@@ -8,7 +8,11 @@
 	outline: none;
 }
 
-.container {
+body {
+	background-color: #ffffff;
+}
+
+.simple-container {
 	max-width: 1440px;
 	width: 100%;
 	padding: 1rem;
@@ -22,4 +26,5 @@
 	line-height: 40px;
 	letter-spacing: 0.25px;
 	color: #323232;
+	margin-bottom: 15px;
 }

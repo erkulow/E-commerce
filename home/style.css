@@ -24,17 +24,12 @@
 	align-items: center;
 }
 
-.swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
 .wraper_slider {
 	position: relative;
+	max-width: 100%;
 	height: 100%;
 	width: 100%;
+	overflow: hidden;
 }
 .swiper-pagination {
 	position: static !important;
