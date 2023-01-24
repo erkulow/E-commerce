@@ -28,3 +28,8 @@ body {
 	color: #323232;
 	margin-bottom: 15px;
 }
+@media screen and (max-width: 600px) {
+	.section_title {
+		font-size: 19px;
+	}
+}
