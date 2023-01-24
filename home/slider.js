@@ -5,10 +5,10 @@ const swiper = new Swiper('.mySwiper', {
 		el: '.swiper-pagination',
 		clickable: true,
 	},
-	// autoplay: {
-	// 	delay: 2500,
-	// 	disableOnInteraction: false,
-	// },
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: false,
+	},
 	breakpoints: {
 		// when window width is >= 320px
 		300: {
