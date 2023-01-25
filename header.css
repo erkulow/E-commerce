@@ -1,0 +1,157 @@
+header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 0;
+}
+
+.list_nav {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	color: #99a2ad;
+}
+.list_nav > li {
+	cursor: pointer;
+}
+.list_nav > li:hover{
+	color: #3a3a3a;
+}
+
+.language_wrapper {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 5px;
+	cursor: pointer;
+}
+.language {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: right;
+	letter-spacing: 0.15px;
+	color: var(--title-color);
+}
+
+.sub_header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	justify-content: space-between;
+}
+
+.logo {
+	margin-right: 40px;
+}
+
+.wrapper_category{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	gap: 15px;
+}
+
+.wrapper_search {
+	width: 100%;
+	max-width: 535px;
+	position: relative;
+}
+.search_icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 20px;
+}
+.search_input {
+	width: 100%;
+	padding: 1rem 3rem;
+	font-family: 'Nunito';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.15px;
+	color: #99a2ad;
+	background: #f5f7fb;
+	border-radius: 32px;
+}
+
+.wrapper_sign_btn{
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.base_button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	padding: 0.5em 1rem;
+	border-radius: 32px;
+	background-color: var(--primary-color);
+	font-family: 'Nunito';
+	font-weight: 600;
+	font-size: 16px;
+	letter-spacing: 0.6px;
+	color: #ffffff;
+	cursor: pointer;
+}
+.outline_button {
+   border: 1px solid var(--primary-color);
+	background: white;
+	color: var(--primary-color);
+}
+
+.base_button:hover{
+	 opacity: 0.7;
+}
+
+.outline_button:hover{
+	background: var(--primary-color);
+	color: white;
+	opacity: 1;
+}
+
+.icon_btn {
+	background: transparent;
+	padding: 0.5em;
+	cursor: pointer;
+	border-radius: 6px;
+}
+.icon_btn:hover{
+	background: rgba(153, 162, 173, 0.13);
+}
+
+
+@media screen and (max-width: 1000px){
+	nav{
+		display: none;
+	}
+	.wrapper_category{
+		display: none;
+	}
+	.burger{
+		display: block;
+	}
+	.wrapper_sign_btn{
+		display: none;
+	}
+    .logo{
+		margin-right: 0;
+	}
+
+}
