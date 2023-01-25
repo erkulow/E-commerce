@@ -1,3 +1,64 @@
+.wrapper_box {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(162px, 1fr));
+	grid-template-rows: 1fr;
+	grid-column-gap: 16px;
+	grid-row-gap: 16px;
+	width: 100%;
+	margin: 0 auto;
+}
+.box > img {
+	width: 100%;
+	height: 100%;
+}
+
+/* __________________ */
+
+.wrapper_reclama_card {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	grid-template-rows: 1fr;
+	grid-column-gap: 16px;
+	grid-row-gap: 16px;
+
+	margin-top: 16px;
+}
+.reclama > img {
+	width: 100%;
+	height: 100%;
+}
+/* ------------------- */
+.wrapper_product_cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
+	grid-column-gap: 16px;
+	grid-row-gap: 16px;
+}
+
+.product_card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border-radius: 16px;
+	position: relative;
+}
+
+.new {
+	position: absolute;
+	left: 8px;
+	margin-top: 8px;
+	background: linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.8),
+			rgba(255, 255, 255, 0.8)
+		),
+		#00bcd4;
+	border-radius: 16px;
+	padding: 4px 8px;
+}
+
+/* ---------- */
 .swiper {
 	width: 100%;
 	position: relative;

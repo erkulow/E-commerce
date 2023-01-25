@@ -16,7 +16,6 @@ button {
 	--primary-color: #392a81;
 	--text-color: #99a2ad;
 	--title-color: #3a3a3a;
-
 }
 
 body {
@@ -28,6 +27,7 @@ body {
 	width: 100%;
 	padding: 1rem;
 	margin: 0 auto;
+	margin-bottom: 40px;
 }
 
 .section_title {

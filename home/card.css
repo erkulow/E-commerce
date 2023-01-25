@@ -67,10 +67,10 @@
 .wear_title {
 	font-weight: 500;
 	font-size: 13px;
-	line-height: 16px;
+	line-height: 18px;
 	letter-spacing: 0.25px;
 	color: #3a3a3a;
-	text-overflow: ellipsis;
+	word-break: keep-all;
 }
 .footer_card {
 	display: flex;
