@@ -6,6 +6,17 @@
 	box-sizing: border-box;
 	border: none;
 	outline: none;
+	transition: all 0.2s;
+}
+button {
+	border: 1px solid transparent;
+}
+:root {
+	--base-font: 'Nunito', sans-serif;
+	--primary-color: #392a81;
+	--text-color: #99a2ad;
+	--title-color: #3a3a3a;
+
 }
 
 body {
@@ -28,6 +39,7 @@ body {
 	color: #323232;
 	margin-bottom: 15px;
 }
+
 @media screen and (max-width: 600px) {
 	.section_title {
 		font-size: 19px;

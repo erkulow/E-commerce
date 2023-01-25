@@ -21,3 +21,19 @@
 	right: 50%;
 	transform: translateX(-50%);
 }
+
+.title {
+	font-weight: 550;
+	font-size: 15px;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	color: var(--title-color);
+}
+
+.text {
+	font-weight: 400;
+	font-size: 11px;
+	line-height: 16px;
+	letter-spacing: 0.4px;
+	color: var(--text-color);
+}
