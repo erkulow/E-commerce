@@ -136,6 +136,9 @@ nav {
 	background: rgba(153, 162, 173, 0.13);
 }
 
+.burger {
+	display: none;
+}
 
 @media screen and (max-width: 1000px){
 	nav{
