@@ -1,0 +1,86 @@
+.wrapper_footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: #3a3a3a;
+	padding-bottom: 1rem;
+}
+footer {
+	width: 100%;
+	max-width: 1440px;
+	padding: 52px 1rem 0;
+}
+.inner_footer {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+.footer_nav {
+	display: flex;
+	align-items: flex-start;
+	gap: 50px;
+}
+.footer_nav > ul > li {
+	list-style: none;
+	font-style: normal;
+	font-weight: 550;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.15px;
+	color: #ffffff;
+	margin-bottom: 16px;
+	cursor: pointer;
+}
+.footer_button {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 28px;
+	background: #382a81;
+	border-radius: 32px;
+	gap: 8px;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.6px;
+	color: #ffffff;
+	margin-top: 24px;
+}
+.under_footer {
+	width: 100%;
+	border-top: 2px solid grey;
+	padding-top: 23px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.wrapper_icons_footer {
+	display: flex;
+	gap: 24px;
+}
+.wrapper_icons_footer > img {
+	cursor: pointer;
+}
+.queation_title {
+	font-weight: 550;
+	font-size: 19px;
+	line-height: 24px;
+	letter-spacing: 0.15px;
+	color: #ffffff;
+	margin-top: 40px;
+}
+@media only screen and (max-width: 600px) {
+	.inner_footer {
+		flex-direction: column;
+	}
+	.footer_nav {
+		margin-top: 25px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 16px;
+		grid-row-gap: 16px;
+	}
+}
