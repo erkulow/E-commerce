@@ -89,3 +89,43 @@
 	height: 36px;
 	cursor: pointer;
 }
+.promotion {
+	position: absolute;
+	/* left: 18px; */
+	right: 15%;
+	margin-top: 8px;
+	background: linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.8),
+			rgba(255, 255, 255, 0.8)
+		),
+		#d81b60;
+	border-radius: 16px;
+	padding: 4px 8px;
+}
+.new {
+	position: absolute;
+	left: 8px;
+	margin-top: 8px;
+	background: linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.8),
+			rgba(255, 255, 255, 0.8)
+		),
+		#00bcd4;
+	border-radius: 16px;
+	padding: 4px 8px;
+}
+.product_of_the_week {
+	position: absolute;
+	left: 8px;
+	margin-top: 8px;
+	background: linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.85),
+			rgba(255, 255, 255, 0.85)
+		),
+		#2e7d32;
+	border-radius: 16px;
+	padding: 4px 8px;
+}

@@ -44,19 +44,6 @@
 	position: relative;
 }
 
-.new {
-	position: absolute;
-	left: 8px;
-	margin-top: 8px;
-	background: linear-gradient(
-			0deg,
-			rgba(255, 255, 255, 0.8),
-			rgba(255, 255, 255, 0.8)
-		),
-		#00bcd4;
-	border-radius: 16px;
-	padding: 4px 8px;
-}
 
 /* ---------- */
 .swiper {
@@ -98,7 +85,3 @@
 	letter-spacing: 0.4px;
 	color: var(--text-color);
 }
-
-
-
-
