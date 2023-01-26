@@ -36,3 +36,9 @@ const swiper = new Swiper('.mySwiper', {
 	},
 })
 
+var bannerSwip = new Swiper('.bannerSwiper', {
+	pagination: {
+		el: '.swiper-pagination-banner',
+		dynamicBullets: true,
+	},
+})

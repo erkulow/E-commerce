@@ -12,6 +12,53 @@
 	height: 100%;
 }
 
+/* BANNER */
+.banner {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.swiper-banner-slide > img {
+	z-index: -1;
+	margin: 0 auto;
+	border-radius: 16px;
+	width: 100%;
+	height: 460px;
+}
+.banner-title {
+	position: absolute;
+	z-index: 1;
+	color: #ffffff;
+	margin-top: 84px;
+	margin-left: 90px;
+}
+.banner-title-small {
+	margin-bottom: 22px;
+}
+.banner-title-big {
+	margin-bottom: 44px;
+}
+@media screen and (max-width: 600px) {
+	.swiper-banner-slide > img {
+		height: 240px;
+	}
+	.banner-title {
+		margin-top: 44px;
+		margin-left: 40px;
+	}
+	.banner-title-small {
+		font-size: 12px;
+	}
+	.banner-title-big {
+		font-size: 18px;
+		margin-bottom: 22px;
+	}
+	.skidki {
+		width: 150px;
+	}
+}
 /* __________________ */
 
 .wrapper_reclama_card {
@@ -43,7 +90,6 @@
 	border-radius: 16px;
 	position: relative;
 }
-
 
 /* ---------- */
 .swiper {
