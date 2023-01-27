@@ -4,6 +4,7 @@ const swiper = new Swiper('.mySwiper', {
 	pagination: {
 		el: '.swiper-pagination',
 		clickable: true,
+		top : 200,
 	},
 	autoplay: {
 		delay: 2500,
@@ -36,9 +37,23 @@ const swiper = new Swiper('.mySwiper', {
 	},
 })
 
-var bannerSwip = new Swiper('.bannerSwiper', {
+var swiperBanner = new Swiper('.bannerSwiper', {
+	grabCursor: true,
+	effect: 'creative',
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: false,
+	},
+	creativeEffect: {
+		prev: {
+			shadow: true,
+			translate: [0, 0, -400],
+		},
+		next: {
+			translate: ['100%', 0, 0],
+		},
+	},
 	pagination: {
-		el: '.swiper-pagination-banner',
-		dynamicBullets: true,
+		el: '.swiper-pagination',
 	},
 })
