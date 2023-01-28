@@ -14,13 +14,26 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 		/>
+
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+		<style>
+			.popup a {
+				background: transparent !important;
+				border: none !important;
+				color: black !important;
+			}
+			.popup a:hover{
+				color: black !important;
+			}
+		</style>
 	</head>
 	<body>
+
 		<!-- HEADER -->
 		<div class="simple-container">
 			<header>
 				<nav>
-					<ul class="list_nav">
+					<ul class="list_nav d-flex">
 						<li>О компании</li>
 						<li>Вопросы и ответы</li>
 						<li>Доставка и оплата</li>
@@ -29,19 +42,16 @@
 						<li>Наши магазины</li>
 					</ul>
 					<div class="language_wrapper">
-						<p class="language">RU</p>
-						<svg
-							width="14"
-							height="8"
-							viewBox="0 0 14 8"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M11.2942 0.705812C11.684 0.316024 12.3181 0.31815 12.7061 0.706116L12.7939 0.793961C13.1839 1.18392 13.1865 1.81355 12.792 2.20803L7.70798 7.29205C7.31697 7.68306 6.68649 7.68653 6.29201 7.29205L1.20798 2.20803C0.816974 1.81702 0.81811 1.18193 1.20607 0.793961L1.29392 0.706116C1.68388 0.31616 2.31277 0.312811 2.70577 0.705812L7 5.00004L11.2942 0.705812Z"
-								fill="#8090A3"
-							/>
-						</svg>
+						<div class="dropdown popup">
+							<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+								Ru
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<li><a class="dropdown-item" href="#">Ru</a></li>
+								<li><a class="dropdown-item" href="#">Kg</a></li>
+								<li><a class="dropdown-item" href="#">En</a></li>
+							</ul>
+						</div>
 					</div>
 				</nav>
 				<div class="sub_header">
@@ -1375,6 +1385,9 @@
 			</footer>
 		</div>
 		<!-- SCRIPT -->
+
+		<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
 		<script src="../media.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 		<script src="./slider.js"></script>
