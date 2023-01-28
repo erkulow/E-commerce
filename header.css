@@ -26,7 +26,7 @@ nav {
 .list_nav > li {
 	cursor: pointer;
 }
-.list_nav > li:hover{
+.list_nav > li:hover {
 	color: #3a3a3a;
 }
 
@@ -58,7 +58,7 @@ nav {
 	margin-right: 40px;
 }
 
-.wrapper_category{
+.wrapper_category {
 	display: flex;
 	align-items: center;
 	width: 100%;
@@ -89,7 +89,7 @@ nav {
 	border-radius: 32px;
 }
 
-.wrapper_sign_btn{
+.wrapper_sign_btn {
 	display: flex;
 	align-items: center;
 	gap: 16px;
@@ -111,16 +111,16 @@ nav {
 	cursor: pointer;
 }
 .outline_button {
-   border: 1px solid var(--primary-color);
+	border: 1px solid var(--primary-color);
 	background: white;
 	color: var(--primary-color);
 }
 
-.base_button:hover{
-	 opacity: 0.7;
+.base_button:hover {
+	opacity: 0.7;
 }
 
-.outline_button:hover{
+.outline_button:hover {
 	background: var(--primary-color);
 	color: white;
 	opacity: 1;
@@ -132,7 +132,7 @@ nav {
 	cursor: pointer;
 	border-radius: 6px;
 }
-.icon_btn:hover{
+.icon_btn:hover {
 	background: rgba(153, 162, 173, 0.13);
 }
 
@@ -140,21 +140,20 @@ nav {
 	display: none;
 }
 
-@media screen and (max-width: 1000px){
-	nav{
+@media screen and (max-width: 1000px) {
+	nav {
 		display: none;
 	}
-	.wrapper_category{
+	.wrapper_category {
 		display: none;
 	}
-	.burger{
+	.burger {
 		display: block;
 	}
-	.wrapper_sign_btn{
+	.wrapper_sign_btn {
 		display: none;
 	}
-    .logo{
+	.logo {
 		margin-right: 0;
 	}
-
 }

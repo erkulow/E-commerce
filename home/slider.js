@@ -57,3 +57,9 @@ var swiperBanner = new Swiper('.bannerSwiper', {
 		el: '.swiper-pagination',
 	},
 })
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+	return new bootstrap.Popover(popoverTriggerEl)
+})
+
+
