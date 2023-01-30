@@ -77,10 +77,20 @@
 /* ------------------- */
 .wrapper_product_cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-	grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(170px, 2fr));
+	grid-template-rows: repeat(auto-fill, minmax(320px, 2fr));
 	grid-column-gap: 16px;
 	grid-row-gap: 16px;
+}
+@media screen and (max-width: 400px) {
+	.wrapper_product_cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.product_card {
+		width: 150px;
+	}
 }
 
 .product_card {
