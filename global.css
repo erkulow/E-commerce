@@ -7,6 +7,7 @@
 	border: none;
 	outline: none;
 	transition: all 0.2s;
+	list-style: none;
 }
 button {
 	border: 1px solid transparent;
@@ -95,5 +96,52 @@ body {
 .base_button, .outline_button {
 	font-size: 14px;
 }
+}
+
+
+/*-------header menu --------*/
+.header_menu {
+	max-height: 100vh;
+	overflow-y: scroll;
+}
+
+.list_header_menu {
+	list-style: none;
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 10px;
+}
+.list_header_menu li a {
+	font-family: var(--base-font);
+	font-weight: 550;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.15px;
+	text-decoration: none;
+	color: #3A3A3A;
+	cursor: pointer;
+}
+
+/* MOBILE */
+.mobail-menu {
+	display: none;
+	width: 100%;
+	padding: 10px 15px;
+	position: sticky;
+	bottom: 0;
+	z-index: 50;
+	background-color: #ffffff;
+	box-shadow: 0px -5px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.inner-mobile-menu {
+	display: flex;
+	justify-content: space-between;
+}
+.inner-mobile-menu > div > img {
+	cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+	.mobail-menu {
+		display: block;
+	}
 }
 
