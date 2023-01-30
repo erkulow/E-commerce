@@ -96,46 +96,6 @@ nav {
 	gap: 16px;
 }
 
-.base_button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 6px;
-	padding: 0.5em 1rem;
-	border-radius: 32px;
-	background-color: var(--primary-color);
-	font-family: 'Nunito';
-	font-weight: 600;
-	font-size: 16px;
-	letter-spacing: 0.6px;
-	color: #ffffff;
-	cursor: pointer;
-}
-.outline_button {
-	border: 1px solid var(--primary-color);
-	background: white;
-	color: var(--primary-color);
-}
-
-.base_button:hover {
-	opacity: 0.7;
-}
-
-.outline_button:hover {
-	background: var(--primary-color);
-	color: white;
-	opacity: 1;
-}
-
-.icon_btn {
-	background: transparent;
-	padding: 0.5em;
-	cursor: pointer;
-	border-radius: 6px;
-}
-.icon_btn:hover {
-	background: rgba(153, 162, 173, 0.13);
-}
 
 .burger {
 	display: none;
