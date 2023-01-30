@@ -5,11 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link rel="stylesheet" href="./card.css" />
+		<link rel="stylesheet" href="../card.css" />
 		<link rel="stylesheet" href="../global.css" />
 		<link rel="stylesheet" href="./style.css" />
 		<link rel="stylesheet" href="../header.css" />
 		<link rel="stylesheet" href="../footer.css" />
+		<link rel="stylesheet" href="../catalog.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -97,7 +98,7 @@
 						<img src="../assets/icons/logoCaravan.svg" alt="" />
 					</div>
 					<div class="wrapper_category">
-						<button class="base_button">
+						<button id="catalog" class="base_button">
 							<svg
 								width="18"
 								height="18"
@@ -199,6 +200,12 @@
 					</div>
 				</div>
 			</header>
+		</div>
+		<div id="catalog_container" class="catalog_container catalog_container_hide">
+			<div id="catalog_wrapper" class="catalog_wrapper catalog_wrapper_hide">
+				<div class="catalog_sidebar"></div>
+				<div class="catalog_content_wrapper"></div>
+			</div>
 		</div>
 		<div class="simple-container">
 			<div class="swiper bannerSwiper">
@@ -1420,7 +1427,8 @@
 		</div>
 		<!-- SCRIPT -->
 		<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="../media.js"></script>
+
+		<script src="./script.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 		<script src="./slider.js"></script>
 	</body>

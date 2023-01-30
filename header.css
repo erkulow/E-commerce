@@ -3,6 +3,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	position: relative;
 }
 nav {
 	width: 100%;
