@@ -138,6 +138,13 @@
 	letter-spacing: 0.4px;
 	color: var(--text-color);
 }
+.text_primary {
+	font-weight: 400;
+	font-size: 19px;
+	line-height: 16px;
+	letter-spacing: 0.4px;
+	color: var(--primary-color);
+}
 
 .dots .swiper-pagination-bullet {
 	background-color: rgb(21, 60, 118) !important;
@@ -179,7 +186,7 @@
 	display: none;
 	width: 100%;
 	padding: 10px 15px;
-	position: fixed;
+	position: sticky;
 	bottom: 0;
 	z-index: 50;
 	background-color: #ffffff;
@@ -196,4 +203,27 @@
 	.mobail-menu {
 		display: block;
 	}
+}
+
+
+/*-------header menu --------*/
+.header_menu {
+	max-height: 100vh;
+	overflow-y: scroll;
+}
+
+.list_header_menu {
+	list-style: none;
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 10px;
+}
+.list_header_menu li a {
+	font-family: var(--base-font);
+	font-weight: 550;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.15px;
+	text-decoration: none;
+	color: #3A3A3A;
+	cursor: pointer;
 }
