@@ -24,7 +24,7 @@ body {
 }
 
 .simple-container {
-	max-width: 1440px;
+	max-width: 1250px;
 	width: 100%;
 	padding: 1rem;
 	margin: 0 auto;
@@ -188,7 +188,7 @@ body {
 /* MOBILE */
 .mobail-menu {
 	display: none;
-	width: 100%;
+	width: 100vw;
 	padding: 10px 15px;
 	position: sticky;
 	bottom: 0;

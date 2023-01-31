@@ -1,0 +1,156 @@
+.info_about_product {
+	width: 68%;
+	display: flex;
+	flex-direction: column;
+}
+
+.widget-product {
+	width: 30%;
+	max-width: 450px;
+	min-width: 320px;
+}
+.mobile {
+	display: none;
+}
+.wrapper-header-widget {
+	display: flex;
+	justify-content: space-between;
+	gap: 4px;
+	margin-bottom: 20px;
+}
+.new_widget {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 4px 12px;
+	gap: 4px;
+	background: #2567a0;
+	border-radius: 16px;
+	color: #ffffff;
+}
+.promotion_widget {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 4px 12px;
+	gap: 4px;
+	background: #ff5038;
+	border-radius: 16px;
+	color: #ffffff;
+}
+.wrapper-buttons {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-top: 20px;
+}
+.characteristics {
+	margin-top: 42px;
+}
+.wrapper-characteristics {
+	display: flex;
+	flex-direction: column;
+}
+.wrapper-characteristics > ul {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+}
+.wrapper-characteristics > ul > li {
+	margin-top: 12px;
+	display: flex;
+	justify-content: flex-end;
+}
+.type {
+	color: #99a2ad;
+}
+.wrapper_otzyv {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 70px;
+}
+.wrapper_stars {
+	margin-top: 15px;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+.wrapper_all_info_buttons {
+	max-width: 400px;
+	border-top: 1px solid #99a2ad;
+	margin: 25px 0 10px 0;
+}
+.wrapper_all_info_buttons > button {
+	padding: 6px 16px;
+	gap: 8px;
+	border: 1px solid #dfe1e9;
+	border-radius: 8px;
+	margin: 4px;
+	background-color: #ffffff;
+}
+.wrapper_name_user {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+}
+
+.header_otzyv {
+	display: flex;
+	justify-content: space-between;
+	gap: 16px;
+	margin-top: 20px;
+}
+.wrapper_ot_img {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+.wrapper_ot_img > img {
+	border-radius: 28px;
+	width: 88px;
+	height: 88px;
+}
+.desktop {
+	display: none;
+}
+@media screen and (max-width: 800px) {
+	.info_about_product {
+		width: 100%;
+	}
+	.widget-product {
+		display: none;
+	}
+	.mobile {
+		width: 100%;
+		display: block;
+	}
+	.wrapper_reverse {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.wrapper_name_user > div > img {
+		width: 15px;
+	}
+	.wrapper-buttons {
+		display: none;
+	}
+	.desktop {
+		width: 100%;
+		position: fixed;
+		bottom: 60px;
+		padding: 10px 15px;
+		background-color: #ffffff;
+		z-index: 52;
+		display: flex;
+		justify-content: space-between;
+	}
+	.desktop > button {
+		width: 150px
+		;
+	}
+}

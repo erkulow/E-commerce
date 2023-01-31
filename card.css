@@ -1,3 +1,6 @@
+figure {
+	margin: 0 !important;
+}
 .card {
 	display: flex;
 	flex-direction: column;
@@ -5,7 +8,7 @@
 	background: #f5f7fb;
 	border: 1px solid #ffd100 !important;
 	border-radius: 16px !important;
-	padding: 10px 7px 12px 6px;
+	padding: 10px 7px 10px 6px !important;
 }
 .wrapper_img {
 	display: flex;
@@ -30,15 +33,22 @@
 	justify-content: space-between;
 	padding-left: 22px;
 }
+
 .time {
 	background: #fcfcfc;
 	border-radius: 16px;
 	padding: 4px 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .discount {
 	padding: 4px 8px;
 	background: #fdd835;
 	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .wrapper_price {
@@ -83,6 +93,7 @@
 	cursor: pointer;
 	letter-spacing: 0.6px;
 	color: #382a81;
+	font-size: 14px;
 }
 .footer_card img {
 	width: 36px;
@@ -132,19 +143,40 @@
 
 /* --------- product card --------------- */
 
-
 .wrapper_product_cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-	grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(140px, 2fr));
+	grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
 	grid-column-gap: 16px;
 	grid-row-gap: 16px;
 }
 
 .product_card {
+	width: 100% !important;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	border-radius: 16px;
 	position: relative;
+}
+
+@media screen and (max-width: 600px) {
+	.time {
+		font-size: 12px;
+	}
+	.discount {
+		font-size: 12px;
+	}
+	.card {
+		padding: 7px 4px 7px 3px;
+	}
+	.wrapper_discount {
+		padding-left: 10px;
+	}
+	.footer_card span {
+		font-size: 14px;
+	}
+	.new {
+		font-size: 14px;
+	}
 }
