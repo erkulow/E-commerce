@@ -89,9 +89,17 @@ body {
 	padding: 0.5em;
 	cursor: pointer;
 	border-radius: 6px;
+	font-size: large;
 }
 .icon_btn:hover {
 	background: rgba(153, 162, 173, 0.13);
+}
+.icon_btn:active {
+	background: rgba(116, 123, 132, 0.13);
+}
+.icon_btn:disabled,
+.icon_btn:hover:disabled {
+	background-color: transparent;
 }
 
 @media (max-width: 500px) {
@@ -130,6 +138,29 @@ body {
 	line-height: 20px;
 	letter-spacing: 0.5px;
 	color: var(--title-color);
+}
+
+.title {
+	font-weight: 550;
+	font-size: 15px;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	color: var(--title-color);
+}
+
+.text {
+	font-weight: 400;
+	font-size: 11px;
+	line-height: 16px;
+	letter-spacing: 0.4px;
+	color: var(--text-color);
+}
+.text_primary {
+	font-weight: 400;
+	font-size: 19px;
+	line-height: 16px;
+	letter-spacing: 0.4px;
+	color: var(--primary-color);
 }
 
 /*-------header menu --------*/

@@ -1,0 +1,121 @@
+.wrapper_cart {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 50px;
+}
+.cart_container {
+	width: 100%;
+	/* background-color: blue; */
+}
+.info_cart_container {
+	min-width: 360px;
+}
+
+.info_card {
+	padding: 1.3rem 0.7rem;
+	border: 1px solid #dfe1e9;
+	border-radius: 4px;
+}
+.infor_card_text {
+	font-family: 'Nunito';
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 16px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.6px;
+	color: #f08222;
+}
+.cart_card {
+	width: 100%;
+	height: 150px;
+	padding: 1rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid gray;
+}
+
+.cart_img {
+	width: 120px;
+	height: 120px;
+	border-radius: 20px;
+	overflow: hidden;
+	object-fit: cover;
+}
+
+.wrapper_buttons {
+	border: 1px solid #a1a7af;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	height: 32px;
+	overflow: hidden;
+}
+
+.product_price {
+	font-family: var(--base-font);
+	font-weight: 550;
+	font-size: 19px;
+	line-height: 24px;
+	letter-spacing: 0.15px;
+	color: #3a3a3a;
+}
+
+.old_price {
+	font-family: var(--base-font);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.2px;
+	text-decoration-line: line-through;
+	color: #99a2ad;
+}
+.discount {
+	padding: 0.4rem;
+	background: #f08222;
+	border-radius: 16px;
+	font-family: var(--base-font);
+	font-weight: 550;
+	font-size: 12px;
+	line-height: 12px;
+	text-align: center;
+	letter-spacing: 0.4px;
+	color: #ffffff;
+}
+
+.title_header{
+    display: none;
+}
+
+@media screen and (max-width:1000px) {
+    .card_logo_header{
+        display: none;
+    }
+    .title_header{
+        display:block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+	.wrapper_cart {
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 550px) {
+	.info_cart_container {
+		width: 100%;
+        min-width: 200px;
+	}
+    .info_card{
+        border-left: none;
+        border-right: none;
+    }
+    .cart_img{
+        width: 85px;
+        height: 85px;
+    }
+}
