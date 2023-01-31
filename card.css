@@ -93,6 +93,7 @@ figure {
 	cursor: pointer;
 	letter-spacing: 0.6px;
 	color: #382a81;
+	font-size: 14px;
 }
 .footer_card img {
 	width: 36px;
@@ -144,13 +145,14 @@ figure {
 
 .wrapper_product_cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(130px, 2fr));
+	grid-template-columns: repeat(auto-fill, minmax(140px, 2fr));
 	grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
 	grid-column-gap: 16px;
 	grid-row-gap: 16px;
 }
 
 .product_card {
+	width: 100% !important;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
