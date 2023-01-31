@@ -28,37 +28,70 @@
 		</style>
 	</head>
 	<body>
-		<!-- HEADER -->
-		<div class="offcanvas offcanvas-start header_menu" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+		<!-- menu toggle header -->
+		<div
+			class="offcanvas offcanvas-start header_menu"
+			tabindex="-1"
+			id="offcanvasExample"
+			aria-labelledby="offcanvasExampleLabel"
+		>
 			<div class="offcanvas-header">
-				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				<button
+					type="button"
+					class="btn-close text-reset"
+					data-bs-dismiss="offcanvas"
+					aria-label="Close"
+				></button>
 				<div class="logo">
 					<img src="../assets/icons/logoCaravan.svg" alt="" />
 				</div>
 				<button class="icon_btn">
 					<svg
-							width="20"
-							height="20"
-							viewBox="0 0 20 20"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						viewBox="0 0 20 20"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
 					>
 						<path
-								d="M19.7644 18.5889L14.7948 13.6188C16.1491 11.9623 16.815 9.84866 16.6547 7.71497C16.4944 5.58128 15.5202 3.59083 13.9336 2.15534C12.347 0.719841 10.2694 -0.0508742 8.13061 0.00260835C5.99177 0.0560909 3.95531 0.929679 2.44245 2.44268C0.929593 3.95568 0.0560857 5.99233 0.00260811 8.13136C-0.0508695 10.2704 0.719775 12.3482 2.15514 13.9349C3.5905 15.5216 5.58076 16.4959 7.71426 16.6562C9.84775 16.8165 11.9612 16.1506 13.6176 14.7962L18.5872 19.7663C18.7442 19.9179 18.9545 20.0019 19.1728 20C19.3911 19.9981 19.5999 19.9105 19.7543 19.7561C19.9087 19.6017 19.9962 19.3929 19.9981 19.1746C20 18.9563 19.9161 18.7459 19.7644 18.5889ZM8.35237 15.0143C7.03503 15.0143 5.74728 14.6237 4.65195 13.8917C3.55663 13.1598 2.70292 12.1194 2.1988 10.9023C1.69468 9.6851 1.56277 8.34575 1.81977 7.05361C2.07677 5.76146 2.71113 4.57455 3.64263 3.64297C4.57413 2.71138 5.76093 2.07697 7.05296 1.81994C8.34498 1.56292 9.6842 1.69483 10.9013 2.199C12.1183 2.70317 13.1586 3.55695 13.8904 4.65238C14.6223 5.74781 15.0129 7.03568 15.0129 8.35314C15.011 10.1192 14.3086 11.8123 13.0599 13.0611C11.8112 14.3099 10.1183 15.0124 8.35237 15.0143Z"
-								fill="#8090A3"
+							d="M19.7644 18.5889L14.7948 13.6188C16.1491 11.9623 16.815 9.84866 16.6547 7.71497C16.4944 5.58128 15.5202 3.59083 13.9336 2.15534C12.347 0.719841 10.2694 -0.0508742 8.13061 0.00260835C5.99177 0.0560909 3.95531 0.929679 2.44245 2.44268C0.929593 3.95568 0.0560857 5.99233 0.00260811 8.13136C-0.0508695 10.2704 0.719775 12.3482 2.15514 13.9349C3.5905 15.5216 5.58076 16.4959 7.71426 16.6562C9.84775 16.8165 11.9612 16.1506 13.6176 14.7962L18.5872 19.7663C18.7442 19.9179 18.9545 20.0019 19.1728 20C19.3911 19.9981 19.5999 19.9105 19.7543 19.7561C19.9087 19.6017 19.9962 19.3929 19.9981 19.1746C20 18.9563 19.9161 18.7459 19.7644 18.5889ZM8.35237 15.0143C7.03503 15.0143 5.74728 14.6237 4.65195 13.8917C3.55663 13.1598 2.70292 12.1194 2.1988 10.9023C1.69468 9.6851 1.56277 8.34575 1.81977 7.05361C2.07677 5.76146 2.71113 4.57455 3.64263 3.64297C4.57413 2.71138 5.76093 2.07697 7.05296 1.81994C8.34498 1.56292 9.6842 1.69483 10.9013 2.199C12.1183 2.70317 13.1586 3.55695 13.8904 4.65238C14.6223 5.74781 15.0129 7.03568 15.0129 8.35314C15.011 10.1192 14.3086 11.8123 13.0599 13.0611C11.8112 14.3099 10.1183 15.0124 8.35237 15.0143Z"
+							fill="#8090A3"
 						/>
 					</svg>
 				</button>
 			</div>
 			<div class="offcanvas-body menu_header">
-				<h1 class="title" style="font-size: 19px">Войдите или зарегистрируйтесь</h1>
-                <p class="text">Чтобы делать покупки, оставлять отзывы, и пользоваться персональными скидками.</p>
-				<br>
-				<div class="d-flex align-items-start justify-content-between gap-1">
-					<button class="w-100 base_button">Вход</button>
-					<button class="w-100 base_button outline_button">Регистрация</button>
+				<h1 class="title" style="font-size: 19px">
+					Войдите или зарегистрируйтесь
+				</h1>
+				<p class="text">
+					Чтобы делать покупки, оставлять отзывы,  и пользоваться
+					персональными скидками.
+				</p>
+				<br />
+				<div
+					class="d-flex align-items-start justify-content-between gap-1"
+				>
+					<button
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+						data-bs-toggle="modal"
+						data-bs-target="#signin-modal"
+						class="w-100 base_button"
+					>
+						Вход
+					</button>
+					<button
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+						data-bs-toggle="modal"
+						data-bs-target="#signup-modal"
+						class="w-100 base_button outline_button"
+					>
+						Регистрация
+					</button>
 				</div>
-				<br>
+				<br />
 				<ul class="list_header_menu d-flex flex-column gap-4">
 					<li><a href="#">Акции</a></li>
 					<li><a href="#">Новинки</a></li>
@@ -66,7 +99,7 @@
 					<li><a href="#">Товары недели</a></li>
 					<li><a href="#">Каталог</a></li>
 				</ul>
-				<br>
+				<br />
 				<ul class="list_header_menu d-flex flex-column gap-4">
 					<li><a href="#">О компании</a></li>
 					<li><a href="#">Вопросы и ответы</a></li>
@@ -75,24 +108,46 @@
 					<li><a href="#">Гарантия и возврат</a></li>
 					<li><a href="#">Для продавцов</a></li>
 				</ul>
-				<br>
+				<br />
 				<div class="d-flex flex-column gap-3">
 					<p class="text">Наши магазины</p>
 					<p class="title gap-2">
-						<svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-						   <path fill-rule="evenodd" clip-rule="evenodd" d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z" fill="#8090A3"/>
-					    </svg>
+						<svg
+							width="14"
+							height="20"
+							viewBox="0 0 14 20"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z"
+								fill="#8090A3"
+							/>
+						</svg>
 						ул. Суйоркулова 20/3
 					</p>
 					<p class="title gap-2">
-						<svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z" fill="#8090A3"/>
+						<svg
+							width="14"
+							height="20"
+							viewBox="0 0 14 20"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z"
+								fill="#8090A3"
+							/>
 						</svg>
 						ул. Суйоркулова 20/3
 					</p>
 				</div>
-				<br>
-				<br>
+				<br />
+				<br />
 				<div class="w-100 d-flex gap-3 align-items-start">
 					<img src="../assets/icons/whatsapp.svg" alt="" />
 					<img src="../assets/icons/telegram.svg" alt="" />
@@ -100,8 +155,144 @@
 					<img src="../assets/icons/Instagram.svg" alt="" />
 				</div>
 			</div>
-
 		</div>
+
+		<!-- sign up modal -->
+
+		<div
+			class="simple-modal modal fade"
+			id="signup-modal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div
+						class="p-3 d-flex align-items-center justify-content-between w-100"
+					>
+						<div></div>
+						<h3 class="m-0">Регистрация</h3>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="p-3">
+						<input
+							class="base_input"
+							type="tel"
+							placeholder="Телефон"
+						/>
+					</div>
+					<div class="p-4">
+						<button class="base_button w-100">
+							Зарегистрироваться
+						</button>
+					</div>
+					<br />
+					<div class="p-3 px-4">
+						<p class="base_text">
+							Я соглашаюсь с условиями
+							<a href="#"
+								>пользовательского соглашения и обработки
+								персональных данных</a
+							>
+						</p>
+					</div>
+					<div class="p-3 d-flex justify-content-center">
+						<p class="text" style="font-size: 13px">или</p>
+					</div>
+					<div class="p-3 px-4">
+						<button
+							type="button"
+							class="base_button outline_button w-100"
+						>
+							Войти
+						</button>
+						<br />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- sign in modal -->
+
+		<div
+			class="simple-modal modal fade"
+			id="signin-modal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div
+						class="p-3 d-flex align-items-center justify-content-between w-100"
+					>
+						<div></div>
+						<h3 class="m-0">Вход</h3>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="p-3">
+						<input
+							class="base_input"
+							type="tel"
+							placeholder="Телефон"
+						/>
+						<br />
+						<br />
+						<input
+							class="base_input"
+							type="tel"
+							placeholder="Пароль"
+						/>
+					</div>
+					<div class="p-4">
+						<button class="base_button w-100">Вход</button>
+					</div>
+					<br />
+					<div
+						class="p-3 px-4 d-flex align-items-center justify-content-evenly"
+					>
+						<p
+							style="font-size: 16px; cursor: pointer"
+							class="text"
+						>
+							Запомнить меня
+						</p>
+						<p
+							style="font-size: 16px; cursor: pointer"
+							class="text"
+						>
+							Забыли пароль?
+						</p>
+					</div>
+					<div class="p-3 d-flex justify-content-center">
+						<p class="text" style="font-size: 13px">или</p>
+					</div>
+					<div class="p-3 px-4">
+						<button
+							type="button"
+							class="base_button outline_button w-100"
+						>
+							Зарегистрироваться
+						</button>
+						<br />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- header -->
+
 		<div class="simple-container">
 			<header>
 				<nav>
@@ -144,7 +335,12 @@
 				</nav>
 				<div class="sub_header">
 					<div class="burger">
-						<button data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" class="icon_btn">
+						<button
+							data-bs-toggle="offcanvas"
+							data-bs-target="#offcanvasExample"
+							aria-controls="offcanvasExample"
+							class="icon_btn"
+						>
 							<svg
 								width="20"
 								height="14"
@@ -248,10 +444,19 @@
 						</button>
 					</div>
 					<div class="wrapper_sign_btn">
-						<button class="base_button outline_button">
+						<button
+							data-bs-toggle="modal"
+							data-bs-target="#signup-modal"
+							class="base_button outline_button"
+						>
 							Регистрация
 						</button>
-						<button style="width: 160px" class="base_button">
+						<button
+							data-bs-toggle="modal"
+							data-bs-target="#signin-modal"
+							style="width: 160px"
+							class="base_button"
+						>
 							Вход
 						</button>
 					</div>
@@ -275,10 +480,14 @@
 			</header>
 		</div>
 
+		<!-- sections -->
+
 		<main class="w-100">
 			<div id="catalog_container" class="catalog_container">
 				<div id="catalog_wrapper" class="catalog_wrapper">
-					<div class="simple-container m-auto d-flex align-items-start w-100 mar">
+					<div
+						class="simple-container m-auto d-flex align-items-start w-100 mar"
+					>
 						<div class="catalog_sidebar">
 							<ul class="w-100 catalog-list">
 								<li>Детская одежда</li>
@@ -291,14 +500,22 @@
 							</ul>
 						</div>
 						<div class="catalog_content_wrapper">
-							<div class="w-100 d-flex align-items-center gap-1" style="color: gray">
-								<span class="text_primary">Новинки</span> • &nbsp;
-								<span class="text_primary">Акции</span> • &nbsp;
-								<span class="text_primary">Лучшие предложения</span> • &nbsp;
-								<span class="text_primary">Товары недели</span> • &nbsp;
+							<div
+								class="w-100 d-flex align-items-center gap-1"
+								style="color: gray"
+							>
+								<span class="text_primary">Новинки</span> •
+								&nbsp; <span class="text_primary">Акции</span> •
+								&nbsp;
+								<span class="text_primary"
+									>Лучшие предложения</span
+								>
+								• &nbsp;
+								<span class="text_primary">Товары недели</span>
+								• &nbsp;
 								<span class="text_primary">Аксессуары</span>
 							</div>
-							<br>
+							<br />
 							<div class="d-grid content_catalog">
 								<p class="catalog_variant">Юбки</p>
 								<p class="catalog_variant">Брюки</p>
@@ -311,7 +528,9 @@
 								<p class="catalog_variant">Белье</p>
 								<p class="catalog_variant">Рубашки</p>
 								<p class="catalog_variant">Футболки</p>
-								<p class="catalog_variant">Костюмы спортивные</p>
+								<p class="catalog_variant">
+									Костюмы спортивные
+								</p>
 							</div>
 						</div>
 					</div>
@@ -324,32 +543,32 @@
 						<div class="swiper-slide banner">
 							<div class="banner_card">
 								<img
-										src="../assets/banner-img/Banner 1 (2).png"
-										alt=""
+									src="../assets/banner-img/Banner 1 (2).png"
+									alt=""
 								/>
 							</div>
 						</div>
 						<div class="swiper-slide banner">
 							<div class="banner_card">
 								<img
-										src="../assets/banner-img/Banner 2.png"
-										alt=""
+									src="../assets/banner-img/Banner 2.png"
+									alt=""
 								/>
 							</div>
 						</div>
 						<div class="swiper-slide banner">
 							<div class="banner_card">
 								<img
-										src="../assets/banner-img/Banner 1 (2).png"
-										alt=""
+									src="../assets/banner-img/Banner 1 (2).png"
+									alt=""
 								/>
 							</div>
 						</div>
 						<div class="swiper-slide banner">
 							<div class="banner_card">
 								<img
-										src="../assets/banner-img/Banner 2.png"
-										alt=""
+									src="../assets/banner-img/Banner 2.png"
+									alt=""
 								/>
 							</div>
 						</div>
@@ -398,7 +617,10 @@
 									<div class="discount">-29%</div>
 								</div>
 								<div class="wrapper_img">
-									<img src="../assets/img/image.png" alt="img" />
+									<img
+										src="../assets/img/image.png"
+										alt="img"
+									/>
 								</div>
 								<div class="wrapper_price">
 									<span class="price">2400 c</span>
@@ -406,13 +628,15 @@
 								</div>
 								<h3 class="type_wear">Обувь</h3>
 
-								<span class="wear_title">Кроссовки Cambridge</span>
+								<span class="wear_title"
+									>Кроссовки Cambridge</span
+								>
 								<div class="footer_card">
 									<span>В корзину</span>
 									<figure>
 										<img
-												src="../assets/icons/whatsapp.png"
-												alt=""
+											src="../assets/icons/whatsapp.png"
+											alt=""
 										/>
 									</figure>
 								</div>
@@ -425,7 +649,10 @@
 									<div class="discount">-29%</div>
 								</div>
 								<div class="wrapper_img">
-									<img src="../assets/img/image.png" alt="img" />
+									<img
+										src="../assets/img/image.png"
+										alt="img"
+									/>
 								</div>
 								<div class="wrapper_price">
 									<span class="price">2400 c</span>
@@ -433,13 +660,15 @@
 								</div>
 								<h3 class="type_wear">Обувь</h3>
 
-								<span class="wear_title">Кроссовки Cambridge</span>
+								<span class="wear_title"
+									>Кроссовки Cambridge</span
+								>
 								<div class="footer_card">
 									<span>В корзину</span>
 									<figure>
 										<img
-												src="../assets/icons/whatsapp.png"
-												alt=""
+											src="../assets/icons/whatsapp.png"
+											alt=""
 										/>
 									</figure>
 								</div>
@@ -452,7 +681,10 @@
 									<div class="discount">-29%</div>
 								</div>
 								<div class="wrapper_img">
-									<img src="../assets/img/image.png" alt="img" />
+									<img
+										src="../assets/img/image.png"
+										alt="img"
+									/>
 								</div>
 								<div class="wrapper_price">
 									<span class="price">2400 c</span>
@@ -460,13 +692,15 @@
 								</div>
 								<h3 class="type_wear">Обувь</h3>
 
-								<span class="wear_title">Кроссовки Cambridge</span>
+								<span class="wear_title"
+									>Кроссовки Cambridge</span
+								>
 								<div class="footer_card">
 									<span>В корзину</span>
 									<figure>
 										<img
-												src="../assets/icons/whatsapp.png"
-												alt=""
+											src="../assets/icons/whatsapp.png"
+											alt=""
 										/>
 									</figure>
 								</div>
@@ -479,7 +713,10 @@
 									<div class="discount">-29%</div>
 								</div>
 								<div class="wrapper_img">
-									<img src="../assets/img/image.png" alt="img" />
+									<img
+										src="../assets/img/image.png"
+										alt="img"
+									/>
 								</div>
 								<div class="wrapper_price">
 									<span class="price">2400 c</span>
@@ -487,13 +724,15 @@
 								</div>
 								<h3 class="type_wear">Обувь</h3>
 
-								<span class="wear_title">Кроссовки Cambridge</span>
+								<span class="wear_title"
+									>Кроссовки Cambridge</span
+								>
 								<div class="footer_card">
 									<span>В корзину</span>
 									<figure>
 										<img
-												src="../assets/icons/whatsapp.png"
-												alt=""
+											src="../assets/icons/whatsapp.png"
+											alt=""
 										/>
 									</figure>
 								</div>
@@ -506,7 +745,10 @@
 									<div class="discount">-29%</div>
 								</div>
 								<div class="wrapper_img">
-									<img src="../assets/img/image.png" alt="img" />
+									<img
+										src="../assets/img/image.png"
+										alt="img"
+									/>
 								</div>
 								<div class="wrapper_price">
 									<span class="price">2400 c</span>
@@ -514,13 +756,15 @@
 								</div>
 								<h3 class="type_wear">Обувь</h3>
 
-								<span class="wear_title">Кроссовки Cambridge</span>
+								<span class="wear_title"
+									>Кроссовки Cambridge</span
+								>
 								<div class="footer_card">
 									<span>В корзину</span>
 									<figure>
 										<img
-												src="../assets/icons/whatsapp.png"
-												alt=""
+											src="../assets/icons/whatsapp.png"
+											alt=""
 										/>
 									</figure>
 								</div>
@@ -533,7 +777,10 @@
 									<div class="discount">-29%</div>
 								</div>
 								<div class="wrapper_img">
-									<img src="../assets/img/image.png" alt="img" />
+									<img
+										src="../assets/img/image.png"
+										alt="img"
+									/>
 								</div>
 								<div class="wrapper_price">
 									<span class="price">2400 c</span>
@@ -541,13 +788,15 @@
 								</div>
 								<h3 class="type_wear">Обувь</h3>
 
-								<span class="wear_title">Кроссовки Cambridge</span>
+								<span class="wear_title"
+									>Кроссовки Cambridge</span
+								>
 								<div class="footer_card">
 									<span>В корзину</span>
 									<figure>
 										<img
-												src="../assets/icons/whatsapp.png"
-												alt=""
+											src="../assets/icons/whatsapp.png"
+											alt=""
 										/>
 									</figure>
 								</div>
@@ -560,7 +809,10 @@
 									<div class="discount">-29%</div>
 								</div>
 								<div class="wrapper_img">
-									<img src="../assets/img/image.png" alt="img" />
+									<img
+										src="../assets/img/image.png"
+										alt="img"
+									/>
 								</div>
 								<div class="wrapper_price">
 									<span class="price">2400 c</span>
@@ -568,13 +820,15 @@
 								</div>
 								<h3 class="type_wear">Обувь</h3>
 
-								<span class="wear_title">Кроссовки Cambridge</span>
+								<span class="wear_title"
+									>Кроссовки Cambridge</span
+								>
 								<div class="footer_card">
 									<span>В корзину</span>
 									<figure>
 										<img
-												src="../assets/icons/whatsapp.png"
-												alt=""
+											src="../assets/icons/whatsapp.png"
+											alt=""
 										/>
 									</figure>
 								</div>
@@ -616,12 +870,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -637,12 +894,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -658,12 +918,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -679,12 +942,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -700,12 +966,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -721,118 +990,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
-							</figure>
-						</div>
-					</div>
-					<div class="product_card">
-						<div class="product wrapper_img">
-							<div class="new">новинки</div>
-							<div class="promotion">Акция</div>
-							<img src="../assets/img/122.png" alt="img" />
-						</div>
-						<div class="wrapper_price">
-							<span class="price">1500 c</span>
-							<span class="old_price">2800 c</span>
-						</div>
-						<h3 class="type_wear">Обувь</h3>
-
-						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
-						<div class="footer_card">
-							<span><b>+</b> В корзину</span>
-							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
-							</figure>
-						</div>
-					</div>
-					<div class="product_card">
-						<div class="product wrapper_img">
-							<div class="product_of_the_week">Товар недели</div>
-							<img src="../assets/img/122.png" alt="img" />
-						</div>
-						<div class="wrapper_price">
-							<span class="price">1500 c</span>
-							<span class="old_price">2800 c</span>
-						</div>
-						<h3 class="type_wear">Обувь</h3>
-
-						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
-						<div class="footer_card">
-							<span><b>+</b> В корзину</span>
-							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
-							</figure>
-						</div>
-					</div>
-					<div class="product_card">
-						<div class="product wrapper_img">
-							<div class="new">новинки</div>
-							<img src="../assets/img/122.png" alt="img" />
-						</div>
-						<div class="wrapper_price">
-							<span class="price">1500 c</span>
-							<span class="old_price">2800 c</span>
-						</div>
-						<h3 class="type_wear">Обувь</h3>
-
-						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
-						<div class="footer_card">
-							<span><b>+</b> В корзину</span>
-							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
-							</figure>
-						</div>
-					</div>
-					<div class="product_card">
-						<div class="product wrapper_img">
-							<div class="product_of_the_week">Товар недели</div>
-							<img src="../assets/img/122.png" alt="img" />
-						</div>
-						<div class="wrapper_price">
-							<span class="price">1500 c</span>
-							<span class="old_price">2800 c</span>
-						</div>
-						<h3 class="type_wear">Обувь</h3>
-
-						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
-						<div class="footer_card">
-							<span><b>+</b> В корзину</span>
-							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
-							</figure>
-						</div>
-					</div>
-					<div class="product_card">
-						<div class="product wrapper_img">
-							<div class="new">новинки</div>
-							<img src="../assets/img/122.png" alt="img" />
-						</div>
-						<div class="wrapper_price">
-							<span class="price">1500 c</span>
-							<span class="old_price">2800 c</span>
-						</div>
-						<h3 class="type_wear">Обувь</h3>
-
-						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
-						<div class="footer_card">
-							<span><b>+</b> В корзину</span>
-							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -849,12 +1015,136 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</figure>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="product_of_the_week">Товар недели</div>
+							<img src="../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
+
+						<span class="wear_title"
+							>Детские кроссовки для девочек
+						</span>
+						<div class="footer_card">
+							<span><b>+</b> В корзину</span>
+							<figure>
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</figure>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="new">новинки</div>
+							<img src="../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
+
+						<span class="wear_title"
+							>Детские кроссовки для девочек
+						</span>
+						<div class="footer_card">
+							<span><b>+</b> В корзину</span>
+							<figure>
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</figure>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="product_of_the_week">Товар недели</div>
+							<img src="../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
+
+						<span class="wear_title"
+							>Детские кроссовки для девочек
+						</span>
+						<div class="footer_card">
+							<span><b>+</b> В корзину</span>
+							<figure>
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</figure>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="new">новинки</div>
+							<img src="../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
+
+						<span class="wear_title"
+							>Детские кроссовки для девочек
+						</span>
+						<div class="footer_card">
+							<span><b>+</b> В корзину</span>
+							<figure>
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</figure>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="new">новинки</div>
+							<div class="promotion">Акция</div>
+							<img src="../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
+
+						<span class="wear_title"
+							>Детские кроссовки для девочек
+						</span>
+						<div class="footer_card">
+							<span><b>+</b> В корзину</span>
+							<figure>
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -872,7 +1162,10 @@
 									<div class="discount">-29%</div>
 								</div>
 								<div class="wrapper_img">
-									<img src="../assets/img/image.png" alt="img" />
+									<img
+										src="../assets/img/image.png"
+										alt="img"
+									/>
 								</div>
 								<div class="wrapper_price">
 									<span class="price">2400 c</span>
@@ -880,13 +1173,15 @@
 								</div>
 								<h3 class="type_wear">Обувь</h3>
 
-								<span class="wear_title">Кроссовки Cambridge</span>
+								<span class="wear_title"
+									>Кроссовки Cambridge</span
+								>
 								<div class="footer_card">
 									<span>В корзину</span>
 									<figure>
 										<img
-												src="../assets/icons/whatsapp.png"
-												alt=""
+											src="../assets/icons/whatsapp.png"
+											alt=""
 										/>
 									</figure>
 								</div>
@@ -899,7 +1194,10 @@
 									<div class="discount">-29%</div>
 								</div>
 								<div class="wrapper_img">
-									<img src="../assets/img/image.png" alt="img" />
+									<img
+										src="../assets/img/image.png"
+										alt="img"
+									/>
 								</div>
 								<div class="wrapper_price">
 									<span class="price">2400 c</span>
@@ -907,13 +1205,15 @@
 								</div>
 								<h3 class="type_wear">Обувь</h3>
 
-								<span class="wear_title">Кроссовки Cambridge</span>
+								<span class="wear_title"
+									>Кроссовки Cambridge</span
+								>
 								<div class="footer_card">
 									<span>В корзину</span>
 									<figure>
 										<img
-												src="../assets/icons/whatsapp.png"
-												alt=""
+											src="../assets/icons/whatsapp.png"
+											alt=""
 										/>
 									</figure>
 								</div>
@@ -926,7 +1226,10 @@
 									<div class="discount">-29%</div>
 								</div>
 								<div class="wrapper_img">
-									<img src="../assets/img/image.png" alt="img" />
+									<img
+										src="../assets/img/image.png"
+										alt="img"
+									/>
 								</div>
 								<div class="wrapper_price">
 									<span class="price">2400 c</span>
@@ -934,13 +1237,15 @@
 								</div>
 								<h3 class="type_wear">Обувь</h3>
 
-								<span class="wear_title">Кроссовки Cambridge</span>
+								<span class="wear_title"
+									>Кроссовки Cambridge</span
+								>
 								<div class="footer_card">
 									<span>В корзину</span>
 									<figure>
 										<img
-												src="../assets/icons/whatsapp.png"
-												alt=""
+											src="../assets/icons/whatsapp.png"
+											alt=""
 										/>
 									</figure>
 								</div>
@@ -953,7 +1258,10 @@
 									<div class="discount">-29%</div>
 								</div>
 								<div class="wrapper_img">
-									<img src="../assets/img/image.png" alt="img" />
+									<img
+										src="../assets/img/image.png"
+										alt="img"
+									/>
 								</div>
 								<div class="wrapper_price">
 									<span class="price">2400 c</span>
@@ -961,13 +1269,15 @@
 								</div>
 								<h3 class="type_wear">Обувь</h3>
 
-								<span class="wear_title">Кроссовки Cambridge</span>
+								<span class="wear_title"
+									>Кроссовки Cambridge</span
+								>
 								<div class="footer_card">
 									<span>В корзину</span>
 									<figure>
 										<img
-												src="../assets/icons/whatsapp.png"
-												alt=""
+											src="../assets/icons/whatsapp.png"
+											alt=""
 										/>
 									</figure>
 								</div>
@@ -980,7 +1290,10 @@
 									<div class="discount">-29%</div>
 								</div>
 								<div class="wrapper_img">
-									<img src="../assets/img/image.png" alt="img" />
+									<img
+										src="../assets/img/image.png"
+										alt="img"
+									/>
 								</div>
 								<div class="wrapper_price">
 									<span class="price">2400 c</span>
@@ -988,13 +1301,15 @@
 								</div>
 								<h3 class="type_wear">Обувь</h3>
 
-								<span class="wear_title">Кроссовки Cambridge</span>
+								<span class="wear_title"
+									>Кроссовки Cambridge</span
+								>
 								<div class="footer_card">
 									<span>В корзину</span>
 									<figure>
 										<img
-												src="../assets/icons/whatsapp.png"
-												alt=""
+											src="../assets/icons/whatsapp.png"
+											alt=""
 										/>
 									</figure>
 								</div>
@@ -1007,7 +1322,10 @@
 									<div class="discount">-29%</div>
 								</div>
 								<div class="wrapper_img">
-									<img src="../assets/img/image.png" alt="img" />
+									<img
+										src="../assets/img/image.png"
+										alt="img"
+									/>
 								</div>
 								<div class="wrapper_price">
 									<span class="price">2400 c</span>
@@ -1015,13 +1333,15 @@
 								</div>
 								<h3 class="type_wear">Обувь</h3>
 
-								<span class="wear_title">Кроссовки Cambridge</span>
+								<span class="wear_title"
+									>Кроссовки Cambridge</span
+								>
 								<div class="footer_card">
 									<span>В корзину</span>
 									<figure>
 										<img
-												src="../assets/icons/whatsapp.png"
-												alt=""
+											src="../assets/icons/whatsapp.png"
+											alt=""
 										/>
 									</figure>
 								</div>
@@ -1034,7 +1354,10 @@
 									<div class="discount">-29%</div>
 								</div>
 								<div class="wrapper_img">
-									<img src="../assets/img/image.png" alt="img" />
+									<img
+										src="../assets/img/image.png"
+										alt="img"
+									/>
 								</div>
 								<div class="wrapper_price">
 									<span class="price">2400 c</span>
@@ -1042,13 +1365,15 @@
 								</div>
 								<h3 class="type_wear">Обувь</h3>
 
-								<span class="wear_title">Кроссовки Cambridge</span>
+								<span class="wear_title"
+									>Кроссовки Cambridge</span
+								>
 								<div class="footer_card">
 									<span>В корзину</span>
 									<figure>
 										<img
-												src="../assets/icons/whatsapp.png"
-												alt=""
+											src="../assets/icons/whatsapp.png"
+											alt=""
 										/>
 									</figure>
 								</div>
@@ -1077,12 +1402,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1098,12 +1426,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1119,12 +1450,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1140,12 +1474,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1161,12 +1498,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1183,12 +1523,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1204,12 +1547,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1225,12 +1571,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1246,12 +1595,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1267,12 +1619,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1288,12 +1643,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1309,12 +1667,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1337,12 +1698,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1358,12 +1722,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1379,12 +1746,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1400,12 +1770,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1421,12 +1794,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1443,12 +1819,15 @@
 						<h3 class="type_wear">Обувь</h3>
 
 						<span class="wear_title"
-						>Детские кроссовки для девочек
-					</span>
+							>Детские кроссовки для девочек
+						</span>
 						<div class="footer_card">
 							<span><b>+</b> В корзину</span>
 							<figure>
-								<img src="../assets/icons/whatsapp.png" alt="" />
+								<img
+									src="../assets/icons/whatsapp.png"
+									alt=""
+								/>
 							</figure>
 						</div>
 					</div>
@@ -1461,16 +1840,25 @@
 						<img src="../assets/icons/Base/Icon/Home.svg" alt="" />
 					</div>
 					<div class="icon_btn">
-						<img src="../assets/icons/Base/Icon/Catalog.svg" alt="" />
+						<img
+							src="../assets/icons/Base/Icon/Catalog.svg"
+							alt=""
+						/>
 					</div>
 					<div class="icon_btn">
 						<img src="../assets/icons/Base/Icon/Cart.svg" alt="" />
 					</div>
 					<div class="icon_btn">
-						<img src="../assets/icons/Base/Icons/heart/y.svg" alt="" />
+						<img
+							src="../assets/icons/Base/Icons/heart/y.svg"
+							alt=""
+						/>
 					</div>
 					<div class="icon_btn">
-						<img src="../assets/icons/Base/Icons/Profile.svg" alt="" />
+						<img
+							src="../assets/icons/Base/Icons/Profile.svg"
+							alt=""
+						/>
 					</div>
 				</div>
 			</div>
@@ -1487,7 +1875,7 @@
 							<h3 class="queation_title">
 								Остались вопросы? Напишите нам!
 							</h3>
-							<button class="footer_button">
+							<button class="base_button mt-4">
 								<img
 									src="../assets/icons/buttonWhatsApp.svg"
 									alt=""
