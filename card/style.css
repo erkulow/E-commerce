@@ -1,7 +1,5 @@
 .info_about_product {
 	width: 68%;
-	background-color: red;
-	height: 500px;
 	display: flex;
 	flex-direction: column;
 }
@@ -10,6 +8,9 @@
 	width: 30%;
 	max-width: 450px;
 	min-width: 320px;
+}
+.mobile {
+	display: none;
 }
 .wrapper-header-widget {
 	display: flex;
@@ -43,17 +44,6 @@
 	gap: 12px;
 	margin-top: 20px;
 }
-.wrapper-buttons > button {
-	display: flex;
-	justify-content: center;
-	/* align-items: center; */
-	padding: 12px 78px;
-	gap: 8px;
-	background: #f08222;
-	border: 1px solid #f08222;
-	border-radius: 32px;
-	color: #ffffff;
-}
 .characteristics {
 	margin-top: 42px;
 }
@@ -64,6 +54,7 @@
 .wrapper-characteristics > ul {
 	display: flex;
 	justify-content: space-between;
+	gap: 10px;
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 20px;
@@ -71,7 +62,95 @@
 }
 .wrapper-characteristics > ul > li {
 	margin-top: 12px;
+	display: flex;
+	justify-content: flex-end;
 }
 .type {
 	color: #99a2ad;
+}
+.wrapper_otzyv {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 70px;
+}
+.wrapper_stars {
+	margin-top: 15px;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+.wrapper_all_info_buttons {
+	max-width: 400px;
+	border-top: 1px solid #99a2ad;
+	margin: 25px 0 10px 0;
+}
+.wrapper_all_info_buttons > button {
+	padding: 6px 16px;
+	gap: 8px;
+	border: 1px solid #dfe1e9;
+	border-radius: 8px;
+	margin: 4px;
+	background-color: #ffffff;
+}
+.wrapper_name_user {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+}
+
+.header_otzyv {
+	display: flex;
+	justify-content: space-between;
+	gap: 16px;
+	margin-top: 20px;
+}
+.wrapper_ot_img {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+.wrapper_ot_img > img {
+	border-radius: 28px;
+	width: 88px;
+	height: 88px;
+}
+.desktop {
+	display: none;
+}
+@media screen and (max-width: 800px) {
+	.info_about_product {
+		width: 100%;
+	}
+	.widget-product {
+		display: none;
+	}
+	.mobile {
+		width: 100%;
+		display: block;
+	}
+	.wrapper_reverse {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.wrapper_name_user > div > img {
+		width: 15px;
+	}
+	.wrapper-buttons {
+		display: none;
+	}
+	.desktop {
+		width: 100%;
+		position: fixed;
+		bottom: 60px;
+		padding: 10px 15px;
+		background-color: #ffffff;
+		z-index: 52;
+		display: flex;
+		justify-content: space-between;
+	}
+	.desktop > button {
+		width: 150px
+		;
+	}
 }

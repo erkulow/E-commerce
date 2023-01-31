@@ -157,7 +157,7 @@ body {
 /* MOBILE */
 .mobail-menu {
 	display: none;
-	width: 100%;
+	width: 100vw;
 	padding: 10px 15px;
 	position: sticky;
 	bottom: 0;
