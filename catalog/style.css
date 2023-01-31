@@ -122,28 +122,7 @@
 	border-radius: 4px;
 	width: 50%;
 }
-.size_catalog {
-	margin: 8px 0 24px;
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	grid-column-gap: 12px;
-	grid-row-gap: 12px;
-}
 
-.size_catalog > button {
-	border: 1px solid #dfe1e9;
-	border-radius: 8px;
-	background-color: #ffffff;
-}
-.size_catalog > button:active {
-	background-color: #382a81;
-	color: #ffffff;
-}
-.size_catalog .active_btn {
-	color: #ffffff;
-	background-color: #382a81;
-}
 .wrapper_material {
 	display: flex;
 	flex-direction: column;
