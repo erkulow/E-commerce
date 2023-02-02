@@ -18,3 +18,9 @@
 .wrapper_notfound > p {
 	margin-bottom: 24px;
 }
+
+@media screen and (max-width: 550px) {
+	.wrapper_notfound {
+        width: 100%;
+    }
+}
