@@ -1,11 +1,11 @@
 .info_about_product {
-	width: 68%;
+	width: 65%;
 	display: flex;
 	flex-direction: column;
 }
 
 .widget-product {
-	width: 30%;
+	width: 35%;
 	max-width: 450px;
 	min-width: 320px;
 }
@@ -118,6 +118,95 @@
 .desktop {
 	display: none;
 }
+
+/* ------------------------ */
+.wrapper_widget_swiper {
+	max-height: 550px;
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 10px;
+	margin-bottom: 40px;
+}
+
+.dots{
+	display: none;
+}
+
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.swiper {
+	width: 100%;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.swiper-slide {
+	background-size: cover;
+	background-position: center;
+}
+
+.productSwiperSmall {
+	height: 100%;
+	width: 85%;
+}
+
+.productSwiper {
+	width: 15%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 10px 0;
+}
+
+.productSwiper .swiper-slide {
+	width: 100%;
+	height: 100%;
+	opacity: 0.4;
+}
+
+.productSwiper .swiper-slide-thumb-active {
+	opacity: 1;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+
 @media screen and (max-width: 800px) {
 	.info_about_product {
 		width: 100%;
@@ -125,8 +214,9 @@
 	.widget-product {
 		display: none;
 	}
-	.mobile {
+	.widget-product.mobile {
 		width: 100%;
+		max-width: 100%;
 		display: block;
 	}
 	.wrapper_reverse {
@@ -139,6 +229,9 @@
 	.wrapper-buttons {
 		display: none;
 	}
+	.dots{
+		display: block;
+	}
 	.desktop {
 		width: 100%;
 		position: fixed;
@@ -150,7 +243,12 @@
 		justify-content: space-between;
 	}
 	.desktop > button {
-		width: 150px
-		;
+		width: 150px;
+	}
+	.productSwiper {
+		display: none;
+	}
+	.productSwiperSmall{
+		width: 100%;
 	}
 }

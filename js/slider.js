@@ -4,7 +4,7 @@ const swiper = new Swiper('.mySwiper', {
 	pagination: {
 		el: '.swiper-pagination',
 		clickable: true,
-		top : 200,
+		top: 200,
 	},
 	autoplay: {
 		delay: 2500,
@@ -57,9 +57,24 @@ var swiperBanner = new Swiper('.bannerSwiper', {
 		el: '.swiper-pagination',
 	},
 })
-var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-	return new bootstrap.Popover(popoverTriggerEl)
+
+const swiperDetailProduct = new Swiper('.productSwiper', {
+	spaceBetween: 10,
+	slidesPerView: 4,
+	direction: 'vertical',
+	freeMode: true,
+	watchSlidesProgress: true,
 })
-
-
+const swiper2 = new Swiper('.productSwiperSmall', {
+	spaceBetween: 10,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	thumbs: {
+		swiper: swiperDetailProduct,
+	},
+	pagination: {
+		el: '.swiper-pagination',
+	},
+})

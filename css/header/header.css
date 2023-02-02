@@ -10,7 +10,6 @@ header {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
 	position: relative;
 }
 nav {
@@ -18,7 +17,7 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0.5rem 0;
+	padding: 0.2rem 0;
 }
 
 .list_nav {
