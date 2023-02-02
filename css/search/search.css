@@ -1,0 +1,20 @@
+.wrapper_notfound {
+	width: 350px;
+	padding: 0 15px;
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+.not-found-img {
+	width: 72px;
+	height: 72px;
+	border-radius: 28px;
+	margin: 0 auto;
+}
+.wrapper_notfound > h2 {
+	margin: 24px 0 8px;
+}
+.wrapper_notfound > p {
+	margin-bottom: 24px;
+}
