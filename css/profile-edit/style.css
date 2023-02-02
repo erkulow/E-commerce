@@ -1,0 +1,59 @@
+.wrapper-profile {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+	flex-direction: column;
+}
+.wrapper-profile > div > img {
+	margin-bottom: 16px;
+}
+.wrapper__qr {
+	margin-top: 24px;
+}
+.wrapper-under-profile {
+	display: none;
+	flex-direction: column;
+	padding: 20px;
+	text-align: start;
+}
+.wrapper-under-profile > div {
+	padding: 12px;
+}
+
+.text_edit {
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 16px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.6px;
+	color: #f08222;
+}
+.label {
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	/* identical to box height, or 133% */
+	text-align: start !important;
+	letter-spacing: 0.4px;
+
+	/* Color/Light/Brand/Text/Secondary */
+
+	color: #99a2ad;
+}
+.label input {
+    font-size: 14px;
+}
+@media screen and (max-width: 460px) {
+	.wrapper-under-profile {
+		display: block;
+	}
+}
+

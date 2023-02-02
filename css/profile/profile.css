@@ -1,0 +1,31 @@
+.wrapper-profile {
+	text-align: center;
+}
+.wrapper-profile > div > img {
+	margin-bottom: 16px;
+}
+.wrapper__qr {
+	margin-top: 24px;
+}
+.wrapper-under-profile {
+	display: none;
+	flex-direction: column;
+	padding: 20px;
+	text-align: start;
+}
+.wrapper-under-profile > div {
+	padding: 12px;
+}
+@media screen and (max-width: 460px) {
+	.wrapper-under-profile {
+		display: block;
+		padding: 0;
+		margin-top: 29px;
+	}
+	.wrapper-under-profile div {
+		padding: 10px 0;
+	}
+	.wrapper-under-profile div h3 {
+		font-size: 17px;
+	}
+}
