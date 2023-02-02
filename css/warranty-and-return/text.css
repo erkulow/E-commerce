@@ -70,6 +70,11 @@
 .mobile-bg {
 	background-color: #f5f7fb;
 }
+.wrapper__map {
+	width: 100%;
+	margin-top: 10px;
+}
+
 @media screen and (max-width: 1000px) {
 	.left-text {
 		display: none;
@@ -91,5 +96,11 @@
 	}
 	.second-block {
 		padding: 0;
+	}
+	.wrapper__map > img {
+		width: 90%;
+	}
+	.wrapper__map {
+		text-align: center;
 	}
 }
