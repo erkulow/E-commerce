@@ -78,3 +78,14 @@ const swiper2 = new Swiper('.productSwiperSmall', {
 		el: '.swiper-pagination',
 	},
 })
+
+var cardSwiper = new Swiper('.swiperCard', {
+	autoplay: {
+		delay: 1500,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		dynamicBullets: true,
+	},
+})

@@ -23,6 +23,8 @@ figure {
 	display: flex;
 	justify-content: center;
 	object-position: center;
+	width: 100%;
+	height: 100%;
 }
 .wrapper_img img {
 	width: 100%;
@@ -141,6 +143,7 @@ figure {
 		#00bcd4;
 	border-radius: 16px;
 	padding: 4px 8px;
+	z-index: 100;
 }
 .product_of_the_week {
 	position: absolute;
@@ -178,6 +181,7 @@ figure {
 	position: absolute;
 	right: 8px;
 	margin-top: 10px;
+	z-index: 100;
 }
 .heart_card > img {
 	width: 20px;
@@ -201,5 +205,25 @@ figure {
 	}
 	.new {
 		font-size: 14px;
+		z-index: 100;
 	}
+}
+.sliderWrapper {
+	max-width: 100%;
+	max-height: 200px;
+}
+
+.swiperCard {
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+.dots_card .swiper-pagination-bullet {
+	background-color: rgb(21, 60, 118) !important;
+}
+
+.dots_card .swiper-pagination-bullet-active {
+	background-color: black !important;
 }
