@@ -25,6 +25,8 @@ nav {
 	display: flex;
 	align-items: center;
 	gap: 24px;
+}
+.list_nav > li > a{
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 20px;
@@ -34,8 +36,8 @@ nav {
 .list_nav > li {
 	cursor: pointer;
 }
-.list_nav > li:hover {
-	color: #3a3a3a;
+.list_nav > li > a:hover {
+	color: #3a3a3a !important;
 }
 
 .language_wrapper {

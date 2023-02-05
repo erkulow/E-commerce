@@ -9,6 +9,9 @@
 	transition: all 0.2s;
 	list-style: none;
 }
+a {
+	text-decoration: none !important;
+}
 button {
 	border: 1px solid transparent;
 }
@@ -61,14 +64,14 @@ body {
 	font-weight: 600;
 	font-size: 16px;
 	letter-spacing: 0.6px;
-	color: #ffffff;
+	color: #ffffff !important;
 	cursor: pointer;
 }
 
 .outline_button {
 	border: 1px solid var(--primary-color);
 	background: white;
-	color: var(--primary-color);
+	color: var(--primary-color) !important;
 }
 
 .base_button:hover {
@@ -80,7 +83,7 @@ body {
 
 .outline_button:hover {
 	background: var(--primary-color);
-	color: white;
+	color: white !important;
 	opacity: 1;
 }
 
