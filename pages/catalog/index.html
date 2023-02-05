@@ -1,1591 +1,1717 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Document</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
 
-    <link rel="stylesheet" href="../../css/cards/card.css"/>
-    <link rel="stylesheet" href="../../css/global.css"/>
-    <link rel="stylesheet" href="../../css/home/style.css"/>
-    <link rel="stylesheet" href="../../css/header/header.css"/>
-    <link rel="stylesheet" href="../../css/footer/footer.css"/>
-    <link rel="stylesheet" href="../../css/catalog/style.css"/>
-    <link rel="stylesheet" href="../../css/cards/catalog.css"/>
+		<link rel="stylesheet" href="../../css/cards/card.css" />
+		<link rel="stylesheet" href="../../css/global.css" />
+		<link rel="stylesheet" href="../../css/home/style.css" />
+		<link rel="stylesheet" href="../../css/header/header.css" />
+		<link rel="stylesheet" href="../../css/footer/footer.css" />
+		<link rel="stylesheet" href="../../css/catalog/style.css" />
+		<link rel="stylesheet" href="../../css/cards/catalog.css" />
 
-    <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css"/>
-    <style>
-        .popup a {
-            background: transparent !important;
-            border: none !important;
-            color: black !important;
-        }
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css" />
+		<style>
+			.popup a {
+				background: transparent !important;
+				border: none !important;
+				color: black !important;
+			}
 
-        .popup a:hover {
-            color: black !important;
-        }
-    </style>
-</head>
-<body>
-<!-- menu toggle header -->
-<div
-        class="offcanvas offcanvas-start header_menu"
-        tabindex="-1"
-        id="offcanvasExample"
-        aria-labelledby="offcanvasExampleLabel"
->
-    <div class="offcanvas-header">
-        <button
-                type="button"
-                class="btn-close text-reset"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-        ></button>
-        <div class="logo">
-            <img src="../../assets/icons/logoCaravan.svg" alt=""/>
-        </div>
-        <button class="icon_btn">
-            <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                        d="M19.7644 18.5889L14.7948 13.6188C16.1491 11.9623 16.815 9.84866 16.6547 7.71497C16.4944 5.58128 15.5202 3.59083 13.9336 2.15534C12.347 0.719841 10.2694 -0.0508742 8.13061 0.00260835C5.99177 0.0560909 3.95531 0.929679 2.44245 2.44268C0.929593 3.95568 0.0560857 5.99233 0.00260811 8.13136C-0.0508695 10.2704 0.719775 12.3482 2.15514 13.9349C3.5905 15.5216 5.58076 16.4959 7.71426 16.6562C9.84775 16.8165 11.9612 16.1506 13.6176 14.7962L18.5872 19.7663C18.7442 19.9179 18.9545 20.0019 19.1728 20C19.3911 19.9981 19.5999 19.9105 19.7543 19.7561C19.9087 19.6017 19.9962 19.3929 19.9981 19.1746C20 18.9563 19.9161 18.7459 19.7644 18.5889ZM8.35237 15.0143C7.03503 15.0143 5.74728 14.6237 4.65195 13.8917C3.55663 13.1598 2.70292 12.1194 2.1988 10.9023C1.69468 9.6851 1.56277 8.34575 1.81977 7.05361C2.07677 5.76146 2.71113 4.57455 3.64263 3.64297C4.57413 2.71138 5.76093 2.07697 7.05296 1.81994C8.34498 1.56292 9.6842 1.69483 10.9013 2.199C12.1183 2.70317 13.1586 3.55695 13.8904 4.65238C14.6223 5.74781 15.0129 7.03568 15.0129 8.35314C15.011 10.1192 14.3086 11.8123 13.0599 13.0611C11.8112 14.3099 10.1183 15.0124 8.35237 15.0143Z"
-                        fill="#8090A3"
-                />
-            </svg>
-        </button>
-    </div>
+			.popup a:hover {
+				color: black !important;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- menu toggle header -->
+		<div
+			class="offcanvas offcanvas-start header_menu"
+			tabindex="-1"
+			id="offcanvasExample"
+			aria-labelledby="offcanvasExampleLabel"
+		>
+			<div class="offcanvas-header">
+				<button
+					type="button"
+					class="btn-close text-reset"
+					data-bs-dismiss="offcanvas"
+					aria-label="Close"
+				></button>
+				<div class="logo">
+					<img src="../../assets/icons/logoCaravan.svg" alt="" />
+				</div>
+				<button class="icon_btn">
+					<svg
+						width="20"
+						height="20"
+						viewBox="0 0 20 20"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M19.7644 18.5889L14.7948 13.6188C16.1491 11.9623 16.815 9.84866 16.6547 7.71497C16.4944 5.58128 15.5202 3.59083 13.9336 2.15534C12.347 0.719841 10.2694 -0.0508742 8.13061 0.00260835C5.99177 0.0560909 3.95531 0.929679 2.44245 2.44268C0.929593 3.95568 0.0560857 5.99233 0.00260811 8.13136C-0.0508695 10.2704 0.719775 12.3482 2.15514 13.9349C3.5905 15.5216 5.58076 16.4959 7.71426 16.6562C9.84775 16.8165 11.9612 16.1506 13.6176 14.7962L18.5872 19.7663C18.7442 19.9179 18.9545 20.0019 19.1728 20C19.3911 19.9981 19.5999 19.9105 19.7543 19.7561C19.9087 19.6017 19.9962 19.3929 19.9981 19.1746C20 18.9563 19.9161 18.7459 19.7644 18.5889ZM8.35237 15.0143C7.03503 15.0143 5.74728 14.6237 4.65195 13.8917C3.55663 13.1598 2.70292 12.1194 2.1988 10.9023C1.69468 9.6851 1.56277 8.34575 1.81977 7.05361C2.07677 5.76146 2.71113 4.57455 3.64263 3.64297C4.57413 2.71138 5.76093 2.07697 7.05296 1.81994C8.34498 1.56292 9.6842 1.69483 10.9013 2.199C12.1183 2.70317 13.1586 3.55695 13.8904 4.65238C14.6223 5.74781 15.0129 7.03568 15.0129 8.35314C15.011 10.1192 14.3086 11.8123 13.0599 13.0611C11.8112 14.3099 10.1183 15.0124 8.35237 15.0143Z"
+							fill="#8090A3"
+						/>
+					</svg>
+				</button>
+			</div>
 
-    <div class="offcanvas-body menu_header">
-        <h1 class="title" style="font-size: 19px">
-            Войдите или зарегистрируйтесь
-        </h1>
-        <p class="text">
-            Чтобы делать покупки, оставлять отзывы, и пользоваться
-            персональными скидками.
-        </p>
-        <br/>
-        <div
-                class="d-flex align-items-start justify-content-between gap-1"
-        >
-            <button
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                    data-bs-toggle="modal"
-                    data-bs-target="#signin-modal"
-                    class="w-100 base_button"
-            >
-                Вход
-            </button>
-            <button
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                    data-bs-toggle="modal"
-                    data-bs-target="#signup-modal"
-                    class="w-100 base_button outline_button"
-            >
-                Регистрация
-            </button>
-        </div>
-        <br/>
-        <ul class="list_header_menu d-flex flex-column gap-4">
-            <li><a href="#"> <img src="../../assets/icons/menu-icons/label.svg" alt=""> Акции</a></li>
-            <li><a href="#"><img src="../../assets/icons/menu-icons/price-sticker.svg"> Новинки</a></li>
-            <li><a href="#"><img src="../../assets/icons/menu-icons/discount (1).svg" alt=""> Лучшие предложения</a>
-            </li>
-            <li><a href="#"> <img src="../../assets/icons/menu-icons/shopping-bag.svg" alt=""> Товары недели</a></li>
-        </ul>
-        <br/>
-        <ul class="list_header_menu d-flex flex-column gap-4">
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Вопросы и ответы</a></li>
-            <li><a href="#">Лучшие предложения</a></li>
-            <li><a href="#">Доставка и оплата</a></li>
-            <li><a href="#">Гарантия и возврат</a></li>
-            <li><a href="#">Для продавцов</a></li>
-        </ul>
-        <br/>
-        <div class="d-flex flex-column gap-3">
-            <p class="text">Наши магазины</p>
-            <p class="title gap-2">
-                <svg
-                        width="14"
-                        height="20"
-                        viewBox="0 0 14 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z"
-                            fill="#8090A3"
-                    />
-                </svg>
-                ул. Суйоркулова 20/3
-            </p>
-            <p class="title gap-2">
-                <svg
-                        width="14"
-                        height="20"
-                        viewBox="0 0 14 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z"
-                            fill="#8090A3"
-                    />
-                </svg>
-                ул. Суйоркулова 20/3
-            </p>
-        </div>
-        <br/>
-        <br/>
-        <div class="w-100 d-flex gap-3 align-items-start">
-            <a href="#"><img src="../../assets/icons/whatsapp.svg" alt=""/></a>
-            <a href="#"><img src="../../assets/icons/telegram.svg" alt=""/></a>
-            <a href="#"><img src="../../assets/icons/Facebook.svg" alt=""/></a>
-            <a href=""><img src="../../assets/icons/Instagram.svg" alt=""/></a>
-        </div>
-    </div>
-</div>
+			<div class="offcanvas-body menu_header">
+				<h1 class="title" style="font-size: 19px">
+					Войдите или зарегистрируйтесь
+				</h1>
+				<p class="text">
+					Чтобы делать покупки, оставлять отзывы, и пользоваться
+					персональными скидками.
+				</p>
+				<br />
+				<div
+					class="d-flex align-items-start justify-content-between gap-1"
+				>
+					<button
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+						data-bs-toggle="modal"
+						data-bs-target="#signin-modal"
+						class="w-100 base_button"
+					>
+						Вход
+					</button>
+					<button
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+						data-bs-toggle="modal"
+						data-bs-target="#signup-modal"
+						class="w-100 base_button outline_button"
+					>
+						Регистрация
+					</button>
+				</div>
+				<br />
+				<ul class="list_header_menu d-flex flex-column gap-4">
+					<li>
+						<a href="#">
+							<img
+								src="../../assets/icons/menu-icons/label.svg"
+								alt=""
+							/>
+							Акции</a
+						>
+					</li>
+					<li>
+						<a href="#"
+							><img
+								src="../../assets/icons/menu-icons/price-sticker.svg"
+							/>
+							Новинки</a
+						>
+					</li>
+					<li>
+						<a href="#"
+							><img
+								src="../../assets/icons/menu-icons/discount (1).svg"
+								alt=""
+							/>
+							Лучшие предложения</a
+						>
+					</li>
+					<li>
+						<a href="#">
+							<img
+								src="../../assets/icons/menu-icons/shopping-bag.svg"
+								alt=""
+							/>
+							Товары недели</a
+						>
+					</li>
+				</ul>
+				<br />
+				<ul class="list_header_menu d-flex flex-column gap-4">
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Вопросы и ответы</a></li>
+					<li><a href="#">Лучшие предложения</a></li>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">Гарантия и возврат</a></li>
+					<li><a href="#">Для продавцов</a></li>
+				</ul>
+				<br />
+				<div class="d-flex flex-column gap-3">
+					<p class="text">Наши магазины</p>
+					<p class="title gap-2">
+						<svg
+							width="14"
+							height="20"
+							viewBox="0 0 14 20"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z"
+								fill="#8090A3"
+							/>
+						</svg>
+						ул. Суйоркулова 20/3
+					</p>
+					<p class="title gap-2">
+						<svg
+							width="14"
+							height="20"
+							viewBox="0 0 14 20"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z"
+								fill="#8090A3"
+							/>
+						</svg>
+						ул. Суйоркулова 20/3
+					</p>
+				</div>
+				<br />
+				<br />
+				<div class="w-100 d-flex gap-3 align-items-start">
+					<a href="#"
+						><img src="../../assets/icons/whatsapp.svg" alt=""
+					/></a>
+					<a href="#"
+						><img src="../../assets/icons/telegram.svg" alt=""
+					/></a>
+					<a href="#"
+						><img src="../../assets/icons/Facebook.svg" alt=""
+					/></a>
+					<a href=""
+						><img src="../../assets/icons/Instagram.svg" alt=""
+					/></a>
+				</div>
+			</div>
+		</div>
 
-<!-- sign up modal -->
+		<!-- sign up modal -->
 
-<div
-        class="simple-modal modal fade"
-        id="signup-modal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
->
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div
-                    class="p-3 d-flex align-items-center justify-content-between w-100"
-            >
-                <div></div>
-                <h3 class="m-0">Регистрация</h3>
-                <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                ></button>
-            </div>
-            <div class="p-3">
-                <input
-                        class="base_input"
-                        type="tel"
-                        placeholder="Телефон"
-                />
-            </div>
-            <div class="p-4">
-                <a href="#" class="base_button w-100">
-                    Зарегистрироваться
-                </a>
-            </div>
-            <br/>
-            <div class="p-3 px-4">
-                <p class="base_text">
-                    Я соглашаюсь с условиями
-                    <a href="#"
-                    >пользовательского соглашения и обработки
-                        персональных данных</a
-                    >
-                </p>
-            </div>
-            <div class="p-3 d-flex justify-content-center">
-                <p class="text" style="font-size: 13px">или</p>
-            </div>
-            <div class="p-3 px-4">
-                <a
-                        href="#"
-                        type="button"
-                        class="base_button outline_button w-100"
-                >
-                    Войти
-                </a>
-                <br/>
-            </div>
-        </div>
-    </div>
-</div>
+		<div
+			class="simple-modal modal fade"
+			id="signup-modal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div
+						class="p-3 d-flex align-items-center justify-content-between w-100"
+					>
+						<div></div>
+						<h3 class="m-0">Регистрация</h3>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="p-3">
+						<input
+							class="base_input"
+							type="tel"
+							placeholder="Телефон"
+						/>
+					</div>
+					<div class="p-4">
+						<a href="#" class="base_button w-100">
+							Зарегистрироваться
+						</a>
+					</div>
+					<br />
+					<div class="p-3 px-4">
+						<p class="base_text">
+							Я соглашаюсь с условиями
+							<a href="#"
+								>пользовательского соглашения иобработки
+								персональных данных</a
+							>
+						</p>
+					</div>
+					<div class="p-3 d-flex justify-content-center">
+						<p class="text" style="font-size: 13px">или</p>
+					</div>
+					<div class="p-3 px-4">
+						<a
+							href="#"
+							type="button"
+							class="base_button outline_button w-100"
+						>
+							Войти
+						</a>
+						<br />
+					</div>
+				</div>
+			</div>
+		</div>
 
-<!-- sign in modal -->
+		<!-- sign in modal -->
 
-<div
-        class="simple-modal modal fade"
-        id="signin-modal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
->
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div
-                    class="p-3 d-flex align-items-center justify-content-between w-100"
-            >
-                <div></div>
-                <h3 class="m-0">Вход</h3>
-                <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                ></button>
-            </div>
-            <div class="p-3">
-                <input
-                        class="base_input"
-                        type="tel"
-                        placeholder="Телефон"
-                />
-                <br/>
-                <br/>
-                <input
-                        class="base_input"
-                        type="tel"
-                        placeholder="Пароль"
-                />
-            </div>
-            <div class="p-4">
-                <a href="#" class="base_button w-100">Вход</a>
-            </div>
-            <br/>
-            <div
-                    class="p-3 px-4 d-flex align-items-center justify-content-evenly"
-            >
-                <p>
-                    <a style="font-size: 16px; cursor: pointer"
-                       class="text" href="">
-                        Запомнить меня
-                    </a>
-                </p>
-                <p class="text">
-                    <a style="font-size: 16px; cursor: pointer" href="#" class="text">
-                        Забыли пароль?
-                    </a>
-                </p>
-            </div>
-            <div class="p-3 d-flex justify-content-center">
-                <p class="text" style="font-size: 13px">или</p>
-            </div>
-            <div class="p-3 px-4">
-                <a href="#"
-                   type="button"
-                   class="base_button outline_button w-100"
-                >
-                    Зарегистрироваться
-                </a>
-                <br/>
-            </div>
-        </div>
-    </div>
-</div>
+		<div
+			class="simple-modal modal fade"
+			id="signin-modal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div
+						class="p-3 d-flex align-items-center justify-content-between w-100"
+					>
+						<div></div>
+						<h3 class="m-0">Вход</h3>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="p-3">
+						<input
+							class="base_input"
+							type="tel"
+							placeholder="Телефон"
+						/>
+						<br />
+						<br />
+						<input
+							class="base_input"
+							type="tel"
+							placeholder="Пароль"
+						/>
+					</div>
+					<div class="p-4">
+						<a href="#" class="base_button w-100">Вход</a>
+					</div>
+					<br />
+					<div
+						class="p-3 px-4 d-flex align-items-center justify-content-evenly"
+					>
+						<p>
+							<a
+								style="font-size: 16px; cursor: pointer"
+								class="text"
+								href=""
+							>
+								Запомнить меня
+							</a>
+						</p>
+						<p class="text">
+							<a
+								style="font-size: 16px; cursor: pointer"
+								href="#"
+								class="text"
+							>
+								Забыли пароль?
+							</a>
+						</p>
+					</div>
+					<div class="p-3 d-flex justify-content-center">
+						<p class="text" style="font-size: 13px">или</p>
+					</div>
+					<div class="p-3 px-4">
+						<a
+							href="#"
+							type="button"
+							class="base_button outline_button w-100"
+						>
+							Зарегистрироваться
+						</a>
+						<br />
+					</div>
+				</div>
+			</div>
+		</div>
 
-<!-- header -->
+		<!-- header -->
 
-<div class="header">
-    <div class="simple-container">
-        <header>
-            <nav>
-                <ul class="list_nav d-flex">
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Вопросы и ответы</a></li>
-                    <li><a href="#">Доставка и оплата</a></li>
-                    <li><a href="#">Гарантия и возврат</a></li>
-                    <li><a href="#">Для продавцов</a></li>
-                    <li><a href="#">Наши магазины</a></li>
-                </ul>
-                <div class="language_wrapper">
-                    <div class="dropdown popup">
-                        <a
-                                class="btn btn-secondary dropdown-toggle"
-                                href="#"
-                                role="button"
-                                id="dropdownMenuLink"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                        >
-                            Ru
-                        </a>
-                        <ul
-                                class="dropdown-menu"
-                                aria-labelledby="dropdownMenuLink"
-                        >
-                            <li>
-                                <a class="dropdown-item" href="#">Ru</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Kg</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">En</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <div class="sub_header">
-                <div class="burger">
-                    <a
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasExample"
-                            aria-controls="offcanvasExample"
-                            class="icon_btn"
-                    >
-                        <svg
-                                width="20"
-                                height="14"
-                                viewBox="0 0 20 14"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                    d="M19.1304 6.08691H0.869553C0.389308 6.08691 0 6.47622 0 6.95647C0 7.43671 0.389308 7.82602 0.869553 7.82602H19.1304C19.6107 7.82602 20 7.43671 20 6.95647C20 6.47622 19.6107 6.08691 19.1304 6.08691Z"
-                                    fill="#8090A3"
-                            />
-                            <path
-                                    d="M0.869553 1.73911H19.1304C19.6107 1.73911 20 1.3498 20 0.869553C20 0.389308 19.6107 0 19.1304 0H0.869553C0.389308 0 0 0.389308 0 0.869553C0 1.3498 0.389308 1.73911 0.869553 1.73911Z"
-                                    fill="#8090A3"
-                            />
-                            <path
-                                    d="M19.1304 12.174H0.869553C0.389308 12.174 0 12.5633 0 13.0435C0 13.5238 0.389308 13.9131 0.869553 13.9131H19.1304C19.6107 13.9131 20 13.5238 20 13.0435C20 12.5633 19.6107 12.174 19.1304 12.174Z"
-                                    fill="#8090A3"
-                            />
-                        </svg>
-                    </a>
-                </div>
-                <div class="logo">
-                    <a href="#">
-                        <img src="../../assets/icons/logoCaravan.svg" alt=""/>
-                    </a>
-                </div>
-                <div class="wrapper_category">
-                    <a href="#" id="catalog" class="base_button">
-                        <svg
-                                width="18"
-                                height="18"
-                                viewBox="0 0 18 18"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                    d="M5.5278 0.666626H3.44447C2.70775 0.666626 2.00121 0.959284 1.48028 1.48022C0.959345 2.00115 0.666687 2.70769 0.666687 3.4444V5.52774C0.666687 6.26445 0.959345 6.97099 1.48028 7.49192C2.00121 8.01286 2.70775 8.30552 3.44447 8.30552H5.5278C6.26451 8.30552 6.97105 8.01286 7.49198 7.49192C8.01292 6.97099 8.30558 6.26445 8.30558 5.52774V3.4444C8.30558 2.70769 8.01292 2.00115 7.49198 1.48022C6.97105 0.959284 6.26451 0.666626 5.5278 0.666626ZM6.91669 5.52774C6.91669 5.89609 6.77036 6.24936 6.50989 6.50983C6.24942 6.7703 5.89615 6.91663 5.5278 6.91663H3.44447C3.07611 6.91663 2.72284 6.7703 2.46237 6.50983C2.20191 6.24936 2.05558 5.89609 2.05558 5.52774V3.4444C2.05558 3.07605 2.20191 2.72278 2.46237 2.46231C2.72284 2.20184 3.07611 2.05552 3.44447 2.05552H5.5278C5.89615 2.05552 6.24942 2.20184 6.50989 2.46231C6.77036 2.72278 6.91669 3.07605 6.91669 3.4444V5.52774Z"
-                                    fill="white"
-                            />
-                            <path
-                                    d="M14.5556 0.666626H12.4722C11.7355 0.666626 11.029 0.959284 10.5081 1.48022C9.98712 2.00115 9.69447 2.70769 9.69447 3.4444V5.52774C9.69447 6.26445 9.98712 6.97099 10.5081 7.49192C11.029 8.01286 11.7355 8.30552 12.4722 8.30552H14.5556C15.2923 8.30552 15.9988 8.01286 16.5198 7.49192C17.0407 6.97099 17.3334 6.26445 17.3334 5.52774V3.4444C17.3334 2.70769 17.0407 2.00115 16.5198 1.48022C15.9988 0.959284 15.2923 0.666626 14.5556 0.666626ZM15.9445 5.52774C15.9445 5.89609 15.7981 6.24936 15.5377 6.50983C15.2772 6.7703 14.9239 6.91663 14.5556 6.91663H12.4722C12.1039 6.91663 11.7506 6.7703 11.4902 6.50983C11.2297 6.24936 11.0834 5.89609 11.0834 5.52774V3.4444C11.0834 3.07605 11.2297 2.72278 11.4902 2.46231C11.7506 2.20184 12.1039 2.05551 12.4722 2.05551H14.5556C14.9239 2.05551 15.2772 2.20184 15.5377 2.46231C15.7981 2.72278 15.9445 3.07605 15.9445 3.4444V5.52774Z"
-                                    fill="white"
-                            />
-                            <path
-                                    d="M5.5278 9.6944H3.44446C2.70775 9.6944 2.00121 9.98706 1.48028 10.508C0.959345 11.0289 0.666687 11.7355 0.666687 12.4722V14.5555C0.666687 15.2922 0.959345 15.9988 1.48028 16.5197C2.00121 17.0406 2.70775 17.3333 3.44446 17.3333H5.5278C6.26451 17.3333 6.97105 17.0406 7.49198 16.5197C8.01292 15.9988 8.30558 15.2922 8.30558 14.5555V12.4722C8.30558 11.7355 8.01292 11.0289 7.49198 10.508C6.97105 9.98706 6.26451 9.6944 5.5278 9.6944ZM6.91669 14.5555C6.91669 14.9239 6.77036 15.2771 6.50989 15.5376C6.24942 15.7981 5.89615 15.9444 5.5278 15.9444H3.44446C3.07611 15.9444 2.72284 15.7981 2.46237 15.5376C2.2019 15.2771 2.05558 14.9239 2.05558 14.5555V12.4722C2.05558 12.1038 2.2019 11.7506 2.46237 11.4901C2.72284 11.2296 3.07611 11.0833 3.44446 11.0833H5.5278C5.89615 11.0833 6.24942 11.2296 6.50989 11.4901C6.77036 11.7506 6.91669 12.1038 6.91669 12.4722V14.5555Z"
-                                    fill="white"
-                            />
-                            <path
-                                    d="M14.5556 9.6944H12.4722C11.7355 9.6944 11.029 9.98706 10.5081 10.508C9.98712 11.0289 9.69447 11.7355 9.69447 12.4722V14.5555C9.69447 15.2922 9.98712 15.9988 10.5081 16.5197C11.029 17.0406 11.7355 17.3333 12.4722 17.3333H14.5556C15.2923 17.3333 15.9988 17.0406 16.5198 16.5197C17.0407 15.9988 17.3334 15.2922 17.3334 14.5555V12.4722C17.3334 11.7355 17.0407 11.0289 16.5198 10.508C15.9988 9.98706 15.2923 9.6944 14.5556 9.6944ZM15.9445 14.5555C15.9445 14.9239 15.7981 15.2771 15.5377 15.5376C15.2772 15.7981 14.9239 15.9444 14.5556 15.9444H12.4722C12.1039 15.9444 11.7506 15.7981 11.4902 15.5376C11.2297 15.2771 11.0834 14.9239 11.0834 14.5555V12.4722C11.0834 12.1038 11.2297 11.7506 11.4902 11.4901C11.7506 11.2296 12.1039 11.0833 12.4722 11.0833H14.5556C14.9239 11.0833 15.2772 11.2296 15.5377 11.4901C15.7981 11.7506 15.9445 12.1038 15.9445 12.4722V14.5555Z"
-                                    fill="white"
-                            />
-                        </svg>
-                        Category
-                    </a>
-                    <div class="wrapper_search">
-                        <svg
-                                class="search_icon"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 20 20"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                    d="M19.7644 18.5889L14.7948 13.6188C16.1491 11.9623 16.815 9.84866 16.6547 7.71497C16.4944 5.58128 15.5202 3.59083 13.9336 2.15534C12.347 0.719841 10.2694 -0.0508742 8.13061 0.00260835C5.99177 0.0560909 3.95531 0.929679 2.44245 2.44268C0.929593 3.95568 0.0560857 5.99233 0.00260811 8.13136C-0.0508695 10.2704 0.719775 12.3482 2.15514 13.9349C3.5905 15.5216 5.58076 16.4959 7.71426 16.6562C9.84775 16.8165 11.9612 16.1506 13.6176 14.7962L18.5872 19.7663C18.7442 19.9179 18.9545 20.0019 19.1728 20C19.3911 19.9981 19.5999 19.9105 19.7543 19.7561C19.9087 19.6017 19.9962 19.3929 19.9981 19.1746C20 18.9563 19.9161 18.7459 19.7644 18.5889ZM8.35237 15.0143C7.03503 15.0143 5.74728 14.6237 4.65195 13.8917C3.55663 13.1598 2.70292 12.1194 2.1988 10.9023C1.69468 9.6851 1.56277 8.34575 1.81977 7.05361C2.07677 5.76146 2.71113 4.57455 3.64263 3.64297C4.57413 2.71138 5.76093 2.07697 7.05296 1.81994C8.34498 1.56292 9.6842 1.69483 10.9013 2.199C12.1183 2.70317 13.1586 3.55695 13.8904 4.65238C14.6223 5.74781 15.0129 7.03568 15.0129 8.35314C15.011 10.1192 14.3086 11.8123 13.0599 13.0611C11.8112 14.3099 10.1183 15.0124 8.35237 15.0143Z"
-                                    fill="#8090A3"
-                            />
-                        </svg>
-                        <input
-                                class="search_input"
-                                type="text"
-                                placeholder="Search"
-                        />
-                    </div>
-                    <a href="/pages/favorites/index.html" class="icon_btn">
-                        <svg
-                                width="24"
-                                height="19"
-                                viewBox="0 0 24 19"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                    d="M22.713 4.077C22.4317 3.73944 22.0796 3.46795 21.6815 3.28182C21.2835 3.09568 20.8494 2.99946 20.41 3H4.242L4.2 2.649C4.11405 1.91942 3.76338 1.24673 3.21449 0.758478C2.6656 0.270223 1.95663 0.000341793 1.222 0L1 0C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1C0 1.26522 0.105357 1.51957 0.292893 1.70711C0.48043 1.89464 0.734784 2 1 2H1.222C1.46693 2.00003 1.70334 2.08996 1.88637 2.25272C2.06941 2.41547 2.18634 2.63975 2.215 2.883L3.591 14.583C3.73385 15.7998 4.31848 16.9218 5.23391 17.736C6.14934 18.5502 7.33185 19 8.557 19H19C19.2652 19 19.5196 18.8946 19.7071 18.7071C19.8946 18.5196 20 18.2652 20 18C20 17.7348 19.8946 17.4804 19.7071 17.2929C19.5196 17.1054 19.2652 17 19 17H8.557C7.93806 16.9983 7.3348 16.8051 6.82994 16.4471C6.32507 16.089 5.94331 15.5835 5.737 15H17.657C18.8293 15.0001 19.9643 14.5882 20.8638 13.8364C21.7633 13.0846 22.37 12.0407 22.578 10.887L23.363 6.533C23.4414 6.10101 23.4237 5.65707 23.3114 5.23264C23.1991 4.80821 22.9948 4.41368 22.713 4.077ZM21.4 6.178L20.614 10.532C20.4891 11.225 20.1245 11.852 19.5839 12.3032C19.0433 12.7544 18.3612 13.0011 17.657 13H5.419L4.478 5H20.41C20.5569 4.99912 20.7022 5.03062 20.8355 5.09226C20.9689 5.15389 21.087 5.24415 21.1815 5.35661C21.276 5.46907 21.3446 5.60097 21.3824 5.74294C21.4201 5.8849 21.4262 6.03344 21.4 6.178Z"
-                                    fill="#8090A3"
-                            />
-                        </svg>
-                    </a>
-                    <a href="/pages/cart/index.html" class="icon_btn">
-                        <svg
-                                width="24"
-                                height="19"
-                                viewBox="0 0 24 19"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                    d="M22.713 4.077C22.4317 3.73944 22.0796 3.46795 21.6815 3.28182C21.2835 3.09568 20.8494 2.99946 20.41 3H4.242L4.2 2.649C4.11405 1.91942 3.76338 1.24673 3.21449 0.758478C2.6656 0.270223 1.95663 0.000341793 1.222 0L1 0C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1C0 1.26522 0.105357 1.51957 0.292893 1.70711C0.48043 1.89464 0.734784 2 1 2H1.222C1.46693 2.00003 1.70334 2.08996 1.88637 2.25272C2.06941 2.41547 2.18634 2.63975 2.215 2.883L3.591 14.583C3.73385 15.7998 4.31848 16.9218 5.23391 17.736C6.14934 18.5502 7.33185 19 8.557 19H19C19.2652 19 19.5196 18.8946 19.7071 18.7071C19.8946 18.5196 20 18.2652 20 18C20 17.7348 19.8946 17.4804 19.7071 17.2929C19.5196 17.1054 19.2652 17 19 17H8.557C7.93806 16.9983 7.3348 16.8051 6.82994 16.4471C6.32507 16.089 5.94331 15.5835 5.737 15H17.657C18.8293 15.0001 19.9643 14.5882 20.8638 13.8364C21.7633 13.0846 22.37 12.0407 22.578 10.887L23.363 6.533C23.4414 6.10101 23.4237 5.65707 23.3114 5.23264C23.1991 4.80821 22.9948 4.41368 22.713 4.077ZM21.4 6.178L20.614 10.532C20.4891 11.225 20.1245 11.852 19.5839 12.3032C19.0433 12.7544 18.3612 13.0011 17.657 13H5.419L4.478 5H20.41C20.5569 4.99912 20.7022 5.03062 20.8355 5.09226C20.9689 5.15389 21.087 5.24415 21.1815 5.35661C21.276 5.46907 21.3446 5.60097 21.3824 5.74294C21.4201 5.8849 21.4262 6.03344 21.4 6.178Z"
-                                    fill="#8090A3"
-                            />
-                        </svg>
-                    </a>
-                </div>
-                <div class="wrapper_sign_btn">
-                    <a
-                            href="#"
-                            data-bs-toggle="modal"
-                            data-bs-target="#signup-modal"
-                            class="base_button outline_button"
-                    >
-                        Регистрация
-                    </a>
-                    <a
-                            href="#"
-                            data-bs-toggle="modal"
-                            data-bs-target="#signin-modal"
-                            style="width: 160px"
-                            class="base_button"
-                    >
-                        Вход
-                    </a>
-                </div>
-                <div class="burger">
-                    <button class="icon_btn">
-                        <svg
-                                width="20"
-                                height="20"
-                                viewBox="0 0 20 20"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                    d="M19.7644 18.5889L14.7948 13.6188C16.1491 11.9623 16.815 9.84866 16.6547 7.71497C16.4944 5.58128 15.5202 3.59083 13.9336 2.15534C12.347 0.719841 10.2694 -0.0508742 8.13061 0.00260835C5.99177 0.0560909 3.95531 0.929679 2.44245 2.44268C0.929593 3.95568 0.0560857 5.99233 0.00260811 8.13136C-0.0508695 10.2704 0.719775 12.3482 2.15514 13.9349C3.5905 15.5216 5.58076 16.4959 7.71426 16.6562C9.84775 16.8165 11.9612 16.1506 13.6176 14.7962L18.5872 19.7663C18.7442 19.9179 18.9545 20.0019 19.1728 20C19.3911 19.9981 19.5999 19.9105 19.7543 19.7561C19.9087 19.6017 19.9962 19.3929 19.9981 19.1746C20 18.9563 19.9161 18.7459 19.7644 18.5889ZM8.35237 15.0143C7.03503 15.0143 5.74728 14.6237 4.65195 13.8917C3.55663 13.1598 2.70292 12.1194 2.1988 10.9023C1.69468 9.6851 1.56277 8.34575 1.81977 7.05361C2.07677 5.76146 2.71113 4.57455 3.64263 3.64297C4.57413 2.71138 5.76093 2.07697 7.05296 1.81994C8.34498 1.56292 9.6842 1.69483 10.9013 2.199C12.1183 2.70317 13.1586 3.55695 13.8904 4.65238C14.6223 5.74781 15.0129 7.03568 15.0129 8.35314C15.011 10.1192 14.3086 11.8123 13.0599 13.0611C11.8112 14.3099 10.1183 15.0124 8.35237 15.0143Z"
-                                    fill="#8090A3"
-                            />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </header>
-    </div>
-</div>
+		<div class="header">
+			<div class="simple-container">
+				<header>
+					<nav>
+						<ul class="list_nav d-flex">
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Вопросы и ответы</a></li>
+							<li><a href="#">Доставка и оплата</a></li>
+							<li><a href="#">Гарантия и возврат</a></li>
+							<li><a href="#">Для продавцов</a></li>
+							<li><a href="#">Наши магазины</a></li>
+						</ul>
+						<div class="language_wrapper">
+							<div class="dropdown popup">
+								<a
+									class="btn btn-secondary dropdown-toggle"
+									href="#"
+									role="button"
+									id="dropdownMenuLink"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									Ru
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="dropdownMenuLink"
+								>
+									<li>
+										<a class="dropdown-item" href="#">Ru</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Kg</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">En</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+					<div class="sub_header">
+						<div class="burger">
+							<a
+								data-bs-toggle="offcanvas"
+								data-bs-target="#offcanvasExample"
+								aria-controls="offcanvasExample"
+								class="icon_btn"
+							>
+								<svg
+									width="20"
+									height="14"
+									viewBox="0 0 20 14"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M19.1304 6.08691H0.869553C0.389308 6.08691 0 6.47622 0 6.95647C0 7.43671 0.389308 7.82602 0.869553 7.82602H19.1304C19.6107 7.82602 20 7.43671 20 6.95647C20 6.47622 19.6107 6.08691 19.1304 6.08691Z"
+										fill="#8090A3"
+									/>
+									<path
+										d="M0.869553 1.73911H19.1304C19.6107 1.73911 20 1.3498 20 0.869553C20 0.389308 19.6107 0 19.1304 0H0.869553C0.389308 0 0 0.389308 0 0.869553C0 1.3498 0.389308 1.73911 0.869553 1.73911Z"
+										fill="#8090A3"
+									/>
+									<path
+										d="M19.1304 12.174H0.869553C0.389308 12.174 0 12.5633 0 13.0435C0 13.5238 0.389308 13.9131 0.869553 13.9131H19.1304C19.6107 13.9131 20 13.5238 20 13.0435C20 12.5633 19.6107 12.174 19.1304 12.174Z"
+										fill="#8090A3"
+									/>
+								</svg>
+							</a>
+						</div>
+						<div class="logo">
+							<a href="#">
+								<img
+									src="../../assets/icons/logoCaravan.svg"
+									alt=""
+								/>
+							</a>
+						</div>
+						<div class="wrapper_category">
+							<a href="#" id="catalog" class="base_button">
+								<svg
+									width="18"
+									height="18"
+									viewBox="0 0 18 18"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M5.5278 0.666626H3.44447C2.70775 0.666626 2.00121 0.959284 1.48028 1.48022C0.959345 2.00115 0.666687 2.70769 0.666687 3.4444V5.52774C0.666687 6.26445 0.959345 6.97099 1.48028 7.49192C2.00121 8.01286 2.70775 8.30552 3.44447 8.30552H5.5278C6.26451 8.30552 6.97105 8.01286 7.49198 7.49192C8.01292 6.97099 8.30558 6.26445 8.30558 5.52774V3.4444C8.30558 2.70769 8.01292 2.00115 7.49198 1.48022C6.97105 0.959284 6.26451 0.666626 5.5278 0.666626ZM6.91669 5.52774C6.91669 5.89609 6.77036 6.24936 6.50989 6.50983C6.24942 6.7703 5.89615 6.91663 5.5278 6.91663H3.44447C3.07611 6.91663 2.72284 6.7703 2.46237 6.50983C2.20191 6.24936 2.05558 5.89609 2.05558 5.52774V3.4444C2.05558 3.07605 2.20191 2.72278 2.46237 2.46231C2.72284 2.20184 3.07611 2.05552 3.44447 2.05552H5.5278C5.89615 2.05552 6.24942 2.20184 6.50989 2.46231C6.77036 2.72278 6.91669 3.07605 6.91669 3.4444V5.52774Z"
+										fill="white"
+									/>
+									<path
+										d="M14.5556 0.666626H12.4722C11.7355 0.666626 11.029 0.959284 10.5081 1.48022C9.98712 2.00115 9.69447 2.70769 9.69447 3.4444V5.52774C9.69447 6.26445 9.98712 6.97099 10.5081 7.49192C11.029 8.01286 11.7355 8.30552 12.4722 8.30552H14.5556C15.2923 8.30552 15.9988 8.01286 16.5198 7.49192C17.0407 6.97099 17.3334 6.26445 17.3334 5.52774V3.4444C17.3334 2.70769 17.0407 2.00115 16.5198 1.48022C15.9988 0.959284 15.2923 0.666626 14.5556 0.666626ZM15.9445 5.52774C15.9445 5.89609 15.7981 6.24936 15.5377 6.50983C15.2772 6.7703 14.9239 6.91663 14.5556 6.91663H12.4722C12.1039 6.91663 11.7506 6.7703 11.4902 6.50983C11.2297 6.24936 11.0834 5.89609 11.0834 5.52774V3.4444C11.0834 3.07605 11.2297 2.72278 11.4902 2.46231C11.7506 2.20184 12.1039 2.05551 12.4722 2.05551H14.5556C14.9239 2.05551 15.2772 2.20184 15.5377 2.46231C15.7981 2.72278 15.9445 3.07605 15.9445 3.4444V5.52774Z"
+										fill="white"
+									/>
+									<path
+										d="M5.5278 9.6944H3.44446C2.70775 9.6944 2.00121 9.98706 1.48028 10.508C0.959345 11.0289 0.666687 11.7355 0.666687 12.4722V14.5555C0.666687 15.2922 0.959345 15.9988 1.48028 16.5197C2.00121 17.0406 2.70775 17.3333 3.44446 17.3333H5.5278C6.26451 17.3333 6.97105 17.0406 7.49198 16.5197C8.01292 15.9988 8.30558 15.2922 8.30558 14.5555V12.4722C8.30558 11.7355 8.01292 11.0289 7.49198 10.508C6.97105 9.98706 6.26451 9.6944 5.5278 9.6944ZM6.91669 14.5555C6.91669 14.9239 6.77036 15.2771 6.50989 15.5376C6.24942 15.7981 5.89615 15.9444 5.5278 15.9444H3.44446C3.07611 15.9444 2.72284 15.7981 2.46237 15.5376C2.2019 15.2771 2.05558 14.9239 2.05558 14.5555V12.4722C2.05558 12.1038 2.2019 11.7506 2.46237 11.4901C2.72284 11.2296 3.07611 11.0833 3.44446 11.0833H5.5278C5.89615 11.0833 6.24942 11.2296 6.50989 11.4901C6.77036 11.7506 6.91669 12.1038 6.91669 12.4722V14.5555Z"
+										fill="white"
+									/>
+									<path
+										d="M14.5556 9.6944H12.4722C11.7355 9.6944 11.029 9.98706 10.5081 10.508C9.98712 11.0289 9.69447 11.7355 9.69447 12.4722V14.5555C9.69447 15.2922 9.98712 15.9988 10.5081 16.5197C11.029 17.0406 11.7355 17.3333 12.4722 17.3333H14.5556C15.2923 17.3333 15.9988 17.0406 16.5198 16.5197C17.0407 15.9988 17.3334 15.2922 17.3334 14.5555V12.4722C17.3334 11.7355 17.0407 11.0289 16.5198 10.508C15.9988 9.98706 15.2923 9.6944 14.5556 9.6944ZM15.9445 14.5555C15.9445 14.9239 15.7981 15.2771 15.5377 15.5376C15.2772 15.7981 14.9239 15.9444 14.5556 15.9444H12.4722C12.1039 15.9444 11.7506 15.7981 11.4902 15.5376C11.2297 15.2771 11.0834 14.9239 11.0834 14.5555V12.4722C11.0834 12.1038 11.2297 11.7506 11.4902 11.4901C11.7506 11.2296 12.1039 11.0833 12.4722 11.0833H14.5556C14.9239 11.0833 15.2772 11.2296 15.5377 11.4901C15.7981 11.7506 15.9445 12.1038 15.9445 12.4722V14.5555Z"
+										fill="white"
+									/>
+								</svg>
+								Category
+							</a>
+							<div class="wrapper_search">
+								<svg
+									class="search_icon"
+									width="20"
+									height="20"
+									viewBox="0 0 20 20"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M19.7644 18.5889L14.7948 13.6188C16.1491 11.9623 16.815 9.84866 16.6547 7.71497C16.4944 5.58128 15.5202 3.59083 13.9336 2.15534C12.347 0.719841 10.2694 -0.0508742 8.13061 0.00260835C5.99177 0.0560909 3.95531 0.929679 2.44245 2.44268C0.929593 3.95568 0.0560857 5.99233 0.00260811 8.13136C-0.0508695 10.2704 0.719775 12.3482 2.15514 13.9349C3.5905 15.5216 5.58076 16.4959 7.71426 16.6562C9.84775 16.8165 11.9612 16.1506 13.6176 14.7962L18.5872 19.7663C18.7442 19.9179 18.9545 20.0019 19.1728 20C19.3911 19.9981 19.5999 19.9105 19.7543 19.7561C19.9087 19.6017 19.9962 19.3929 19.9981 19.1746C20 18.9563 19.9161 18.7459 19.7644 18.5889ZM8.35237 15.0143C7.03503 15.0143 5.74728 14.6237 4.65195 13.8917C3.55663 13.1598 2.70292 12.1194 2.1988 10.9023C1.69468 9.6851 1.56277 8.34575 1.81977 7.05361C2.07677 5.76146 2.71113 4.57455 3.64263 3.64297C4.57413 2.71138 5.76093 2.07697 7.05296 1.81994C8.34498 1.56292 9.6842 1.69483 10.9013 2.199C12.1183 2.70317 13.1586 3.55695 13.8904 4.65238C14.6223 5.74781 15.0129 7.03568 15.0129 8.35314C15.011 10.1192 14.3086 11.8123 13.0599 13.0611C11.8112 14.3099 10.1183 15.0124 8.35237 15.0143Z"
+										fill="#8090A3"
+									/>
+								</svg>
+								<input
+									class="search_input"
+									type="text"
+									placeholder="Search"
+								/>
+							</div>
+							<a
+								href="/pages/favorites/index.html"
+								class="icon_btn"
+							>
+								<svg
+									width="24"
+									height="19"
+									viewBox="0 0 24 19"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M22.713 4.077C22.4317 3.73944 22.0796 3.46795 21.6815 3.28182C21.2835 3.09568 20.8494 2.99946 20.41 3H4.242L4.2 2.649C4.11405 1.91942 3.76338 1.24673 3.21449 0.758478C2.6656 0.270223 1.95663 0.000341793 1.222 0L1 0C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1C0 1.26522 0.105357 1.51957 0.292893 1.70711C0.48043 1.89464 0.734784 2 1 2H1.222C1.46693 2.00003 1.70334 2.08996 1.88637 2.25272C2.06941 2.41547 2.18634 2.63975 2.215 2.883L3.591 14.583C3.73385 15.7998 4.31848 16.9218 5.23391 17.736C6.14934 18.5502 7.33185 19 8.557 19H19C19.2652 19 19.5196 18.8946 19.7071 18.7071C19.8946 18.5196 20 18.2652 20 18C20 17.7348 19.8946 17.4804 19.7071 17.2929C19.5196 17.1054 19.2652 17 19 17H8.557C7.93806 16.9983 7.3348 16.8051 6.82994 16.4471C6.32507 16.089 5.94331 15.5835 5.737 15H17.657C18.8293 15.0001 19.9643 14.5882 20.8638 13.8364C21.7633 13.0846 22.37 12.0407 22.578 10.887L23.363 6.533C23.4414 6.10101 23.4237 5.65707 23.3114 5.23264C23.1991 4.80821 22.9948 4.41368 22.713 4.077ZM21.4 6.178L20.614 10.532C20.4891 11.225 20.1245 11.852 19.5839 12.3032C19.0433 12.7544 18.3612 13.0011 17.657 13H5.419L4.478 5H20.41C20.5569 4.99912 20.7022 5.03062 20.8355 5.09226C20.9689 5.15389 21.087 5.24415 21.1815 5.35661C21.276 5.46907 21.3446 5.60097 21.3824 5.74294C21.4201 5.8849 21.4262 6.03344 21.4 6.178Z"
+										fill="#8090A3"
+									/>
+								</svg>
+							</a>
+							<a href="/pages/cart/index.html" class="icon_btn">
+								<svg
+									width="24"
+									height="19"
+									viewBox="0 0 24 19"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M22.713 4.077C22.4317 3.73944 22.0796 3.46795 21.6815 3.28182C21.2835 3.09568 20.8494 2.99946 20.41 3H4.242L4.2 2.649C4.11405 1.91942 3.76338 1.24673 3.21449 0.758478C2.6656 0.270223 1.95663 0.000341793 1.222 0L1 0C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1C0 1.26522 0.105357 1.51957 0.292893 1.70711C0.48043 1.89464 0.734784 2 1 2H1.222C1.46693 2.00003 1.70334 2.08996 1.88637 2.25272C2.06941 2.41547 2.18634 2.63975 2.215 2.883L3.591 14.583C3.73385 15.7998 4.31848 16.9218 5.23391 17.736C6.14934 18.5502 7.33185 19 8.557 19H19C19.2652 19 19.5196 18.8946 19.7071 18.7071C19.8946 18.5196 20 18.2652 20 18C20 17.7348 19.8946 17.4804 19.7071 17.2929C19.5196 17.1054 19.2652 17 19 17H8.557C7.93806 16.9983 7.3348 16.8051 6.82994 16.4471C6.32507 16.089 5.94331 15.5835 5.737 15H17.657C18.8293 15.0001 19.9643 14.5882 20.8638 13.8364C21.7633 13.0846 22.37 12.0407 22.578 10.887L23.363 6.533C23.4414 6.10101 23.4237 5.65707 23.3114 5.23264C23.1991 4.80821 22.9948 4.41368 22.713 4.077ZM21.4 6.178L20.614 10.532C20.4891 11.225 20.1245 11.852 19.5839 12.3032C19.0433 12.7544 18.3612 13.0011 17.657 13H5.419L4.478 5H20.41C20.5569 4.99912 20.7022 5.03062 20.8355 5.09226C20.9689 5.15389 21.087 5.24415 21.1815 5.35661C21.276 5.46907 21.3446 5.60097 21.3824 5.74294C21.4201 5.8849 21.4262 6.03344 21.4 6.178Z"
+										fill="#8090A3"
+									/>
+								</svg>
+							</a>
+						</div>
+						<div class="wrapper_sign_btn">
+							<a
+								href="#"
+								data-bs-toggle="modal"
+								data-bs-target="#signup-modal"
+								class="base_button outline_button"
+							>
+								Регистрация
+							</a>
+							<a
+								href="#"
+								data-bs-toggle="modal"
+								data-bs-target="#signin-modal"
+								style="width: 160px"
+								class="base_button"
+							>
+								Вход
+							</a>
+						</div>
+						<div class="burger">
+							<button class="icon_btn">
+								<svg
+									width="20"
+									height="20"
+									viewBox="0 0 20 20"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M19.7644 18.5889L14.7948 13.6188C16.1491 11.9623 16.815 9.84866 16.6547 7.71497C16.4944 5.58128 15.5202 3.59083 13.9336 2.15534C12.347 0.719841 10.2694 -0.0508742 8.13061 0.00260835C5.99177 0.0560909 3.95531 0.929679 2.44245 2.44268C0.929593 3.95568 0.0560857 5.99233 0.00260811 8.13136C-0.0508695 10.2704 0.719775 12.3482 2.15514 13.9349C3.5905 15.5216 5.58076 16.4959 7.71426 16.6562C9.84775 16.8165 11.9612 16.1506 13.6176 14.7962L18.5872 19.7663C18.7442 19.9179 18.9545 20.0019 19.1728 20C19.3911 19.9981 19.5999 19.9105 19.7543 19.7561C19.9087 19.6017 19.9962 19.3929 19.9981 19.1746C20 18.9563 19.9161 18.7459 19.7644 18.5889ZM8.35237 15.0143C7.03503 15.0143 5.74728 14.6237 4.65195 13.8917C3.55663 13.1598 2.70292 12.1194 2.1988 10.9023C1.69468 9.6851 1.56277 8.34575 1.81977 7.05361C2.07677 5.76146 2.71113 4.57455 3.64263 3.64297C4.57413 2.71138 5.76093 2.07697 7.05296 1.81994C8.34498 1.56292 9.6842 1.69483 10.9013 2.199C12.1183 2.70317 13.1586 3.55695 13.8904 4.65238C14.6223 5.74781 15.0129 7.03568 15.0129 8.35314C15.011 10.1192 14.3086 11.8123 13.0599 13.0611C11.8112 14.3099 10.1183 15.0124 8.35237 15.0143Z"
+										fill="#8090A3"
+									/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</header>
+			</div>
+		</div>
 
-<main class="w-100">
-    <div id="catalog_container" class="catalog_container">
-        <div id="catalog_wrapper" class="catalog_wrapper">
-            <div
-                    class="simple-container m-auto d-flex align-items-start w-100 mar"
-            >
-                <div class="catalog_sidebar">
-                    <ul class="w-100 catalog-list">
-                        <li>Детская одежда</li>
-                        <li>Женская одежда</li>
-                        <li>Мужская одежда</li>
-                        <li>Обувь</li>
-                        <li>Игрушки</li>
-                        <li>Спорт</li>
-                        <li>Товары для дома</li>
-                    </ul>
-                </div>
-                <div class="catalog_content_wrapper">
-                    <div
-                            class="w-100 d-flex align-items-center gap-1"
-                            style="color: gray"
-                    >
-                        <span class="text_primary">Новинки</span> •
-                        &nbsp; <span class="text_primary">Акции</span> •
-                        &nbsp;
-                        <span class="text_primary"
-                        >Лучшие предложения</span
-                        >
-                        • &nbsp;
-                        <span class="text_primary">Товары недели</span>
-                        • &nbsp;
-                        <span class="text_primary">Аксессуары</span>
-                    </div>
-                    <br/>
-                    <div class="d-grid content_catalog">
-                        <p class="catalog_variant">Юбки</p>
-                        <p class="catalog_variant">Брюки</p>
-                        <p class="catalog_variant">Шорты</p>
-                        <p class="catalog_variant">Джинсы</p>
-                        <p class="catalog_variant">Верхняя одежда</p>
-                        <p class="catalog_variant">Плащи и тренчи</p>
-                        <p class="catalog_variant">Пиджак</p>
-                        <p class="catalog_variant">Рубашки и блузки</p>
-                        <p class="catalog_variant">Белье</p>
-                        <p class="catalog_variant">Рубашки</p>
-                        <p class="catalog_variant">Футболки</p>
-                        <p class="catalog_variant">
-                            Костюмы спортивные
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-<!-- FILTER -->
-<div class="simple-container d-flex">
-    <div class="catalog-wrapper">
-        <h3 class="catalog-type">Одежда</h3>
-        <ul class="type_catalog">
-            <li>Белье</li>
-            <li>Для новорожденных</li>
-            <li>Комбинезоны</li>
-        </ul>
-        <p class="see_all_catalog">Показать все</p>
-        <h3 class="catalog-type">Для девочек</h3>
-        <ul class="type_catalog">
-            <li>Брюки и шорты</li>
-            <li>Кофты</li>
-            <li>Платья и сарафаны</li>
-        </ul>
-        <p class="see_all_catalog">Показать все</p>
-        <h3 class="catalog-type">Для мальчиков</h3>
-        <ul class="type_catalog">
-            <li>Брюки и шорты</li>
-            <li>Кофты</li>
-            <li>Платья и сарафаны</li>
-        </ul>
-        <p class="see_all_catalog">Показать все</p>
-        <div class="catalog_filter">
-            <h3 class="catalog-type filter">ЦЕНА</h3>
-            <div class="wrapper_input_price">
-                <input type="number" min="0" placeholder="От 0 сом"/>
-                <input type="number" placeholder="до 5000 сом"/>
-            </div>
-            <h3 class="catalog-type filter">РАЗМЕР</h3>
-            <div class="size_catalog">
-                <button>39</button>
-                <button>40</button>
-                <button class="active_btn">41</button>
-                <button class="active_btn">42</button>
-                <button>43</button>
-                <button>44</button>
-                <button class="active_btn">50</button>
-                <button class="active_btn">51</button>
-                <button class="active_btn">52</button>
-                <button>53</button>
-                <button>54</button>
-                <button>55</button>
-                <button>50</button>
-                <button>51</button>
-                <button>52</button>
-            </div>
-            <!-- Материал -->
-            <h3 class="catalog-type filter">Материал</h3>
-            <div class="wrapper_material">
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox1"
-                            value="option1"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox1"
-                    >Лайкра</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox2"
-                            value="option2"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox2"
-                    >Хлопок</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox3"
-                            value="option3"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox3"
-                    >Полиэстер</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox4"
-                            value="option4"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox4"
-                    >Текстиль</label
-                    >
-                </div>
-            </div>
-            <!-- изготовитель -->
-            <h3 class="catalog-type filter">ИЗГОТОВИТЕЛЬ</h3>
-            <div class="wrapper_material">
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox1"
-                            value="option1"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox1"
-                    >Россия</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox2"
-                            value="option2"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox2"
-                    >Турция</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox3"
-                            value="option3"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox3"
-                    >Китай</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox4"
-                            value="option4"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox4"
-                    >Испания</label
-                    >
-                </div>
-            </div>
-            <!-- бренды -->
-            <h3 class="catalog-type filter">БРЕНДЫ</h3>
-            <div class="wrapper_material">
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox1"
-                            value="option1"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox1"
-                    >Tip Mag</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox2"
-                            value="option2"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox2"
-                    >Rolly</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox3"
-                            value="option3"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox3"
-                    >BeeKey</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox4"
-                            value="option4"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox4"
-                    >White Signs</label
-                    >
-                </div>
-            </div>
-            <!-- Сезон -->
-            <h3 class="catalog-type filter">СЕЗОН</h3>
-            <div class="wrapper_material">
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox1"
-                            value="option1"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox1"
-                    >Демисезон (6)</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox2"
-                            value="option2"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox2"
-                    >Зима (30)</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox3"
-                            value="option3"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox3"
-                    >Лето (4)</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox4"
-                            value="option4"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox4"
-                    >На любой сезон (10)</label
-                    >
-                </div>
-            </div>
-            <h3 class="catalog-type filter">ЦВЕТ</h3>
-            <div class="wrapper_select_color">
-                <button></button>
-                <button style="background-color: white"></button>
-                <button style="background-color: skyblue"></button>
-                <button style="background-color: yellow"></button>
-                <button style="background-color: green"></button>
-                <button style="background-color: pink"></button>
-                <button style="background-color: purple"></button>
-                <button style="background-color: burlywood"></button>
-                <button style="background-color: orange"></button>
-                <button style="background-color: blue"></button>
-            </div>
-        </div>
-    </div>
-    <div class="wrapper-catalog-main">
-        <div class="wrapper-title-catalog">
-            <h2 class="section_title">Детская одежда / Комплекты</h2>
-            <span class="type_wear">219 329 товаров</span>
-        </div>
-        <!-- BANNER -->
-        <div class="swiper bannerSwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide banner">
-                    <div class="banner_card">
-                        <img
-                                src="../../assets/banner-img/Banner 1 (2).png"
-                                alt=""
-                        />
-                    </div>
-                </div>
-                <div class="swiper-slide banner">
-                    <div class="banner_card">
-                        <img
-                                src="../../assets/banner-img/Banner 2.png"
-                                alt=""
-                        />
-                    </div>
-                </div>
-                <div class="swiper-slide banner">
-                    <div class="banner_card">
-                        <img
-                                src="../../assets/banner-img/Banner 1 (2).png"
-                                alt=""
-                        />
-                    </div>
-                </div>
-                <div class="swiper-slide banner">
-                    <div class="banner_card">
-                        <img
-                                src="../../assets/banner-img/Banner 2.png"
-                                alt=""
-                        />
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-        <!-- Популярные -->
-        <br/>
-        <h2 class="section_title">Популярные</h2>
-        <div class="wrapper_product_cards">
-            <div class="product_card">
-                <div class="product wrapper_img">
-                    <div class="new">новинки</div>
-                    <div class="promotion">Акция</div>
-                    <img src="../../assets/img/122.png" alt="img"/>
-                </div>
-                <div class="wrapper_price">
-                    <span class="price">1500 c</span>
-                    <span class="old_price">2800 c</span>
-                </div>
-                <h3 class="type_wear">Обувь</h3>
+		<main class="w-100">
+			<div id="catalog_container" class="catalog_container">
+				<div id="catalog_wrapper" class="catalog_wrapper">
+					<div
+						class="simple-container m-auto d-flex align-items-start w-100 mar"
+					>
+						<div class="catalog_sidebar">
+							<ul class="w-100 catalog-list">
+								<li>Детская одежда</li>
+								<li>Женская одежда</li>
+								<li>Мужская одежда</li>
+								<li>Обувь</li>
+								<li>Игрушки</li>
+								<li>Спорт</li>
+								<li>Товары для дома</li>
+							</ul>
+						</div>
+						<div class="catalog_content_wrapper">
+							<div
+								class="w-100 d-flex align-items-center gap-1"
+								style="color: gray"
+							>
+								<span class="text_primary">Новинки</span> •
+								&nbsp; <span class="text_primary">Акции</span> •
+								&nbsp;
+								<span class="text_primary"
+									>Лучшие предложения</span
+								>
+								• &nbsp;
+								<span class="text_primary">Товары недели</span>
+								• &nbsp;
+								<span class="text_primary">Аксессуары</span>
+							</div>
+							<br />
+							<div class="d-grid content_catalog">
+								<p class="catalog_variant">Юбки</p>
+								<p class="catalog_variant">Брюки</p>
+								<p class="catalog_variant">Шорты</p>
+								<p class="catalog_variant">Джинсы</p>
+								<p class="catalog_variant">Верхняя одежда</p>
+								<p class="catalog_variant">Плащи и тренчи</p>
+								<p class="catalog_variant">Пиджак</p>
+								<p class="catalog_variant">Рубашки и блузки</p>
+								<p class="catalog_variant">Белье</p>
+								<p class="catalog_variant">Рубашки</p>
+								<p class="catalog_variant">Футболки</p>
+								<p class="catalog_variant">
+									Костюмы спортивные
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- FILTER -->
+		<div class="simple-container d-flex">
+			<div class="catalog-wrapper">
+				<h3 class="catalog-type">Одежда</h3>
+				<ul class="type_catalog">
+					<li>Белье</li>
+					<li>Для новорожденных</li>
+					<li>Комбинезоны</li>
+				</ul>
+				<p class="see_all_catalog">Показать все</p>
+				<h3 class="catalog-type">Для девочек</h3>
+				<ul class="type_catalog">
+					<li>Брюки и шорты</li>
+					<li>Кофты</li>
+					<li>Платья и сарафаны</li>
+				</ul>
+				<p class="see_all_catalog">Показать все</p>
+				<h3 class="catalog-type">Для мальчиков</h3>
+				<ul class="type_catalog">
+					<li>Брюки и шорты</li>
+					<li>Кофты</li>
+					<li>Платья и сарафаны</li>
+				</ul>
+				<p class="see_all_catalog">Показать все</p>
+				<div class="catalog_filter">
+					<h3 class="catalog-type filter">ЦЕНА</h3>
+					<div class="wrapper_input_price">
+						<input type="number" min="0" placeholder="От 0 сом" />
+						<input type="number" placeholder="до 5000 сом" />
+					</div>
+					<h3 class="catalog-type filter">РАЗМЕР</h3>
+					<div class="size_catalog">
+						<span>39</span>
+						<span>40</span>
+						<span class="active_btn">41</span>
+						<span class="active_btn">42</span>
+						<span>43</span>
+						<span>44</span>
+						<span class="active_btn">50</span>
+						<span class="active_btn">51</span>
+						<span class="active_btn">52</span>
+						<span>53</span>
+						<span>54</span>
+						<span>55</span>
+						<span>50</span>
+						<span>51</span>
+						<span>52</span>
+					</div>
+					<!-- Материал -->
+					<h3 class="catalog-type filter">Материал</h3>
+					<div class="wrapper_material">
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox1"
+								value="option1"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox1"
+								>Лайкра</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox2"
+								value="option2"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox2"
+								>Хлопок</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox3"
+								value="option3"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox3"
+								>Полиэстер</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox4"
+								value="option4"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox4"
+								>Текстиль</label
+							>
+						</div>
+					</div>
+					<!-- изготовитель -->
+					<h3 class="catalog-type filter">ИЗГОТОВИТЕЛЬ</h3>
+					<div class="wrapper_material">
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox1"
+								value="option1"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox1"
+								>Россия</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox2"
+								value="option2"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox2"
+								>Турция</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox3"
+								value="option3"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox3"
+								>Китай</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox4"
+								value="option4"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox4"
+								>Испания</label
+							>
+						</div>
+					</div>
+					<!-- бренды -->
+					<h3 class="catalog-type filter">БРЕНДЫ</h3>
+					<div class="wrapper_material">
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox1"
+								value="option1"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox1"
+								>Tip Mag</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox2"
+								value="option2"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox2"
+								>Rolly</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox3"
+								value="option3"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox3"
+								>BeeKey</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox4"
+								value="option4"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox4"
+								>White Signs</label
+							>
+						</div>
+					</div>
+					<!-- Сезон -->
+					<h3 class="catalog-type filter">СЕЗОН</h3>
+					<div class="wrapper_material">
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox1"
+								value="option1"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox1"
+								>Демисезон (6)</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox2"
+								value="option2"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox2"
+								>Зима (30)</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox3"
+								value="option3"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox3"
+								>Лето (4)</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox4"
+								value="option4"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox4"
+								>На любой сезон (10)</label
+							>
+						</div>
+					</div>
+					<h3 class="catalog-type filter">ЦВЕТ</h3>
+					<div class="wrapper_select_color">
+						<button></button>
+						<button style="background-color: white"></button>
+						<button style="background-color: skyblue"></button>
+						<button style="background-color: yellow"></button>
+						<button style="background-color: green"></button>
+						<button style="background-color: pink"></button>
+						<button style="background-color: purple"></button>
+						<button style="background-color: burlywood"></button>
+						<button style="background-color: orange"></button>
+						<button style="background-color: blue"></button>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper-catalog-main">
+				<div class="wrapper-title-catalog">
+					<h2 class="section_title">Детская одежда / Комплекты</h2>
+					<span class="type_wear">219 329 товаров</span>
+				</div>
+				<!-- BANNER -->
+				<div class="swiper bannerSwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide banner">
+							<div class="banner_card">
+								<img
+									src="../../assets/banner-img/Banner 1 (2).png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="swiper-slide banner">
+							<div class="banner_card">
+								<img
+									src="../../assets/banner-img/Banner 2.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="swiper-slide banner">
+							<div class="banner_card">
+								<img
+									src="../../assets/banner-img/Banner 1 (2).png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="swiper-slide banner">
+							<div class="banner_card">
+								<img
+									src="../../assets/banner-img/Banner 2.png"
+									alt=""
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<!-- Популярные -->
+				<br />
+				<h2 class="section_title">Популярные</h2>
+				<div class="wrapper_product_cards">
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="new">новинки</div>
+							<a href="./" class="heart_card">
+								<img
+									src="../../assets/icons/heart_card.svg"
+									alt=""
+								/>
+							</a>
+							<img src="../../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
 
-                <span class="wear_title"
-                >Детские кроссовки для девочек
-						</span>
-                <div class="footer_card">
-                    <span><b>+</b> В корзину</span>
-                    <figure>
-                        <img
-                                src="../../assets/icons/whatsapp.png"
-                                alt=""
-                        />
-                    </figure>
-                </div>
-            </div>
-            <div class="product_card">
-                <div class="product wrapper_img">
-                    <div class="product_of_the_week">Товар недели</div>
-                    <img src="../../assets/img/122.png" alt="img"/>
-                </div>
-                <div class="wrapper_price">
-                    <span class="price">1500 c</span>
-                    <span class="old_price">2800 c</span>
-                </div>
-                <h3 class="type_wear">Обувь</h3>
+						<a href="./" class="wear_title"
+							>Детские кроссовки для девочек
+						</a>
+						<div class="footer_card">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
+								<img
+									src="../../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="new">новинки</div>
+							<a href="./" class="heart_card">
+								<img
+									src="../../assets/icons/heart_card.svg"
+									alt=""
+								/>
+							</a>
+							<img src="../../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
 
-                <span class="wear_title"
-                >Детские кроссовки для девочек
-						</span>
-                <div class="footer_card">
-                    <span><b>+</b> В корзину</span>
-                    <figure>
-                        <img
-                                src="../../assets/icons/whatsapp.png"
-                                alt=""
-                        />
-                    </figure>
-                </div>
-            </div>
-            <div class="product_card">
-                <div class="product wrapper_img">
-                    <div class="new">новинки</div>
-                    <img src="../../assets/img/122.png" alt="img"/>
-                </div>
-                <div class="wrapper_price">
-                    <span class="price">1500 c</span>
-                    <span class="old_price">2800 c</span>
-                </div>
-                <h3 class="type_wear">Обувь</h3>
+						<a href="./" class="wear_title"
+							>Детские кроссовки для девочек
+						</a>
+						<div class="footer_card">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
+								<img
+									src="../../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="new">новинки</div>
+							<a href="./" class="heart_card">
+								<img
+									src="../../assets/icons/heart_card.svg"
+									alt=""
+								/>
+							</a>
+							<img src="../../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
 
-                <span class="wear_title"
-                >Детские кроссовки для девочек
-						</span>
-                <div class="footer_card">
-                    <span><b>+</b> В корзину</span>
-                    <figure>
-                        <img
-                                src="../../assets/icons/whatsapp.png"
-                                alt=""
-                        />
-                    </figure>
-                </div>
-            </div>
-            <div class="product_card">
-                <div class="product wrapper_img">
-                    <div class="product_of_the_week">Товар недели</div>
-                    <img src="../../assets/img/122.png" alt="img"/>
-                </div>
-                <div class="wrapper_price">
-                    <span class="price">1500 c</span>
-                    <span class="old_price">2800 c</span>
-                </div>
-                <h3 class="type_wear">Обувь</h3>
+						<a href="./" class="wear_title"
+							>Детские кроссовки для девочек
+						</a>
+						<div class="footer_card">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
+								<img
+									src="../../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="new">новинки</div>
+							<a href="./" class="heart_card">
+								<img
+									src="../../assets/icons/heart_card.svg"
+									alt=""
+								/>
+							</a>
+							<img src="../../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
 
-                <span class="wear_title"
-                >Детские кроссовки для девочек
-						</span>
-                <div class="footer_card">
-                    <span><b>+</b> В корзину</span>
-                    <figure>
-                        <img
-                                src="../../assets/icons/whatsapp.png"
-                                alt=""
-                        />
-                    </figure>
-                </div>
-            </div>
-            <div class="product_card">
-                <div class="product wrapper_img">
-                    <div class="new">новинки</div>
-                    <img src="../../assets/img/122.png" alt="img"/>
-                </div>
-                <div class="wrapper_price">
-                    <span class="price">1500 c</span>
-                    <span class="old_price">2800 c</span>
-                </div>
-                <h3 class="type_wear">Обувь</h3>
+						<a href="./" class="wear_title"
+							>Детские кроссовки для девочек
+						</a>
+						<div class="footer_card">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
+								<img
+									src="../../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="new">новинки</div>
+							<a href="./" class="heart_card">
+								<img
+									src="../../assets/icons/heart_card.svg"
+									alt=""
+								/>
+							</a>
+							<img src="../../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
 
-                <span class="wear_title"
-                >Детские кроссовки для девочек
-						</span>
-                <div class="footer_card">
-                    <span><b>+</b> В корзину</span>
-                    <figure>
-                        <img
-                                src="../../assets/icons/whatsapp.png"
-                                alt=""
-                        />
-                    </figure>
-                </div>
-            </div>
-            <div class="product_card">
-                <div class="product wrapper_img">
-                    <div class="new">новинки</div>
-                    <div class="promotion">Акция</div>
-                    <img src="../../assets/img/122.png" alt="img"/>
-                </div>
-                <div class="wrapper_price">
-                    <span class="price">1500 c</span>
-                    <span class="old_price">2800 c</span>
-                </div>
-                <h3 class="type_wear">Обувь</h3>
+						<a href="./" class="wear_title"
+							>Детские кроссовки для девочек
+						</a>
+						<div class="footer_card">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
+								<img
+									src="../../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<!-- -------------------------- -->
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="new">новинки</div>
+							<div class="promotion">Акция</div>
+							<a href="./" class="heart_card">
+								<img
+									src="../../assets/icons/heart_card.svg"
+									alt=""
+								/>
+							</a>
+							<img src="../../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
 
-                <span class="wear_title"
-                >Детские кроссовки для девочек
-						</span>
-                <div class="footer_card">
-                    <span><b>+</b> В корзину</span>
-                    <figure>
-                        <img
-                                src="../../assets/icons/whatsapp.png"
-                                alt=""
-                        />
-                    </figure>
-                </div>
-            </div>
-            <div class="product_card">
-                <div class="product wrapper_img">
-                    <div class="new">новинки</div>
-                    <img src="../../assets/img/122.png" alt="img"/>
-                </div>
-                <div class="wrapper_price">
-                    <span class="price">1500 c</span>
-                    <span class="old_price">2800 c</span>
-                </div>
-                <h3 class="type_wear">Обувь</h3>
+						<a href="./" class="wear_title"
+							>Детские кроссовки для девочек
+						</a>
+						<div class="footer_card">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
+								<img
+									src="../../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="product_of_the_week">Товар недели</div>
+							<a href="./" class="heart_card">
+								<img
+									src="../../assets/icons/heart_card.svg"
+									alt=""
+								/>
+							</a>
+							<img src="../../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
 
-                <span class="wear_title"
-                >Детские кроссовки для девочек
-						</span>
-                <div class="footer_card">
-                    <span><b>+</b> В корзину</span>
-                    <figure>
-                        <img
-                                src="../../assets/icons/whatsapp.png"
-                                alt=""
-                        />
-                    </figure>
-                </div>
-            </div>
-            <div class="product_card">
-                <div class="product wrapper_img">
-                    <div class="new">новинки</div>
-                    <img src="../../assets/img/122.png" alt="img"/>
-                </div>
-                <div class="wrapper_price">
-                    <span class="price">1500 c</span>
-                    <span class="old_price">2800 c</span>
-                </div>
-                <h3 class="type_wear">Обувь</h3>
+						<a href="./" class="wear_title"
+							>Детские кроссовки для девочек
+						</a>
+						<div class="footer_card">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
+								<img
+									src="../../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="new">новинки</div>
+							<a href="./" class="heart_card">
+								<img
+									src="../../assets/icons/heart_card.svg"
+									alt=""
+								/>
+							</a>
+							<img src="../../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
 
-                <span class="wear_title"
-                >Детские кроссовки для девочек
-						</span>
-                <div class="footer_card">
-                    <span><b>+</b> В корзину</span>
-                    <figure>
-                        <img
-                                src="../../assets/icons/whatsapp.png"
-                                alt=""
-                        />
-                    </figure>
-                </div>
-            </div>
-            <div class="product_card">
-                <div class="product wrapper_img">
-                    <div class="new">новинки</div>
-                    <img src="../../assets/img/122.png" alt="img"/>
-                </div>
-                <div class="wrapper_price">
-                    <span class="price">1500 c</span>
-                    <span class="old_price">2800 c</span>
-                </div>
-                <h3 class="type_wear">Обувь</h3>
+						<a href="./" class="wear_title"
+							>Детские кроссовки для девочек
+						</a>
+						<div class="footer_card">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
+								<img
+									src="../../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="product_of_the_week">Товар недели</div>
+							<a href="./" class="heart_card">
+								<img
+									src="../../assets/icons/heart_card.svg"
+									alt=""
+								/>
+							</a>
+							<img src="../../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
 
-                <span class="wear_title"
-                >Детские кроссовки для девочек
-						</span>
-                <div class="footer_card">
-                    <span><b>+</b> В корзину</span>
-                    <figure>
-                        <img
-                                src="../../assets/icons/whatsapp.png"
-                                alt=""
-                        />
-                    </figure>
-                </div>
-            </div>
-            <div class="product_card">
-                <div class="product wrapper_img">
-                    <div class="new">новинки</div>
-                    <img src="../../assets/img/122.png" alt="img"/>
-                </div>
-                <div class="wrapper_price">
-                    <span class="price">1500 c</span>
-                    <span class="old_price">2800 c</span>
-                </div>
-                <h3 class="type_wear">Обувь</h3>
+						<a href="./" class="wear_title"
+							>Детские кроссовки для девочек
+						</a>
+						<div class="footer_card">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
+								<img
+									src="../../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="new">новинки</div>
+							<a href="./" class="heart_card">
+								<img
+									src="../../assets/icons/heart_card.svg"
+									alt=""
+								/>
+							</a>
+							<img src="../../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
 
-                <span class="wear_title"
-                >Детские кроссовки для девочек
-						</span>
-                <div class="footer_card">
-                    <span><b>+</b> В корзину</span>
-                    <figure>
-                        <img
-                                src="../../assets/icons/whatsapp.png"
-                                alt=""
-                        />
-                    </figure>
-                </div>
-            </div>
-            <div class="product_card">
-                <div class="product wrapper_img">
-                    <div class="new">новинки</div>
-                    <img src="../../assets/img/122.png" alt="img"/>
-                </div>
-                <div class="wrapper_price">
-                    <span class="price">1500 c</span>
-                    <span class="old_price">2800 c</span>
-                </div>
-                <h3 class="type_wear">Обувь</h3>
+						<a href="./" class="wear_title"
+							>Детские кроссовки для девочек
+						</a>
+						<div class="footer_card">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
+								<img
+									src="../../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="new">новинки</div>
+							<div class="promotion">Акция</div>
+							<a href="./" class="heart_card">
+								<img
+									src="../../assets/icons/heart_card.svg"
+									alt=""
+								/>
+							</a>
+							<img src="../../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
 
-                <span class="wear_title"
-                >Детские кроссовки для девочек
-						</span>
-                <div class="footer_card">
-                    <span><b>+</b> В корзину</span>
-                    <figure>
-                        <img
-                                src="../../assets/icons/whatsapp.png"
-                                alt=""
-                        />
-                    </figure>
-                </div>
-            </div>
-            <div class="product_card">
-                <div class="product wrapper_img">
-                    <div class="new">новинки</div>
-                    <img src="../../assets/img/122.png" alt="img"/>
-                </div>
-                <div class="wrapper_price">
-                    <span class="price">1500 c</span>
-                    <span class="old_price">2800 c</span>
-                </div>
-                <h3 class="type_wear">Обувь</h3>
+						<a href="./" class="wear_title"
+							>Детские кроссовки для девочек
+						</a>
+						<div class="footer_card">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
+								<img
+									src="../../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="new">новинки</div>
+							<div class="promotion">Акция</div>
+							<a href="./" class="heart_card">
+								<img
+									src="../../assets/icons/heart_card.svg"
+									alt=""
+								/>
+							</a>
+							<img src="../../assets/img/122.png" alt="img" />
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
 
-                <span class="wear_title"
-                >Детские кроссовки для девочек
-						</span>
-                <div class="footer_card">
-                    <span><b>+</b> В корзину</span>
-                    <figure>
-                        <img
-                                src="../../assets/icons/whatsapp.png"
-                                alt=""
-                        />
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- MOBAIL-MENU -->
+						<a href="./" class="wear_title"
+							>Детские кроссовки для девочек
+						</a>
+						<div class="footer_card">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
+								<img
+									src="../../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- MOBAIL-MENU -->
 
-<button
-        class="filter-mobile"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#filterMenu"
-        aria-controls="filterMenu"
->
-    <img src="../../assets/icons/filter.jpg" alt=""/>
-    Фильтр
-</button>
-<div
-        class="offcanvas offcanvas-start"
-        tabindex="-1"
-        id="filterMenu"
-        aria-labelledby="offcanvasExampleLabel"
->
-    <div class="d-flex justify-content-between">
-        <div class="title-active wrapper-title-catalog">
-            <h2 class="section_title">Детская одежда / Комплекты</h2>
-            <span class="type_wear">219 329 товаров</span>
-        </div>
-        <button
-                style="margin: 10px 10px 0 0"
-                type="button"
-                class="btn-close text-reset"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-        ></button>
-    </div>
-    <div class="active catalog-wrapper">
-        <h3 class="catalog-type">Одежда</h3>
-        <ul class="type_catalog">
-            <li>Белье</li>
-            <li>Для новорожденных</li>
-            <li>Комбинезоны</li>
-        </ul>
-        <p class="see_all_catalog">Показать все</p>
-        <h3 class="catalog-type">Для девочек</h3>
-        <ul class="type_catalog">
-            <li>Брюки и шорты</li>
-            <li>Кофты</li>
-            <li>Платья и сарафаны</li>
-        </ul>
-        <p class="see_all_catalog">Показать все</p>
-        <h3 class="catalog-type">Для мальчиков</h3>
-        <ul class="type_catalog">
-            <li>Брюки и шорты</li>
-            <li>Кофты</li>
-            <li>Платья и сарафаны</li>
-        </ul>
-        <p class="see_all_catalog">Показать все</p>
-        <div class="catalog_filter">
-            <h3 class="catalog-type filter">ЦЕНА</h3>
-            <div class="wrapper_input_price">
-                <input type="number" min="0" placeholder="От 0 сом"/>
-                <input type="number" placeholder="до 5000 сом"/>
-            </div>
-            <h3 class="catalog-type filter">РАЗМЕР</h3>
-            <div class="size_catalog">
-                <button>39</button>
-                <button>40</button>
-                <button class="active_btn">41</button>
-                <button class="active_btn">42</button>
-                <button>43</button>
-                <button>44</button>
-                <button class="active_btn">50</button>
-                <button class="active_btn">51</button>
-                <button class="active_btn">52</button>
-                <button>53</button>
-                <button>54</button>
-                <button>55</button>
-                <button>50</button>
-                <button>51</button>
-                <button>52</button>
-            </div>
-            <!-- Материал -->
-            <h3 class="catalog-type filter">Материал</h3>
-            <div class="wrapper_material">
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox1"
-                            value="option1"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox1"
-                    >Лайкра</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox2"
-                            value="option2"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox2"
-                    >Хлопок</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox3"
-                            value="option3"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox3"
-                    >Полиэстер</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox4"
-                            value="option4"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox4"
-                    >Текстиль</label
-                    >
-                </div>
-            </div>
-            <!-- изготовитель -->
-            <h3 class="catalog-type filter">ИЗГОТОВИТЕЛЬ</h3>
-            <div class="wrapper_material">
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox1"
-                            value="option1"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox1"
-                    >Россия</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox2"
-                            value="option2"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox2"
-                    >Турция</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox3"
-                            value="option3"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox3"
-                    >Китай</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox4"
-                            value="option4"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox4"
-                    >Испания</label
-                    >
-                </div>
-            </div>
-            <!-- бренды -->
-            <h3 class="catalog-type filter">БРЕНДЫ</h3>
-            <div class="wrapper_material">
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox1"
-                            value="option1"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox1"
-                    >Tip Mag</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox2"
-                            value="option2"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox2"
-                    >Rolly</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox3"
-                            value="option3"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox3"
-                    >BeeKey</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox4"
-                            value="option4"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox4"
-                    >White Signs</label
-                    >
-                </div>
-            </div>
-            <!-- Сезон -->
-            <h3 class="catalog-type filter">СЕЗОН</h3>
-            <div class="wrapper_material">
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox1"
-                            value="option1"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox1"
-                    >Демисезон (6)</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox2"
-                            value="option2"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox2"
-                    >Зима (30)</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox3"
-                            value="option3"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox3"
-                    >Лето (4)</label
-                    >
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox4"
-                            value="option4"
-                    />
-                    <label
-                            class="form-check-label"
-                            for="inlineCheckbox4"
-                    >На любой сезон (10)</label
-                    >
-                </div>
-            </div>
-            <h3 class="catalog-type filter">ЦВЕТ</h3>
-            <div class="wrapper_select_color">
-                <button></button>
-                <button style="background-color: white"></button>
-                <button style="background-color: skyblue"></button>
-                <button style="background-color: yellow"></button>
-                <button style="background-color: green"></button>
-                <button style="background-color: pink"></button>
-                <button style="background-color: purple"></button>
-                <button style="background-color: burlywood"></button>
-                <button style="background-color: orange"></button>
-                <button style="background-color: blue"></button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="mobail-menu">
-    <div class="inner-mobile-menu">
-        <div class="icon_btn">
-            <img src="../../assets/icons/Base/Icon/Home.svg" alt=""/>
-        </div>
-        <div class="icon_btn">
-            <img
-                    src="../../assets/icons/Base/Icon/Catalog.svg"
-                    alt=""
-            />
-        </div>
-        <div class="icon_btn">
-            <img src="../../assets/icons/Base/Icon/Cart.svg" alt=""/>
-        </div>
-        <div class="icon_btn">
-            <img
-                    src="../../assets/icons/Base/Icons/heart/y.svg"
-                    alt=""
-            />
-        </div>
-        <div class="icon_btn">
-            <img
-                    src="../../assets/icons/Base/Icons/Profile.svg"
-                    alt=""
-            />
-        </div>
-    </div>
-</div>
-<!-- FOOTER -->
-<div class="wrapper_footer">
-    <footer>
-        <div class="inner_footer">
-            <div>
-                <div>
-                    <img
-                            src="../../assets/icons/footer_logo.svg"
-                            alt=""
-                    />
-                </div>
-                <div>
-                    <h3 class="queation_title">
-                        Остались вопросы? Напишите нам!
-                    </h3>
-                    <button class="footer_button">
-                        <img
-                                src="../../assets/icons/buttonWhatsApp.svg"
-                                alt=""
-                        />
-                        Написать в Whatsapp
-                    </button>
-                </div>
-            </div>
-            <div>
-                <nav class="footer_nav">
-                    <ul>
-                        <li>Детская одежда</li>
-                        <li>Игрушки</li>
-                        <li>Женская одежда</li>
-                        <li>Мужская одежда</li>
-                        <li>Обувь</li>
-                    </ul>
-                    <ul>
-                        <li>Спорт</li>
-                        <li>Ремонт</li>
-                        <li>Аксессуары</li>
-                        <li>Товары для дома</li>
-                    </ul>
-                    <ul>
-                        <li>Акции</li>
-                        <li>Новинки</li>
-                        <li>Лучшие предложения</li>
-                        <li>Товары недели</li>
-                    </ul>
-                    <ul>
-                        <li>О компании</li>
-                        <li>Вопросы и ответы</li>
-                        <li>Оплата и доставка</li>
-                        <li>Для продавцов</li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div class="under_footer">
-            <p class="text">© 2022 ООО «Караван маркет»</p>
-            <div class="wrapper_icons_footer">
-                <img src="../../assets/icons/whatsapp.svg" alt=""/>
-                <img src="../../assets/icons/telegram.svg" alt=""/>
-                <img src="../../assets/icons/Facebook.svg" alt=""/>
-                <img src="../../assets/icons/Instagram.svg" alt=""/>
-            </div>
-        </div>
-    </footer>
-</div>
-<!-- SCRIPT -->
-<script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../../js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="../../js/slider.js"></script>
-</body>
+		<button
+			class="filter-mobile"
+			data-bs-toggle="offcanvas"
+			data-bs-target="#filterMenu"
+			aria-controls="filterMenu"
+		>
+			<img src="../../assets/icons/filter.jpg" alt="" />
+			Фильтр
+		</button>
+		<div
+			class="offcanvas offcanvas-start"
+			tabindex="-1"
+			id="filterMenu"
+			aria-labelledby="offcanvasExampleLabel"
+		>
+			<div class="d-flex justify-content-between">
+				<div class="title-active wrapper-title-catalog">
+					<h2 class="section_title">Детская одежда / Комплекты</h2>
+					<span class="type_wear">219 329 товаров</span>
+				</div>
+				<button
+					style="margin: 10px 10px 0 0"
+					type="button"
+					class="btn-close text-reset"
+					data-bs-dismiss="offcanvas"
+					aria-label="Close"
+				></button>
+			</div>
+			<div class="active catalog-wrapper">
+				<h3 class="catalog-type">Одежда</h3>
+				<ul class="type_catalog">
+					<li>Белье</li>
+					<li>Для новорожденных</li>
+					<li>Комбинезоны</li>
+				</ul>
+				<p class="see_all_catalog">Показать все</p>
+				<h3 class="catalog-type">Для девочек</h3>
+				<ul class="type_catalog">
+					<li>Брюки и шорты</li>
+					<li>Кофты</li>
+					<li>Платья и сарафаны</li>
+				</ul>
+				<p class="see_all_catalog">Показать все</p>
+				<h3 class="catalog-type">Для мальчиков</h3>
+				<ul class="type_catalog">
+					<li>Брюки и шорты</li>
+					<li>Кофты</li>
+					<li>Платья и сарафаны</li>
+				</ul>
+				<p class="see_all_catalog">Показать все</p>
+				<div class="catalog_filter">
+					<h3 class="catalog-type filter">ЦЕНА</h3>
+					<div class="wrapper_input_price">
+						<input type="number" min="0" placeholder="От 0 сом" />
+						<input type="number" placeholder="до 5000 сом" />
+					</div>
+					<h3 class="catalog-type filter">РАЗМЕР</h3>
+					<div class="size_catalog">
+						<span>39</span>
+						<span>40</span>
+						<span class="active_btn">41</span>
+						<span class="active_btn">42</span>
+						<span>43</span>
+						<span>44</span>
+						<span class="active_btn">50</span>
+						<span class="active_btn">51</span>
+						<span class="active_btn">52</span>
+						<span>53</span>
+						<span>54</span>
+						<span>55</span>
+						<span>50</span>
+						<span>51</span>
+						<span>52</span>
+					</div>
+					<!-- Материал -->
+					<h3 class="catalog-type filter">Материал</h3>
+					<div class="wrapper_material">
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox1"
+								value="option1"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox1"
+								>Лайкра</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox2"
+								value="option2"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox2"
+								>Хлопок</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox3"
+								value="option3"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox3"
+								>Полиэстер</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox4"
+								value="option4"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox4"
+								>Текстиль</label
+							>
+						</div>
+					</div>
+					<!-- изготовитель -->
+					<h3 class="catalog-type filter">ИЗГОТОВИТЕЛЬ</h3>
+					<div class="wrapper_material">
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox1"
+								value="option1"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox1"
+								>Россия</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox2"
+								value="option2"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox2"
+								>Турция</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox3"
+								value="option3"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox3"
+								>Китай</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox4"
+								value="option4"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox4"
+								>Испания</label
+							>
+						</div>
+					</div>
+					<!-- бренды -->
+					<h3 class="catalog-type filter">БРЕНДЫ</h3>
+					<div class="wrapper_material">
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox1"
+								value="option1"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox1"
+								>Tip Mag</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox2"
+								value="option2"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox2"
+								>Rolly</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox3"
+								value="option3"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox3"
+								>BeeKey</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox4"
+								value="option4"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox4"
+								>White Signs</label
+							>
+						</div>
+					</div>
+					<!-- Сезон -->
+					<h3 class="catalog-type filter">СЕЗОН</h3>
+					<div class="wrapper_material">
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox1"
+								value="option1"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox1"
+								>Демисезон (6)</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox2"
+								value="option2"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox2"
+								>Зима (30)</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox3"
+								value="option3"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox3"
+								>Лето (4)</label
+							>
+						</div>
+						<div class="form-check form-check-inline">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox4"
+								value="option4"
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox4"
+								>На любой сезон (10)</label
+							>
+						</div>
+					</div>
+					<h3 class="catalog-type filter">ЦВЕТ</h3>
+					<div class="wrapper_select_color">
+						<button></button>
+						<button style="background-color: white"></button>
+						<button style="background-color: skyblue"></button>
+						<button style="background-color: yellow"></button>
+						<button style="background-color: green"></button>
+						<button style="background-color: pink"></button>
+						<button style="background-color: purple"></button>
+						<button style="background-color: burlywood"></button>
+						<button style="background-color: orange"></button>
+						<button style="background-color: blue"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mobail-menu">
+			<div class="inner-mobile-menu">
+				<div class="icon_btn">
+					<img src="../../assets/icons/Base/Icon/Home.svg" alt="" />
+				</div>
+				<div class="icon_btn">
+					<img
+						src="../../assets/icons/Base/Icon/Catalog.svg"
+						alt=""
+					/>
+				</div>
+				<div class="icon_btn">
+					<img src="../../assets/icons/Base/Icon/Cart.svg" alt="" />
+				</div>
+				<div class="icon_btn">
+					<img
+						src="../../assets/icons/Base/Icons/heart/y.svg"
+						alt=""
+					/>
+				</div>
+				<div class="icon_btn">
+					<img
+						src="../../assets/icons/Base/Icons/Profile.svg"
+						alt=""
+					/>
+				</div>
+			</div>
+		</div>
+		<!-- FOOTER -->
+		<div class="wrapper_footer">
+			<footer>
+				<div class="inner_footer">
+					<div>
+						<div>
+							<img
+								src="../../assets/icons/footer_logo.svg"
+								alt=""
+							/>
+						</div>
+						<div>
+							<h3 class="queation_title">
+								Остались вопросы? Напишите нам!
+							</h3>
+							<button class="footer_button">
+								<img
+									src="../../assets/icons/buttonWhatsApp.svg"
+									alt=""
+								/>
+								Написать в Whatsapp
+							</button>
+						</div>
+					</div>
+					<div>
+						<nav class="footer_nav">
+							<ul>
+								<li>Детская одежда</li>
+								<li>Игрушки</li>
+								<li>Женская одежда</li>
+								<li>Мужская одежда</li>
+								<li>Обувь</li>
+							</ul>
+							<ul>
+								<li>Спорт</li>
+								<li>Ремонт</li>
+								<li>Аксессуары</li>
+								<li>Товары для дома</li>
+							</ul>
+							<ul>
+								<li>Акции</li>
+								<li>Новинки</li>
+								<li>Лучшие предложения</li>
+								<li>Товары недели</li>
+							</ul>
+							<ul>
+								<li>О компании</li>
+								<li>Вопросы и ответы</li>
+								<li>Оплата и доставка</li>
+								<li>Для продавцов</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="under_footer">
+					<p class="text">© 2022 ООО «Караван маркет»</p>
+					<div class="wrapper_icons_footer">
+						<img src="../../assets/icons/whatsapp.svg" alt="" />
+						<img src="../../assets/icons/telegram.svg" alt="" />
+						<img src="../../assets/icons/Facebook.svg" alt="" />
+						<img src="../../assets/icons/Instagram.svg" alt="" />
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- SCRIPT -->
+		<script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="../../js/script.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script src="../../js/slider.js"></script>
+	</body>
 </html>

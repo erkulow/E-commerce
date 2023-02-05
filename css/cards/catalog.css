@@ -92,16 +92,20 @@
 	grid-row-gap: 12px;
 }
 
-.size_catalog > button {
+.size_catalog > span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	border: 1px solid #dfe1e9;
 	border-radius: 8px;
+	cursor: pointer;
 	background-color: #ffffff;
 }
-.size_catalog > button:active {
-	background-color: #382a81;
+.size_catalog > span:active {
+	background-color: #f08222;
 	color: #ffffff;
 }
 .size_catalog .active_btn {
 	color: #ffffff;
-	background-color: #382a81;
+	background-color: #f08222;
 }
