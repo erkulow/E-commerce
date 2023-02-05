@@ -71,6 +71,11 @@ footer {
 	color: #ffffff;
 	margin-top: 40px;
 }
+.wrapper_icons_payment {
+	display: flex;
+	gap: 20px;
+	margin-top: 32px;
+}
 @media only screen and (max-width: 1000px) {
 	.inner_footer {
 		flex-direction: column;
