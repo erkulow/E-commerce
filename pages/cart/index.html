@@ -540,11 +540,6 @@
 					</div>
 				</header>
 			</div>
-		</div>
-
-		<!-- sections -->
-
-		<main class="w-100">
 			<div id="catalog_container" class="catalog_container">
 				<div id="catalog_wrapper" class="catalog_wrapper">
 					<div
@@ -552,13 +547,17 @@
 					>
 						<div class="catalog_sidebar">
 							<ul class="w-100 catalog-list">
-								<li>Детская одежда</li>
-								<li>Женская одежда</li>
-								<li>Мужская одежда</li>
-								<li>Обувь</li>
-								<li>Игрушки</li>
-								<li>Спорт</li>
-								<li>Товары для дома</li>
+								<li><a href="./">Детская одежда</a></li>
+								<li><a href="">Женская одежда</a></li>
+								<li><a href="">Мужская одежда</a></li>
+								<li><a href="">Обувь</a></li>
+								<li><a href="">Игрушки</a></li>
+								<li><a href="">Спорт</a></li>
+								<li><a href="">Товары для дома</a></li>
+								<li><a href="">Товары для дома</a></li>
+								<li><a href="">Товары для дома</a></li>
+								<li><a href="">Товары для дома</a></li>
+								<li><a href="">Товары для дома</a></li>
 							</ul>
 						</div>
 						<div class="catalog_content_wrapper">
@@ -578,27 +577,110 @@
 								<span class="text_primary">Аксессуары</span>
 							</div>
 							<br />
-							<div class="d-grid content_catalog">
-								<p class="catalog_variant">Юбки</p>
-								<p class="catalog_variant">Брюки</p>
-								<p class="catalog_variant">Шорты</p>
-								<p class="catalog_variant">Джинсы</p>
-								<p class="catalog_variant">Верхняя одежда</p>
-								<p class="catalog_variant">Плащи и тренчи</p>
-								<p class="catalog_variant">Пиджак</p>
-								<p class="catalog_variant">Рубашки и блузки</p>
-								<p class="catalog_variant">Белье</p>
-								<p class="catalog_variant">Рубашки</p>
-								<p class="catalog_variant">Футболки</p>
-								<p class="catalog_variant">
-									Костюмы спортивные
-								</p>
+							<div
+								class="d-flex align-items-start justify-content-between"
+							>
+								<div class="d-grid content_catalog">
+									<p class="catalog_variant"><b>Одежда</b></p>
+									<p class="catalog_variant">
+										<b>Для девочек</b>
+									</p>
+									<p class="catalog_variant">
+										<b>Для мальчиков</b>
+									</p>
+									<p>
+										<a class="catalog_variant" href=""
+											>Юбки</a
+										>
+									</p>
+									<p>
+										<a class="catalog_variant" href=""
+											>Брюки</a
+										>
+									</p>
+									<p>
+										<a class="catalog_variant" href=""
+											>Шорты</a
+										>
+									</p>
+									<p>
+										<a class="catalog_variant" href=""
+											>Джинсы</a
+										>
+									</p>
+									<p>
+										<a class="catalog_variant" href=""
+											>Верхняя одежда</a
+										>
+									</p>
+									<p>
+										<a class="catalog_variant" href=""
+											>Плащи и тренчи</a
+										>
+									</p>
+									<p>
+										<a class="catalog_variant" href=""
+											>Пиджак</a
+										>
+									</p>
+									<p>
+										<a class="catalog_variant" href=""
+											>Рубашки и блузки</a
+										>
+									</p>
+									<p>
+										<a class="catalog_variant" href=""
+											>Белье</a
+										>
+									</p>
+									<p>
+										<a class="catalog_variant" href=""
+											>Рубашки</a
+										>
+									</p>
+									<p>
+										<a class="catalog_variant" href=""
+											>Футболки</a
+										>
+									</p>
+									<p>
+										<a class="catalog_variant" href=""
+											>Костюмы спортивные</a
+										>
+									</p>
+								</div>
+								<div
+									class="d-flex flex-column gap-2 catalog-banner"
+								>
+									<a href="./" class="reclama">
+										<img
+											src="../../assets/img/123.png"
+											alt=""
+										/>
+									</a>
+									<a href="./" class="reclama">
+										<img
+											src="../../assets/img/123.png"
+											alt=""
+										/>
+									</a>
+									<a href="./" class="reclama">
+										<img
+											src="../../assets/img/123.png"
+											alt=""
+										/>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 
+		<!-- sections -->
+
+		<main class="w-100">
 			<section class="simple-container">
 				<h2 class="section_title">Корзина</h2>
 				<div class="m-0 wrapper_cart">
@@ -625,9 +707,14 @@
 											<button class="icon_btn w-100">
 												+
 											</button>
-											<button disabled class="icon_btn">
-												0
-											</button>
+											<span>
+												<button
+													disabled
+													class="icon_btn"
+												>
+													0
+												</button>
+											</span>
 											<button class="icon_btn w-100">
 												-
 											</button>
@@ -644,12 +731,14 @@
 										<p class="old_price">2300c</p>
 										<div class="discount">-25%</div>
 									</div>
-									<img
-										src="../../assets/icons/deleteIcon.svg"
-										width="30px"
-										height="30px"
-										alt=""
-									/>
+									<a href="./">
+										<img
+											src="../../assets/icons/deleteIcon.svg"
+											width="30px"
+											height="30px"
+											alt=""
+										/>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -676,9 +765,14 @@
 											<button class="icon_btn w-100">
 												+
 											</button>
-											<button disabled class="icon_btn">
-												0
-											</button>
+											<span>
+												<button
+													disabled
+													class="icon_btn"
+												>
+													0
+												</button>
+											</span>
 											<button class="icon_btn w-100">
 												-
 											</button>
@@ -695,63 +789,14 @@
 										<p class="old_price">2300c</p>
 										<div class="discount">-25%</div>
 									</div>
-									<img
-										src="../../assets/icons/deleteIcon.svg"
-										width="30px"
-										height="30px"
-										alt=""
-									/>
-								</div>
-							</div>
-						</div>
-
-						<div class="cart_container">
-							<div class="cart_card">
-								<div
-									class="d-flex align-items-center gap-4 h-100"
-								>
-									<img
-										class="cart_img"
-										src="../../assets/img/122.png"
-									/>
-									<div
-										class="d-flex flex-column justify-content-between h-100"
-									>
-										<div class="d-flex flex-column gap-2">
-											<p class="text">Обувь</p>
-											<p class="base_text">
-												Женские ботинки
-											</p>
-										</div>
-										<div class="wrapper_buttons">
-											<button class="icon_btn w-100">
-												+
-											</button>
-											<button disabled class="icon_btn">
-												0
-											</button>
-											<button class="icon_btn w-100">
-												-
-											</button>
-										</div>
-									</div>
-								</div>
-								<div
-									class="d-flex flex-column h-100 justify-content-evenly align-items-end"
-								>
-									<p class="product_price">1120c</p>
-									<div
-										class="d-flex align-items-center gap-2"
-									>
-										<p class="old_price">2300c</p>
-										<div class="discount">-25%</div>
-									</div>
-									<img
-										src="../../assets/icons/deleteIcon.svg"
-										width="30px"
-										height="30px"
-										alt=""
-									/>
+									<a href="./">
+										<img
+											src="../../assets/icons/deleteIcon.svg"
+											width="30px"
+											height="30px"
+											alt=""
+										/> </a
+									>s
 								</div>
 							</div>
 						</div>
@@ -764,16 +809,35 @@
 								<p class="base_text" style="font-size: 19px">
 									Всего товаров
 								</p>
-								<p class="text" style="font-size: 16px">
+								<a href="./" class="close_cart">
+									<img
+										src="../../assets/icons/close_cart.png"
+										alt=""
+									/>
+								</a>
+							</div>
+							<br />
+							<div class="d-flex flex-column gap-2">
+								<a href="./" class="infor_card_promocode w-100"
+									>Ввести помокод</a
+								>
+							</div>
+							<br />
+							<div class="d-flex justify-content-between">
+								<p style="font-size: 19px">В корзине</p>
+								<p style="font-size: 14px; color: grey">
 									3 товара
 								</p>
 							</div>
 							<br />
-							<div class="d-flex flex-column gap-2">
-								<p class="infor_card_text">Ввести помокод</p>
-								<p class="infor_card_text">
-									Использовать бонусы
-								</p>
+
+							<div class="d-flex flex-column">
+								<p class="text">Списание бонусов</p>
+								<input
+									class="input_bonus"
+									type="text"
+									placeholder="Доступно 182 бонуса"
+								/>
 							</div>
 							<br />
 							<div
@@ -783,9 +847,9 @@
 								<p class="product_price">1753c</p>
 							</div>
 							<br />
-							<button class="base_button w-100">
+							<a href="./" class="base_button w-100">
 								Перейти к оформлению
-							</button>
+							</a>
 							<br />
 							<div class="text" style="font-size: 14px">
 								Вы получите +133 бонуса

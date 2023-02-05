@@ -18,7 +18,7 @@
 	border: 1px solid #dfe1e9;
 	border-radius: 4px;
 }
-.infor_card_text {
+/* .infor_card_text {
 	font-family: 'Nunito';
 	font-weight: 600;
 	font-size: 14px;
@@ -28,6 +28,26 @@
 	text-align: center;
 	letter-spacing: 0.6px;
 	color: #f08222;
+} */
+.infor_card_promocode {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 93px;
+	color: #f08222;
+	font-style: normal;
+	border: 1px solid #f08222;
+	border-radius: 32px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+	letter-spacing: 0.6px;
+}
+.infor_card_promocode:hover {
+	background-color: #f08222;
+	color: white;
 }
 .cart_card {
 	width: 100%;
@@ -37,6 +57,13 @@
 	align-items: center;
 	justify-content: space-between;
 	border-bottom: 1px solid gray;
+}
+.input_bonus {
+	padding: 16px 12px;
+	gap: 16px;
+	background: #fcfcfc;
+	border: 1px solid #dfe1e9;
+	border-radius: 4px;
 }
 
 .cart_img {
@@ -87,17 +114,17 @@
 	color: #ffffff;
 }
 
-.title_header{
-    display: none;
+.title_header {
+	display: none;
 }
 
-@media screen and (max-width:1000px) {
-    .card_logo_header{
-        display: none;
-    }
-    .title_header{
-        display:block;
-    }
+@media screen and (max-width: 1000px) {
+	.card_logo_header {
+		display: none;
+	}
+	.title_header {
+		display: block;
+	}
 }
 
 @media screen and (max-width: 800px) {
@@ -108,14 +135,14 @@
 @media screen and (max-width: 550px) {
 	.info_cart_container {
 		width: 100%;
-        min-width: 200px;
+		min-width: 200px;
 	}
-    .info_card{
-        border-left: none;
-        border-right: none;
-    }
-    .cart_img{
-        width: 85px;
-        height: 85px;
-    }
+	.info_card {
+		border-left: none;
+		border-right: none;
+	}
+	.cart_img {
+		width: 85px;
+		height: 85px;
+	}
 }

@@ -34,6 +34,11 @@
 	letter-spacing: 0.6px;
 	color: #f08222;
 }
+.text_edit:hover {
+	color: #f08222;
+
+	opacity: 0.9;
+}
 .label {
 	font-family: 'Nunito';
 	font-style: normal;
@@ -49,11 +54,10 @@
 	color: #99a2ad;
 }
 .label input {
-    font-size: 14px;
+	font-size: 14px;
 }
 @media screen and (max-width: 460px) {
 	.wrapper-under-profile {
 		display: block;
 	}
 }
-

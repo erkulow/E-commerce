@@ -22,7 +22,10 @@
 	line-height: 24px;
 	letter-spacing: 0.15px;
 }
-.left-text > li:hover {
+.left-text > li > a {
+	color: black;
+}
+.left-text > li > a:hover {
 	color: #f08222;
 }
 .first-block {
