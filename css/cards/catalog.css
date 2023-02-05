@@ -96,6 +96,7 @@
 
 .size_catalog > span {
 	display: flex;
+	padding: 4px 12px;
 	align-items: center;
 	justify-content: center;
 	border: 1px solid #dfe1e9;
