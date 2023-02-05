@@ -35,6 +35,8 @@
 	min-width: 250px;
 	padding: 1rem;
 	height: 100%;
+	overflow-y: scroll;
+	max-height: 350px;
 }
 
 .catalog_content_wrapper {
@@ -68,7 +70,7 @@
 	gap: 15px;
 	list-style: none;
 }
-.catalog-list li {
+.catalog-list li > a {
 	font-family: var(--base-font);
 	font-weight: 550;
 	font-size: 19px;
@@ -77,10 +79,10 @@
 	color: #3a3a3a;
 	cursor: pointer;
 }
-.catalog-list li:hover {
+.catalog-list li > a:hover {
 	color: var(--primary-color);
 }
-.catalog-list li:active {
+.catalog-list li > a:active {
 	color: #100657;
 }
 .size_catalog {
@@ -104,4 +106,9 @@
 .size_catalog .active_btn {
 	color: #ffffff;
 	background-color: #382a81;
+}
+
+.catalog-banner a > img {
+	max-width: 250px !important;
+	width: 250px !important;
 }
