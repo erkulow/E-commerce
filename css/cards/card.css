@@ -174,7 +174,15 @@ figure {
 	border-radius: 16px;
 	position: relative;
 }
-
+.heart_card {
+	position: absolute;
+	right: 8px;
+	margin-top: 10px;
+}
+.heart_card > img {
+	width: 20px;
+	height: 20px;
+}
 @media screen and (max-width: 600px) {
 	.time {
 		font-size: 12px;
