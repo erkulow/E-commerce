@@ -1,5 +1,31 @@
 const catalogBtn = document.getElementById('catalog')
 const header = document.querySelector('.header')
+const searchWrapper = document.querySelector('.wrapper_search')
+const searchDropdown = document.getElementById('menu_search')
+const searchInput = document.querySelector('.search_input')
+const backdrop = document.querySelector('.backdrop_simple')
+
+
+searchInput.addEventListener('focus',()=>{
+	if (!searchDropdown.classList.contains('show')) {
+		searchDropdown.classList.add('show')
+		searchWrapper.style.cssText = 'background:white !important; border-radius:20px 20px 0px 0px'
+		searchInput.style.background = 'transparent'
+		backdrop.style.display = 'block'
+	}
+})
+searchInput.addEventListener('blur',()=>{
+	if (searchDropdown.classList.contains('show')) {
+		searchDropdown.classList.remove('show')
+		searchWrapper.style.cssText = 'background:transparent !important; border-radius:0px'
+		searchInput.style.background = '#f5f7fb'
+		backdrop.style.display = 'none'
+	}
+})
+
+
+
+
 
 catalogBtn.addEventListener('click', () => {
 	const catalogContent = document.getElementById('catalog_wrapper')
@@ -16,6 +42,12 @@ catalogBtn.addEventListener('click', () => {
 	}
 })
 
+
+
+
+
+
+
 var shrinkHeader = 1
 
 function getCurrentScroll() {
@@ -30,3 +62,5 @@ window.addEventListener('scroll', () => {
 		header.style.cssText = 'box-shadow:none;'
 	}
 })
+
+
