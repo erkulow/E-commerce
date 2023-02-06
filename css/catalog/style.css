@@ -77,6 +77,14 @@
 		margin: 0;
 	}
 }
+@media screen and (max-width: 600px) {
+	.header {
+		display: block !important;
+	}
+	.catalag > .simple-container {
+		padding: 0;
+	}
+}
 .catalog-type {
 	display: flex;
 	align-items: center;

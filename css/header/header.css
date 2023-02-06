@@ -98,7 +98,7 @@ nav {
 .menu_search.show > div {
 	padding: 1rem;
 }
-.menu_search.show >div:hover{
+.menu_search.show > div:hover {
 	background-color: rgb(236, 236, 236);
 }
 .search_icon {

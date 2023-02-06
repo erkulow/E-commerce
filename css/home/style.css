@@ -14,6 +14,9 @@
 .box-mobile-block {
 	display: none;
 }
+.logo > a {
+	display: block;
+}
 
 /* BANNER */
 .banner {

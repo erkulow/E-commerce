@@ -117,6 +117,17 @@
 .title_header {
 	display: none;
 }
+.mobile_menu_header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	position: sticky;
+	padding: 8px 16px;
+}
+.logo > h2 {
+	display: none;
+}
 
 @media screen and (max-width: 1000px) {
 	.card_logo_header {
@@ -125,11 +136,22 @@
 	.title_header {
 		display: block;
 	}
+	.logo > a {
+		display: none;
+	}
+	.logo > h2 {
+		display: block;
+	}
 }
 
 @media screen and (max-width: 800px) {
 	.wrapper_cart {
 		flex-direction: column;
+	}
+}
+@media screen and (max-width: 600px) {
+	.header {
+		display: block !important;
 	}
 }
 @media screen and (max-width: 550px) {

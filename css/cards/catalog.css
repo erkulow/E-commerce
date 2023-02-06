@@ -116,9 +116,30 @@
 	max-width: 250px !important;
 	width: 250px !important;
 }
+.mobile-header {
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.header {
+		display: none;
+	}
+	.catalag > .simple-container {
+		padding: 0;
+	}
+}
 @media screen and (max-width: 600px) {
 	.size_catalog {
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-rows: repeat(2, 1fr);
+	}
+	.mobile-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		padding: 10px 20px;
+		position: absolute;
+		z-index: 10;
 	}
 }

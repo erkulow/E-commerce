@@ -21,6 +21,9 @@
 .wrapper-under-profile > div {
 	padding: 12px;
 }
+.wrapper_logout {
+	display: none;
+}
 
 .text_edit {
 	font-family: 'Nunito';
@@ -56,8 +59,18 @@
 .label input {
 	font-size: 14px;
 }
+@media screen and (max-width: 1000px) {
+	.header {
+		display: block !important;
+	}
+}
 @media screen and (max-width: 460px) {
 	.wrapper-under-profile {
+		display: block;
+	}
+}
+@media screen and (max-width: 600px) {
+	.wrapper_logout {
 		display: block;
 	}
 }

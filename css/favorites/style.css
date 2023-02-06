@@ -96,12 +96,27 @@
 .title_header {
 	display: none;
 }
+.logo a {
+	display: block;
+}
+.logo > h2 {
+	display: none;
+}
 
 @media screen and (max-width: 1000px) {
+	.header {
+		display: block !important;
+	}
 	.card_logo_header {
 		display: none;
 	}
 	.title_header {
+		display: block;
+	}
+	.logo a {
+		display: none;
+	}
+	.logo > h2 {
 		display: block;
 	}
 }
@@ -156,6 +171,6 @@
 
 @media screen and (max-width: 550px) {
 	.wrapper_notfound {
-        width: 100%;
-    }
+		width: 100%;
+	}
 }
