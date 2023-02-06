@@ -22,13 +22,16 @@ footer {
 }
 .footer_nav > ul > li {
 	list-style: none;
+	margin-bottom: 16px;
+}
+.footer_nav > ul > li > a {
 	font-style: normal;
 	font-weight: 550;
 	font-size: 16px;
 	line-height: 20px;
 	letter-spacing: 0.15px;
 	color: #ffffff;
-	margin-bottom: 16px;
+
 	cursor: pointer;
 }
 .footer_button {

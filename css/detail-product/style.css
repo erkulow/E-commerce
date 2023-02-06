@@ -34,15 +34,15 @@
 	align-items: center;
 	padding: 4px 12px;
 	gap: 4px;
-	background: #ff5038;
+	background: #fddd35;
 	border-radius: 16px;
-	color: #ffffff;
+	color: black;
 }
 .wrapper-buttons {
 	display: flex;
 	align-items: center;
+	width: 100%;
 	gap: 12px;
-	margin-top: 20px;
 }
 .characteristics {
 	margin-top: 42px;
@@ -128,7 +128,7 @@
 	margin-bottom: 40px;
 }
 
-.dots{
+.dots {
 	display: none;
 }
 
@@ -205,8 +205,6 @@
 	object-fit: cover;
 }
 
-
-
 @media screen and (max-width: 800px) {
 	.info_about_product {
 		width: 100%;
@@ -229,26 +227,25 @@
 	.wrapper-buttons {
 		display: none;
 	}
-	.dots{
+	.dots {
 		display: block;
 	}
 	.desktop {
 		width: 100%;
-		position: fixed;
-		bottom: 60px;
+		position: sticky;
 		padding: 10px 15px;
 		background-color: #ffffff;
 		z-index: 52;
 		display: flex;
 		justify-content: space-between;
 	}
-	.desktop > button {
-		width: 150px;
+	.desktop > .base_button {
+		width: 80%;
 	}
 	.productSwiper {
 		display: none;
 	}
-	.productSwiperSmall{
+	.productSwiperSmall {
 		width: 100%;
 	}
 }
