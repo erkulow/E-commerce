@@ -2029,7 +2029,7 @@ textarea.form-control-lg {
 	}
 }
 .form-select:focus {
-	border-color: #86b7fe;
+	border-color: #eba86d;
 	outline: 0;
 	box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
@@ -2093,13 +2093,13 @@ textarea.form-control-lg {
 	filter: brightness(90%);
 }
 .form-check-input:focus {
-	border-color: #86b7fe;
+	border-color: #e5a166;
 	outline: 0;
 	box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 .form-check-input:checked {
-	background-color: #0d6efd;
-	border-color: #0d6efd;
+	background-color: #ef8223;
+	border-color: #ef8223;
 }
 .form-check-input:checked[type='checkbox'] {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
@@ -2108,8 +2108,8 @@ textarea.form-control-lg {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
 }
 .form-check-input[type='checkbox']:indeterminate {
-	background-color: #0d6efd;
-	border-color: #0d6efd;
+	background-color: #ef8223;
+	border-color: #ef8223;
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
 .form-check-input:disabled {
@@ -2184,7 +2184,7 @@ textarea.form-control-lg {
 	width: 1rem;
 	height: 1rem;
 	margin-top: -0.25rem;
-	background-color: #0d6efd;
+	background-color: #ef8223;
 	border: 0;
 	border-radius: 1rem;
 	-webkit-transition: background-color 0.15s ease-in-out,
@@ -2201,7 +2201,7 @@ textarea.form-control-lg {
 	}
 }
 .form-range::-webkit-slider-thumb:active {
-	background-color: #b6d4fe;
+	background-color: #f0a25d;
 }
 .form-range::-webkit-slider-runnable-track {
 	width: 100%;
@@ -2215,7 +2215,7 @@ textarea.form-control-lg {
 .form-range::-moz-range-thumb {
 	width: 1rem;
 	height: 1rem;
-	background-color: #0d6efd;
+	background-color: #ef8223;
 	border: 0;
 	border-radius: 1rem;
 	-moz-transition: background-color 0.15s ease-in-out,
@@ -2232,7 +2232,7 @@ textarea.form-control-lg {
 	}
 }
 .form-range::-moz-range-thumb:active {
-	background-color: #b6d4fe;
+	background-color: #e9b65f;
 }
 .form-range::-moz-range-track {
 	width: 100%;
