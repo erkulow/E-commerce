@@ -216,3 +216,18 @@ body {
 .modal-content {
 	border-radius: 30px !important;
 }
+
+.modal-sort .modal-dialog {
+	position: fixed;
+	bottom: 0;
+	left: 0%;
+	right: 0%;
+	transform: translate(-50%, -50%);
+}
+
+input[type='radio'] {
+	border-color: var(--primary-color) !important;
+	color: var(--primary-color) !important;
+	accent-color: var(--primary-color) !important;
+	mix-blend-mode: multiply;
+}

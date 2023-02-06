@@ -169,3 +169,17 @@
 	border-radius: 50%;
 	border: 1px solid #dfe1e9;
 }
+
+.label {
+	font-family: var(--base-font);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+	letter-spacing: 0.15px;
+
+	/* Color/Light/Brand/Text/Default */
+
+	color: #3a3a3a;
+}
