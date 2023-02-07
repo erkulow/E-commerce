@@ -1,6 +1,6 @@
 .wrapper_box {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(160px, 2fr));
+	grid-template-columns: repeat(auto-fill, minmax(180px, 3fr));
 	grid-template-rows: 1fr;
 	grid-column-gap: 16px;
 	grid-row-gap: 16px;
@@ -64,10 +64,19 @@
 	.skidki {
 		width: 150px;
 	}
+	.wrapper_box {
+		grid-template-columns: repeat(minmax(150px, 3fr));
+	}
 }
 @media screen and (max-width: 700px) {
 	.box {
+		width: 100px;
+		height: 100px;
 		display: block;
+	}
+	.wrapper_box {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
 	}
 }
 /* __________________ */

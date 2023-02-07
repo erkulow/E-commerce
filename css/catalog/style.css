@@ -171,13 +171,17 @@
 	grid-row-gap: 16px;
 	padding: 20px 10px;
 }
-.wrapper_select_color > button {
+.wrapper_select_color > span {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
 	border: 1px solid #dfe1e9;
+	cursor: pointer;
 }
-
+.isActiveColor {
+	border: 2px solid #f08222 !important;
+	box-shadow: 0px 0px 2px 1px #f08222;
+}
 .label {
 	font-family: var(--base-font);
 	font-weight: 400;
