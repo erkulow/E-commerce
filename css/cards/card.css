@@ -135,7 +135,7 @@ figure {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	/* background-color: red; */
+	flex-wrap: wrap;
 }
 .product_labels .new {
 	background: linear-gradient(
@@ -204,6 +204,13 @@ figure {
 	.new {
 		font-size: 14px;
 		z-index: 100;
+	}
+	.product_labels,
+	.label.new {
+		font-size: 12px;
+	}
+	.wrapper_product_cards {
+		grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
 	}
 }
 .sliderWrapper {

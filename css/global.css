@@ -224,13 +224,37 @@ body {
 .inner-mobile-menu > a > img {
 	cursor: pointer;
 }
+.mobile_category {
+	display: none;
+}
 
 @media screen and (max-width: 1000px) {
 	.mobail-menu {
 		display: block;
 	}
 }
-
+@media screen and (max-width: 600px) {
+	.mobile_category {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 20px;
+		grid-row-gap: 18px;
+		padding: 20px;
+	}
+	.mobile_category > img {
+		width: 88px;
+		height: 88px;
+	}
+	.mobile_category > a {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		gap: 14px;
+	}
+}
 .modal-content {
 	border-radius: 30px !important;
 }
