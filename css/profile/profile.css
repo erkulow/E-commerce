@@ -16,6 +16,20 @@
 .wrapper-under-profile > div {
 	padding: 12px;
 }
+.wrapper_qr_code {
+	display: flex;
+	align-items: center;
+	background: rgba(56, 42, 129, 0.05);
+	border-radius: 28px;
+	max-width: 428px;
+	height: 172px;
+	gap: 12px;
+	padding-right: 10px;
+}
+.footer_profile {
+	display: none;
+}
+
 @media screen and (max-width: 460px) {
 	.wrapper-under-profile {
 		display: block;
@@ -27,5 +41,25 @@
 	}
 	.wrapper-under-profile div h3 {
 		font-size: 17px;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.footer_profile {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 10px;
+		border-top: 1px solid rgb(173, 173, 173);
+	}
+	.footer_profile > div > a {
+		padding: 20px 20px;
+		font-weight: 550;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: 0.15px;
+		color: #3a3a3a;
+	}
+	.footer_profile > div > a:hover {
+		color: black;
 	}
 }
