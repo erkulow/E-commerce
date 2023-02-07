@@ -22,6 +22,7 @@
 	display: flex;
 	animation: show 0.3s ease;
 }
+
 @keyframes show {
 	0% {
 		opacity: 0;
@@ -35,7 +36,7 @@
 	min-width: 250px;
 	padding: 1rem;
 	height: 100%;
-	overflow-y: scroll;
+	/* overflow-y: scroll; */
 	max-height: 350px;
 }
 
@@ -67,8 +68,19 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
 	list-style: none;
+}
+.catalog-list > .isActiveCatalog {
+	background-color: #f5f7fb;
+}
+.catalog-list > .isActiveCatalog > a {
+	color: #f08222;
+}
+.catalog-list > li {
+	padding: 8px 0 8px 12px;
+	border-radius: 8px;
+	gap: 8px;
+	cursor: pointer;
 }
 .catalog-list li > a {
 	font-family: var(--base-font);
@@ -77,9 +89,8 @@
 	line-height: 24px;
 	letter-spacing: 0.15px;
 	color: #3a3a3a;
-	cursor: pointer;
 }
-.catalog-list li > a:hover {
+.catalog-list li:hover a {
 	color: var(--primary-color);
 }
 .catalog-list li > a:active {

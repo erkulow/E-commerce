@@ -652,11 +652,14 @@
 			<div id="catalog_container" class="catalog_container">
 				<div id="catalog_wrapper" class="catalog_wrapper">
 					<div
-						class="simple-container m-auto d-flex align-items-start w-100 mar"
+						style="padding-bottom: 32px"
+						class="simple-container d-flex align-items-start w-100 mar"
 					>
 						<div class="catalog_sidebar">
 							<ul class="w-100 catalog-list">
-								<li><a href="./">Детская одежда</a></li>
+								<li class="isActiveCatalog">
+									<a href="./">Детская одежда</a>
+								</li>
 								<li><a href="">Женская одежда</a></li>
 								<li><a href="">Мужская одежда</a></li>
 								<li><a href="">Обувь</a></li>
@@ -760,7 +763,6 @@
 								</div>
 								<div
 									class="d-flex flex-column gap-2 catalog-banner"
-									id="catalog-banner"
 								>
 									<a href="./" class="reclama">
 										<img
@@ -1548,12 +1550,56 @@
 			</div>
 			<!-- CARDS -->
 			<div class="simple-container" style="padding: 0 16px">
-				<h2 class="section_title">С этим товаром покупают</h2>
+				<h2 class="section_title">Вы смотрели</h2>
 				<div class="wrapper_product_cards">
 					<div class="product_card">
 						<div class="product wrapper_img">
-							<div class="new">новинки</div>
-							<img src="../../assets/img/122.png" alt="img" />
+							<div class="product_labels">
+								<div class="label new">новинки</div>
+								<a href="./" class="heart_card">
+									<svg
+										width="25"
+										height="25"
+										viewBox="0 0 16 16"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M11.1883 1.00001C10.1377 1 9.44702 1.12157 8.65709 1.48981C8.42388 1.59852 8.20175 1.72496 7.99153 1.86887C7.79197 1.73467 7.58156 1.61553 7.36107 1.51167C6.55687 1.13285 5.83195 1 4.81818 1C2.0385 1 0 3.21361 0 6.07992C0 8.22791 1.23654 10.2682 3.51175 12.2171C4.69005 13.2264 6.19097 14.2228 7.2731 14.7565L8 15.115L8.7269 14.7565C9.80903 14.2228 11.3099 13.2264 12.4883 12.2171C14.7635 10.2682 16 8.22791 16 6.07992C16 3.24213 13.9439 1.01088 11.1883 1.00001ZM14 6.07992C14 7.54385 13.0612 9.09289 11.1872 10.6981C10.1923 11.5503 8.92207 12.4042 8 12.8829C7.07793 12.4042 5.8077 11.5503 4.81283 10.6981C2.93882 9.09289 2 7.54385 2 6.07992C2 4.28305 3.18156 3 4.81818 3C5.55825 3 5.99874 3.08073 6.50879 3.32098C6.80322 3.45967 7.06157 3.64149 7.28459 3.86806L8.00336 4.59832L8.7159 3.86197C8.9439 3.62635 9.20545 3.44082 9.50212 3.30252C9.99576 3.0724 10.4071 3 11.1844 3.00001C12.7984 3.00638 14 4.31041 14 6.07992Z"
+											fill="#A0A9B5"
+										/>
+									</svg>
+								</a>
+							</div>
+							<div class="sliderWrapper">
+								<div class="swiper swiperCard">
+									<div class="swiper-wrapper">
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+									</div>
+									<div
+										class="dots_card swiper-pagination"
+									></div>
+								</div>
+							</div>
 						</div>
 						<div class="wrapper_price">
 							<span class="price">1500 c</span>
@@ -1561,12 +1607,12 @@
 						</div>
 						<h3 class="type_wear">Обувь</h3>
 
-						<span class="wear_title"
+						<a href="./" class="wear_title"
 							>Детские кроссовки для девочек
-						</span>
+						</a>
 						<div class="footer_card">
-							<span><b>+</b> В корзину</span>
-							<a href="#">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
 								<img
 									src="../../assets/icons/whatsapp.png"
 									alt=""
@@ -1576,8 +1622,52 @@
 					</div>
 					<div class="product_card">
 						<div class="product wrapper_img">
-							<div class="new">новинки</div>
-							<img src="../../assets/img/122.png" alt="img" />
+							<div class="product_labels">
+								<div class="label new">новинки</div>
+								<a href="./" class="heart_card isActiveHeart">
+									<svg
+										width="25"
+										height="25"
+										viewBox="0 0 16 16"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M11.1883 1.00001C10.1377 1 9.44702 1.12157 8.65709 1.48981C8.42388 1.59852 8.20175 1.72496 7.99153 1.86887C7.79197 1.73467 7.58156 1.61553 7.36107 1.51167C6.55687 1.13285 5.83195 1 4.81818 1C2.0385 1 0 3.21361 0 6.07992C0 8.22791 1.23654 10.2682 3.51175 12.2171C4.69005 13.2264 6.19097 14.2228 7.2731 14.7565L8 15.115L8.7269 14.7565C9.80903 14.2228 11.3099 13.2264 12.4883 12.2171C14.7635 10.2682 16 8.22791 16 6.07992C16 3.24213 13.9439 1.01088 11.1883 1.00001ZM14 6.07992C14 7.54385 13.0612 9.09289 11.1872 10.6981C10.1923 11.5503 8.92207 12.4042 8 12.8829C7.07793 12.4042 5.8077 11.5503 4.81283 10.6981C2.93882 9.09289 2 7.54385 2 6.07992C2 4.28305 3.18156 3 4.81818 3C5.55825 3 5.99874 3.08073 6.50879 3.32098C6.80322 3.45967 7.06157 3.64149 7.28459 3.86806L8.00336 4.59832L8.7159 3.86197C8.9439 3.62635 9.20545 3.44082 9.50212 3.30252C9.99576 3.0724 10.4071 3 11.1844 3.00001C12.7984 3.00638 14 4.31041 14 6.07992Z"
+											fill="#A0A9B5"
+										/>
+									</svg>
+								</a>
+							</div>
+							<div class="sliderWrapper">
+								<div class="swiper swiperCard">
+									<div class="swiper-wrapper">
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+									</div>
+									<div
+										class="dots_card swiper-pagination"
+									></div>
+								</div>
+							</div>
 						</div>
 						<div class="wrapper_price">
 							<span class="price">1500 c</span>
@@ -1585,12 +1675,12 @@
 						</div>
 						<h3 class="type_wear">Обувь</h3>
 
-						<span class="wear_title"
+						<a href="./" class="wear_title"
 							>Детские кроссовки для девочек
-						</span>
+						</a>
 						<div class="footer_card">
-							<span><b>+</b> В корзину</span>
-							<a href="#">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
 								<img
 									src="../../assets/icons/whatsapp.png"
 									alt=""
@@ -1600,8 +1690,52 @@
 					</div>
 					<div class="product_card">
 						<div class="product wrapper_img">
-							<div class="new">новинки</div>
-							<img src="../../assets/img/122.png" alt="img" />
+							<div class="product_labels">
+								<div class="label new">новинки</div>
+								<a href="./" class="heart_card">
+									<svg
+										width="25"
+										height="25"
+										viewBox="0 0 16 16"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M11.1883 1.00001C10.1377 1 9.44702 1.12157 8.65709 1.48981C8.42388 1.59852 8.20175 1.72496 7.99153 1.86887C7.79197 1.73467 7.58156 1.61553 7.36107 1.51167C6.55687 1.13285 5.83195 1 4.81818 1C2.0385 1 0 3.21361 0 6.07992C0 8.22791 1.23654 10.2682 3.51175 12.2171C4.69005 13.2264 6.19097 14.2228 7.2731 14.7565L8 15.115L8.7269 14.7565C9.80903 14.2228 11.3099 13.2264 12.4883 12.2171C14.7635 10.2682 16 8.22791 16 6.07992C16 3.24213 13.9439 1.01088 11.1883 1.00001ZM14 6.07992C14 7.54385 13.0612 9.09289 11.1872 10.6981C10.1923 11.5503 8.92207 12.4042 8 12.8829C7.07793 12.4042 5.8077 11.5503 4.81283 10.6981C2.93882 9.09289 2 7.54385 2 6.07992C2 4.28305 3.18156 3 4.81818 3C5.55825 3 5.99874 3.08073 6.50879 3.32098C6.80322 3.45967 7.06157 3.64149 7.28459 3.86806L8.00336 4.59832L8.7159 3.86197C8.9439 3.62635 9.20545 3.44082 9.50212 3.30252C9.99576 3.0724 10.4071 3 11.1844 3.00001C12.7984 3.00638 14 4.31041 14 6.07992Z"
+											fill="#A0A9B5"
+										/>
+									</svg>
+								</a>
+							</div>
+							<div class="sliderWrapper">
+								<div class="swiper swiperCard">
+									<div class="swiper-wrapper">
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+									</div>
+									<div
+										class="dots_card swiper-pagination"
+									></div>
+								</div>
+							</div>
 						</div>
 						<div class="wrapper_price">
 							<span class="price">1500 c</span>
@@ -1609,12 +1743,12 @@
 						</div>
 						<h3 class="type_wear">Обувь</h3>
 
-						<span class="wear_title"
+						<a href="./" class="wear_title"
 							>Детские кроссовки для девочек
-						</span>
+						</a>
 						<div class="footer_card">
-							<span><b>+</b> В корзину</span>
-							<a href="#">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
 								<img
 									src="../../assets/icons/whatsapp.png"
 									alt=""
@@ -1624,8 +1758,52 @@
 					</div>
 					<div class="product_card">
 						<div class="product wrapper_img">
-							<div class="new">новинки</div>
-							<img src="../../assets/img/122.png" alt="img" />
+							<div class="product_labels">
+								<div class="label new">новинки</div>
+								<a href="./" class="heart_card isActiveHeart">
+									<svg
+										width="25"
+										height="25"
+										viewBox="0 0 16 16"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M11.1883 1.00001C10.1377 1 9.44702 1.12157 8.65709 1.48981C8.42388 1.59852 8.20175 1.72496 7.99153 1.86887C7.79197 1.73467 7.58156 1.61553 7.36107 1.51167C6.55687 1.13285 5.83195 1 4.81818 1C2.0385 1 0 3.21361 0 6.07992C0 8.22791 1.23654 10.2682 3.51175 12.2171C4.69005 13.2264 6.19097 14.2228 7.2731 14.7565L8 15.115L8.7269 14.7565C9.80903 14.2228 11.3099 13.2264 12.4883 12.2171C14.7635 10.2682 16 8.22791 16 6.07992C16 3.24213 13.9439 1.01088 11.1883 1.00001ZM14 6.07992C14 7.54385 13.0612 9.09289 11.1872 10.6981C10.1923 11.5503 8.92207 12.4042 8 12.8829C7.07793 12.4042 5.8077 11.5503 4.81283 10.6981C2.93882 9.09289 2 7.54385 2 6.07992C2 4.28305 3.18156 3 4.81818 3C5.55825 3 5.99874 3.08073 6.50879 3.32098C6.80322 3.45967 7.06157 3.64149 7.28459 3.86806L8.00336 4.59832L8.7159 3.86197C8.9439 3.62635 9.20545 3.44082 9.50212 3.30252C9.99576 3.0724 10.4071 3 11.1844 3.00001C12.7984 3.00638 14 4.31041 14 6.07992Z"
+											fill="#A0A9B5"
+										/>
+									</svg>
+								</a>
+							</div>
+							<div class="sliderWrapper">
+								<div class="swiper swiperCard">
+									<div class="swiper-wrapper">
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+									</div>
+									<div
+										class="dots_card swiper-pagination"
+									></div>
+								</div>
+							</div>
 						</div>
 						<div class="wrapper_price">
 							<span class="price">1500 c</span>
@@ -1633,12 +1811,12 @@
 						</div>
 						<h3 class="type_wear">Обувь</h3>
 
-						<span class="wear_title"
+						<a href="./" class="wear_title"
 							>Детские кроссовки для девочек
-						</span>
+						</a>
 						<div class="footer_card">
-							<span><b>+</b> В корзину</span>
-							<a href="#">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
 								<img
 									src="../../assets/icons/whatsapp.png"
 									alt=""
@@ -1648,8 +1826,52 @@
 					</div>
 					<div class="product_card">
 						<div class="product wrapper_img">
-							<div class="new">новинки</div>
-							<img src="../../assets/img/122.png" alt="img" />
+							<div class="product_labels">
+								<div class="label new">новинки</div>
+								<a href="./" class="heart_card">
+									<svg
+										width="25"
+										height="25"
+										viewBox="0 0 16 16"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M11.1883 1.00001C10.1377 1 9.44702 1.12157 8.65709 1.48981C8.42388 1.59852 8.20175 1.72496 7.99153 1.86887C7.79197 1.73467 7.58156 1.61553 7.36107 1.51167C6.55687 1.13285 5.83195 1 4.81818 1C2.0385 1 0 3.21361 0 6.07992C0 8.22791 1.23654 10.2682 3.51175 12.2171C4.69005 13.2264 6.19097 14.2228 7.2731 14.7565L8 15.115L8.7269 14.7565C9.80903 14.2228 11.3099 13.2264 12.4883 12.2171C14.7635 10.2682 16 8.22791 16 6.07992C16 3.24213 13.9439 1.01088 11.1883 1.00001ZM14 6.07992C14 7.54385 13.0612 9.09289 11.1872 10.6981C10.1923 11.5503 8.92207 12.4042 8 12.8829C7.07793 12.4042 5.8077 11.5503 4.81283 10.6981C2.93882 9.09289 2 7.54385 2 6.07992C2 4.28305 3.18156 3 4.81818 3C5.55825 3 5.99874 3.08073 6.50879 3.32098C6.80322 3.45967 7.06157 3.64149 7.28459 3.86806L8.00336 4.59832L8.7159 3.86197C8.9439 3.62635 9.20545 3.44082 9.50212 3.30252C9.99576 3.0724 10.4071 3 11.1844 3.00001C12.7984 3.00638 14 4.31041 14 6.07992Z"
+											fill="#A0A9B5"
+										/>
+									</svg>
+								</a>
+							</div>
+							<div class="sliderWrapper">
+								<div class="swiper swiperCard">
+									<div class="swiper-wrapper">
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+									</div>
+									<div
+										class="dots_card swiper-pagination"
+									></div>
+								</div>
+							</div>
 						</div>
 						<div class="wrapper_price">
 							<span class="price">1500 c</span>
@@ -1657,12 +1879,80 @@
 						</div>
 						<h3 class="type_wear">Обувь</h3>
 
-						<span class="wear_title"
+						<a href="./" class="wear_title"
 							>Детские кроссовки для девочек
-						</span>
+						</a>
 						<div class="footer_card">
-							<span><b>+</b> В корзину</span>
-							<a href="#">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
+								<img
+									src="../../assets/icons/whatsapp.png"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="product_card">
+						<div class="product wrapper_img">
+							<div class="product_labels">
+								<div class="label new">новинки</div>
+								<a href="./" class="heart_card">
+									<svg
+										width="25"
+										height="25"
+										viewBox="0 0 16 16"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M11.1883 1.00001C10.1377 1 9.44702 1.12157 8.65709 1.48981C8.42388 1.59852 8.20175 1.72496 7.99153 1.86887C7.79197 1.73467 7.58156 1.61553 7.36107 1.51167C6.55687 1.13285 5.83195 1 4.81818 1C2.0385 1 0 3.21361 0 6.07992C0 8.22791 1.23654 10.2682 3.51175 12.2171C4.69005 13.2264 6.19097 14.2228 7.2731 14.7565L8 15.115L8.7269 14.7565C9.80903 14.2228 11.3099 13.2264 12.4883 12.2171C14.7635 10.2682 16 8.22791 16 6.07992C16 3.24213 13.9439 1.01088 11.1883 1.00001ZM14 6.07992C14 7.54385 13.0612 9.09289 11.1872 10.6981C10.1923 11.5503 8.92207 12.4042 8 12.8829C7.07793 12.4042 5.8077 11.5503 4.81283 10.6981C2.93882 9.09289 2 7.54385 2 6.07992C2 4.28305 3.18156 3 4.81818 3C5.55825 3 5.99874 3.08073 6.50879 3.32098C6.80322 3.45967 7.06157 3.64149 7.28459 3.86806L8.00336 4.59832L8.7159 3.86197C8.9439 3.62635 9.20545 3.44082 9.50212 3.30252C9.99576 3.0724 10.4071 3 11.1844 3.00001C12.7984 3.00638 14 4.31041 14 6.07992Z"
+											fill="#A0A9B5"
+										/>
+									</svg>
+								</a>
+							</div>
+							<div class="sliderWrapper">
+								<div class="swiper swiperCard">
+									<div class="swiper-wrapper">
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+										<a href="#" class="swiper-slide">
+											<img
+												src="../../assets/img/122.png"
+												alt="img"
+											/>
+										</a>
+									</div>
+									<div
+										class="dots_card swiper-pagination"
+									></div>
+								</div>
+							</div>
+						</div>
+						<div class="wrapper_price">
+							<span class="price">1500 c</span>
+							<span class="old_price">2800 c</span>
+						</div>
+						<h3 class="type_wear">Обувь</h3>
+
+						<a href="./" class="wear_title"
+							>Детские кроссовки для девочек
+						</a>
+						<div class="footer_card">
+							<a href="./"><b>+</b> В корзину</a>
+							<a href="./">
 								<img
 									src="../../assets/icons/whatsapp.png"
 									alt=""

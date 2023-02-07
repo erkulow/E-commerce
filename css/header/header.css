@@ -43,6 +43,9 @@ nav {
 	padding: 5px;
 	cursor: pointer;
 }
+.language_wrapper > div > ul > li:hover {
+	background-color: #fce6d3;
+}
 .language {
 	font-weight: 400;
 	font-size: 16px;

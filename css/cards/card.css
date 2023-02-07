@@ -118,10 +118,6 @@ figure {
 	cursor: pointer;
 }
 .promotion {
-	position: absolute;
-	/* left: 18px; */
-	right: 15%;
-	margin-top: 8px;
 	background: linear-gradient(
 			0deg,
 			rgba(255, 255, 255, 0.8),
@@ -131,10 +127,17 @@ figure {
 	border-radius: 16px;
 	padding: 4px 8px;
 }
-.new {
+.product_labels {
 	position: absolute;
-	left: 8px;
 	margin-top: 8px;
+	padding: 0 12px 0 8px;
+	z-index: 2;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	/* background-color: red; */
+}
+.product_labels .new {
 	background: linear-gradient(
 			0deg,
 			rgba(255, 255, 255, 0.8),
@@ -145,10 +148,14 @@ figure {
 	padding: 4px 8px;
 	z-index: 100;
 }
+.lebel .heart_card {
+	margin-top: 10px;
+}
+.isActiveHeart > svg > path {
+	fill: #f08222;
+}
+
 .product_of_the_week {
-	position: absolute;
-	left: 8px;
-	margin-top: 8px;
 	background: linear-gradient(
 			0deg,
 			rgba(255, 255, 255, 0.85),
@@ -177,16 +184,7 @@ figure {
 	border-radius: 16px;
 	position: relative;
 }
-.heart_card {
-	position: absolute;
-	right: 8px;
-	margin-top: 10px;
-	z-index: 100;
-}
-.heart_card > img {
-	width: 20px;
-	height: 20px;
-}
+
 @media screen and (max-width: 600px) {
 	.time {
 		font-size: 12px;
