@@ -227,9 +227,15 @@ body {
 .mobile_category {
 	display: none;
 }
+.title-category{
+	display: none;
+}
 
 @media screen and (max-width: 1000px) {
 	.mobail-menu {
+		display: block;
+	}
+	.title-category{
 		display: block;
 	}
 }
@@ -240,7 +246,7 @@ body {
 		grid-template-rows: repeat(3, 1fr);
 		grid-column-gap: 20px;
 		grid-row-gap: 18px;
-		padding: 20px;
+		padding: 20px 0;
 	}
 	.mobile_category > img {
 		width: 88px;

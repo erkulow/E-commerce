@@ -5,6 +5,7 @@ const searchDropdown = document.getElementById('menu_search')
 const searchInput = document.querySelector('.search_input')
 const backdrop = document.querySelector('.backdrop_simple')
 const closeSearch = document.querySelector('.close_icon')
+const search_btn = document.querySelector('.search_btn')
 
 searchInput.addEventListener('focus', () => {
 	if (!searchDropdown.classList.contains('show')) {
