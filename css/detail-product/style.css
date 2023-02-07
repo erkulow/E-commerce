@@ -205,6 +205,73 @@
 	object-fit: cover;
 }
 
+.upload-file-wrapper {
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid #dfe1e9;
+	border-radius: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 14px;
+}
+.upload-file-wrapper input[type='file'] {
+	display: none;
+}
+.img_upload {
+	cursor: pointer;
+}
+.text_upload {
+	font-family: var(--base-font);
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	letter-spacing: 0.2px;
+	color: #f08222;
+}
+.title_upload {
+	font-family: 'Nunito';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.15px;
+	color: #3a3a3a;
+}
+
+.upload-file-wrapper {
+	position: relative;
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid #dfe1e9;
+	border-radius: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 14px;
+}
+
+.progresbar{
+	width: 100%;
+	height: 10px;
+	border-radius: 16px;
+	background-color: rgb(238, 238, 238);
+	padding: 0;
+	overflow: hidden;
+	text-align: start;
+}
+.indicator-progres {
+	width: 50%;
+	background-color: #f08222;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.icon_delete_upload {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
 @media screen and (max-width: 800px) {
 	.info_about_product {
 		width: 100%;

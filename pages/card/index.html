@@ -444,6 +444,202 @@
 			</div>
 		</div>
 
+		<!-- feedback modal  -->
+
+		<div
+			class="modal-sort modal fade"
+			id="sort-modal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div
+						class="p-3 d-flex align-items-center justify-content-between w-100"
+					>
+						<div></div>
+						<h3 class="m-0">Написать отзыв</h3>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div
+						class="d-flex align-items-center justify-content-center w-100"
+					>
+						<p class="text">Поделитесь своей историей о покупке</p>
+					</div>
+					<div class="p-3">
+						<input
+							class="base_input"
+							type="tel"
+							placeholder="ФИО"
+						/>
+						<br />
+						<br />
+						<input
+							class="base_input"
+							type="tel"
+							placeholder="Телефон"
+						/>
+						<br />
+						<br />
+						<textarea
+							class="base_input"
+							type="tel"
+							placeholder="Ваш отзыв"
+						></textarea>
+					</div>
+					<div class="p-3">
+						<div class="upload-file-wrapper">
+							<label for="upload">
+								<img
+									class="img_upload"
+									src="../../assets/icons/upload.svg"
+									alt=""
+								/>
+							</label>
+							<p class="text_upload">
+								<b>Нажмите, чтобы загрузить</b> или перетащите
+							</p>
+							<input type="file" id="upload" />
+						</div>
+						<br />
+						<div class="upload-file-wrapper gap-1">
+							<a href="#" class="icon_btn icon_delete_upload">
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M9 1H15C16.1046 1 17 1.89543 17 3V4H20C21.1046 4 22 4.89543 22 6V8C22 9.10457 21.1046 10 20 10H19.9199L19 21C19 22.1046 18.1046 23 17 23H7C5.89543 23 5 22.1046 5.00345 21.083L4.07987 10H4C2.89543 10 2 9.10457 2 8V6C2 4.89543 2.89543 4 4 4H7V3C7 1.89543 7.89543 1 9 1ZM4 6H7H17H20V8H4V6ZM6.08649 10H17.9132L17.0035 20.917L17 21H7L6.08649 10ZM15 3V4H9V3H15ZM13.4142 15L15.7071 17.2929L14.2929 18.7071L12 16.4142L9.70711 18.7071L8.29289 17.2929L10.5858 15L8.29289 12.7071L9.70711 11.2929L12 13.5858L14.2929 11.2929L15.7071 12.7071L13.4142 15Z"
+										fill="#A0A9B5"
+									/>
+									<circle
+										cx="21"
+										cy="3"
+										r="3"
+										fill="#304FFE"
+									/>
+								</svg>
+							</a>
+							<div class="d-flex align-items-start gap-2 w-100">
+								<label for="upload">
+									<img
+										class="img_upload"
+										src="../../assets/icons/uploaded.svg"
+										alt=""
+									/>
+								</label>
+								<div class="d-flex flex-column gap-1">
+									<p class="title_upload">
+										Загрузка файла.pdf
+									</p>
+									<p
+										class="text"
+										style="text-transform: uppercase"
+									>
+										20MB
+									</p>
+								</div>
+							</div>
+							<div class="d-flex align-items-start gap-2 w-100">
+								<label class="m-0" for="upload">
+									<img
+										style="opacity: 0"
+										class="img_upload"
+										src="../../assets/icons/uploaded.svg"
+										alt=""
+									/>
+								</label>
+								<div
+									class="d-flex align-items-center gap-1 w-100"
+								>
+									<div class="progresbar">
+										<div class="indicator-progres"></div>
+									</div>
+									<p>50%</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="p-4">
+						<a
+							data-bs-dismiss="modal"
+							aria-label="Close"
+							data-bs-toggle="modal"
+							data-bs-target="#confirm-modal"
+							href="#"
+							class="base_button w-100"
+							>Отправить</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- confirm feedback modal -->
+
+		<div
+			class="modal-sort modal fade"
+			id="confirm-modal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div
+						class="p-3 d-flex align-items-center justify-content-between w-100"
+					>
+						<div></div>
+						<h3 class="m-0" style="opacity: 0">Написать отзыв</h3>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="p-3">
+						<div
+							class="upload-file-wrapper"
+							style="border: none; text-align: center"
+						>
+							<img
+								class="img_upload"
+								src="../../assets/icons/success.svg"
+								alt=""
+							/>
+							<p class="base_text">Отзыв отправлен</p>
+							<p class="text" style="font-size: 14px">
+								Ваш отзыв будет опубликован после проверки
+								модератором
+							</p>
+						</div>
+					</div>
+					<div class="p-4">
+						<a
+							data-bs-dismiss="modal"
+							aria-label="Close"
+							href="#"
+							class="base_button w-100"
+							>Подтвердить</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- header -->
 
 		<div class="header">
@@ -1203,12 +1399,17 @@
 
 					<div class="wrapper_otzyv" style="padding: 0 16px">
 						<h2 class="base-title">Отзывы 41</h2>
-						<p
+						<button
+							data-bs-toggle="modal"
+							data-bs-target="#sort-modal"
 							class="base_text"
-							style="color: var(--primary-color)"
+							style="
+								color: var(--primary-color);
+								background-color: transparent;
+							"
 						>
 							Написать отзыв
-						</p>
+						</button>
 					</div>
 					<div class="wrapper_stars" style="padding: 0 16px">
 						<p class="base_text">4.8</p>
