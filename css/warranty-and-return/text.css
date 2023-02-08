@@ -87,6 +87,10 @@
 .logo > h2 {
 	display: none;
 }
+.accordion-button:not(collapsed) {
+	color: #3a3a3a !important;
+	background-color: #f5f7fb !important;
+}
 
 @media screen and (max-width: 1000px) {
 	.left-text {
