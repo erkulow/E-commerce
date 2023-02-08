@@ -109,6 +109,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 8px;
+	width: 88px !important;
 }
 .wrapper_ot_img > img {
 	border-radius: 28px;
@@ -186,6 +187,11 @@
 	height: 100%;
 	box-sizing: border-box;
 	padding: 10px 0;
+}
+.swiper-slide.otzyv_img {
+	width: 88px !important;
+	margin-right: 0;
+	padding: 0;
 }
 
 .productSwiper .swiper-slide {
