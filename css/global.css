@@ -227,7 +227,7 @@ body {
 .mobile_category {
 	display: none;
 }
-.title-category{
+.title-category {
 	display: none;
 }
 
@@ -235,7 +235,7 @@ body {
 	.mobail-menu {
 		display: block;
 	}
-	.title-category{
+	.title-category {
 		display: block;
 	}
 }
@@ -278,4 +278,20 @@ input[type='radio'] {
 	color: var(--primary-color) !important;
 	accent-color: var(--primary-color) !important;
 	mix-blend-mode: multiply;
+}
+
+::-webkit-scrollbar {
+	width: 24px;
+	height: 8px;
+	background-color: #a0a9b5;
+}
+
+::-webkit-scrollbar {
+	background-color: transparent;
+	width: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 0.1rem;
+	background-color: #a0a9b5;
 }
