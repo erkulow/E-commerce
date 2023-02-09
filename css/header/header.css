@@ -98,7 +98,7 @@ nav {
 	height: auto;
 	cursor: pointer;
 }
-.menu_search.show > div {
+.menu_search.show > a {
 	padding: 1rem;
 }
 .menu_search.show > div:hover {

@@ -130,7 +130,26 @@
 .mobile-header {
 	display: none;
 }
-
+.card_text {
+	font-weight: 400;
+	font-size: 11px;
+	line-height: 16px;
+	letter-spacing: 0.4px;
+	color: var(--text-color);
+	font-size: 15px;
+	margin-top: 8px;
+	margin-bottom: 28px;
+}
+.wrapper_about_card {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.wrapper_about_card div {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+}
 @media screen and (max-width: 600px) {
 	.header {
 		display: none;
