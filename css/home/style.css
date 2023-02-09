@@ -125,6 +125,11 @@
 	background-color: black !important;
 	/* transform: translateY(100px) !important; */
 }
+.header_best_title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
 /* banner styles */
 

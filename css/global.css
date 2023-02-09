@@ -187,12 +187,25 @@ body {
 	color: #3a3a3a;
 	cursor: pointer;
 }
+.list_header_menu_mobile li a {
+	font-family: var(--base-font);
+	font-weight: 550;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.15px;
+	text-decoration: none;
+	color: #3a3a3a;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
 
 /* MOBILE */
 .mobail-menu {
 	display: none;
 	width: 100vw;
-	position: sticky;
+	position: fixed;
 	bottom: 0;
 	z-index: 103;
 }
@@ -227,7 +240,7 @@ body {
 .mobile_category {
 	display: none;
 }
-.title-category{
+.title-category {
 	display: none;
 }
 
@@ -235,7 +248,7 @@ body {
 	.mobail-menu {
 		display: block;
 	}
-	.title-category{
+	.title-category {
 		display: block;
 	}
 }
