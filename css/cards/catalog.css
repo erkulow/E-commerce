@@ -173,3 +173,9 @@
 		z-index: 10;
 	}
 }
+
+.text_primary::after {
+	content: '•';
+	color: gray;
+	margin-left: 5px;
+}
