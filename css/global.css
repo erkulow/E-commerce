@@ -308,3 +308,12 @@ input[type='radio'] {
 	border-radius: 0.1rem;
 	background-color: #a0a9b5;
 }
+
+.banner_box {
+	height: 40px;
+}
+.banner_box img {
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
